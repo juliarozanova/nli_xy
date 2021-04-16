@@ -1,0 +1,16 @@
+{
+	"data_dir": "data/nlixy_small", 
+	"save_dir": "representations/layer_abliations",
+	"tokenizer": "roberta-large-mnli",
+	"encoder_model": "./models/roberta-large-mnli-help", 
+	"which_layers": "all",
+	"layer_summary": "single",
+	"X_or_Y": "both",
+	"phrase_summary": "mean",
+	"pair_summary": "concat",
+	"embedding_size": 2048,
+	"include_cls": "False",
+	"context_option": "all",
+	"max_length": 100,
+	"batch_size": 64
+}

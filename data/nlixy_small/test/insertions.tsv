@@ -1,0 +1,64 @@
+	source	x_grammar	x	y	y_grammar	insertion_rel	Unnamed: 6	Unnamed: 7	Unnamed: 8	Unnamed: 9
+26	MoNLI	s	gent	man	s	leq				
+101	own	p	gloves	clothes	p	leq				
+80	own	p	sausages	food	m	leq				
+71	own	p	prawns	seafood	m	leq				
+86	own	p	files	clothes	p	none				
+144	MED	s	violin shop	shop	s	leq				
+96	own	s	church	building	s	leq				
+68	own	p	lamb chops	meat	m	leq				
+95	own	s	courthouse	building	s	leq				
+103	own	p	leggings	clothes	p	leq				
+15	MoNLI	s	adult	person	s	leq				
+28	MoNLI	s	maid	woman	s	leq				
+87	own	p	rats	clothes	p	none				
+41	MoNLI	s	school	building	s	leq				
+1	MoNLI	m	cake	food	m	leq				
+113	own	m	fish	music	m	none				
+18	MoNLI	s	hunter	person	s	leq				
+98	own	p	shoes	clothes	p	leq				
+47	MoNLI	s	basketball	ball	s	leq				
+74	own	m	cheese	food	m	leq				
+29	MoNLI	s	girlfriend	woman	s	leq				
+141	MED	m	high-protein dog food	dog food	m	leq				
+13	MoNLI	s	king	person	s	leq				
+128	own	p	socks	buildings	p	none				
+7	MoNLI	m	rock	music	m	leq				
+76	own	m	seafood	food	m	leq				
+116	own	m	ham	fruit	m	none				
+106	own	p	potatoes	animals	p	none				
+97	own	s	cottage	building	s	leq				
+100	own	p	mittens	clothes	p	leq				
+90	own	s	pen	vehicle	s	none				
+39	MoNLI	s	dog	animal	s	leq				
+24	MoNLI	m	bass	fish	m	leq				
+0	MoNLI	m	rice	food	m	leq				
+25	MoNLI	s	man	adult	s	leq				
+73	own	m	fish	food	m	leq				
+149	MED	p	cherry trees	trees	p	leq				
+104	own	s	sock 	animal	s	none				
+51	MoNLI	p	rats	things	p	leq				
+82	own	p	dogs	food	m	none				
+117	own	m	pasta	fruit	m	none				
+5	MoNLI	m	punk	music	m	leq				
+108	own	p	items	animals	p	none				
+72	own	m	fish	seafood	m	leq				
+46	MoNLI	s	library	building	s	leq				
+93	own	s	school	building	s	leq				
+3	MoNLI	m	bread	food	m	leq				
+21	MoNLI	s	pine	tree	s	leq				
+135	MED	s	big spider	spider	s	leq				
+10	MoNLI	s	woman	person	s	leq				
+60	own	s	peach	fruit	s	leq				
+78	own	m	yoghurt	food	m	leq				
+65	own	m	beef	meat	m	leq				
+67	own	m	lamb	meat	m	leq				
+2	MoNLI	m	corn	food	m	leq				
+132	MED	s	giant rat	rat	s	leq				
+102	own	p	hats	clothes	p	leq				
+119	own	m	lasagne	fruit	m	none				
+56	own	s	strawberry	fruit	s	leq				
+33	MoNLI	s	gun	woman	s	leq				
+17	MoNLI	s	uncle	person	s	leq				
+110	own	p	pencils	animals	p	none				
+147	MED	s	cold lasting more than one week	cold	s	leq				

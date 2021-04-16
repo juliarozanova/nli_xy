@@ -1,0 +1,43 @@
+	source	x_grammar	x	y	y_grammar	insertion_rel	Unnamed: 6	Unnamed: 7	Unnamed: 8	Unnamed: 9
+131	MED	s	pumpkin	vegetable	s	leq				
+99	own	p	socks	clothes	p	leq				
+146	MED	s	sentence about oranges	sentence	s	leq				
+12	MoNLI	s	conservative	person	s	leq				
+6	MoNLI	m	folk	music	m	leq				
+136	MED	s	tear of happiness	tear	s	leq				
+84	own	s	hat	food	s	none				
+40	MoNLI	s	house	building	s	leq				
+63	own	p	tomatoes	fruit	m	leq				
+43	MoNLI	s	pub	building	s	leq				
+140	MED	s	red diary	diary	s	leq				
+134	MED	s	poisonous spider	spider	s	leq				
+111	own	p	computers	clothes	p	none				
+107	own	p	chairs	clothes	p	none				
+64	own	m	ham	meat	m	leq				
+55	own	s	apple	fruit	s	leq				
+57	own	p	strawberries	fruit	m	leq				
+105	own	s	shoe 	animal	s	none				
+112	own	m	cheese	music	m	none				
+59	own	p	peaches	fruit	m	leq				
+83	own	m	snow	food	m	none				
+124	own	m	wind	weather	m	leq				
+125	own	p	mittens	weather	m	none				
+35	MoNLI	s	computer	machine	s	leq				
+53	MoNLI	p	reports	things	p	leq				
+50	MoNLI	p	blocks	things	p	leq				
+133	MED	s	summer hat	hat	s	leq				
+32	MoNLI	s	mother	woman	s	leq				
+139	MED	s	soup bowl	bowl	s	leq				
+58	own	p	oranges	fruit	m	leq				
+109	own	p	cups	animals	p	none				
+34	MoNLI	s	mare	horse	s	leq				
+62	own	p	watermelons	fruit	m	leq				
+137	MED	s	fruit tree	tree	s	leq				
+14	MoNLI	s	official	person	s	leq				
+114	own	m	jazz	food	m	none				
+20	MoNLI	s	ash	tree	s	leq				
+142	MED	m	powdered sugar	sugar	m	leq				
+48	MoNLI	s	football	ball	s	leq				
+11	MoNLI	s	smith	person	s	leq				
+36	MoNLI	s	PC	machine	s	leq				
+69	own	p	sausages	meat	m	leq				
