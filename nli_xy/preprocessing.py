@@ -260,7 +260,3 @@ def gold_labeller(meta_df_row):
         return True
     else:
         return False
-
-
-
-

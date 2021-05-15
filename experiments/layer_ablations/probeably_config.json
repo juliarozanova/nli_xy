@@ -1,0 +1,38 @@
+{
+   "tasks":[
+      {
+         "task_name":"Monotonicity Layer Ablations",
+         "models":[
+            {
+               "model_name":"Layer 0",
+               "file_location":"/data/Code/PhD/nli_xy/experiments/layer_ablations/roberta-large-mnli-help/layer_0/probe_reps_and_labels.tsv"
+            },
+            {
+               "model_name":"Layer ",
+               "file_location":"/data/Code/PhD/nli_xy/experiments/layer_ablations/roberta-large-mnli-help/layer_24/probe_reps_and_labels.tsv"
+            }
+         ]
+      }
+   ],
+   "probing_setup":{
+      "train_size":0.50,
+      "dev_size":0.25,
+      "test_size":0.25,
+      "intra_metric":"probe_ably.core.metrics.accuracy.AccuracyMetric",
+      "inter_metric":"probe_ably.core.metrics.selectivity.SelectivityMetric",
+      "probing_models":[
+         {
+            "probing_model_name":"probe_ably.core.models.linear.LinearModel",
+            "batch_size":5,
+            "epochs":10,
+            "number_of_models":5
+         },
+         {
+            "probing_model_name":"probe_ably.core.models.mlp.MLPModel",
+            "batch_size":5,
+            "epochs":20,
+            "number_of_models":10
+         }
+      ]
+   }
+}

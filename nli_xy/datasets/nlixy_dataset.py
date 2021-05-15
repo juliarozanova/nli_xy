@@ -89,6 +89,7 @@ class NLI_XY_Dataset():
         meta_row = self.meta_df.iloc[index]
 
         return {
+                'example_index': index,
                 'input_ids': row['input_ids'].to(self.device), 
                 'attention_mask': row['attention_mask'].to(self.device),
                 'X_range': meta_row['X_range'],
