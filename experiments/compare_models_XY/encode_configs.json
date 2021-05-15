@@ -1,7 +1,7 @@
 {
     "shared_config": {
         "data_dir": "data/nlixy_small", 
-        "save_dir": "experiments/model_comparison/",
+        "save_dir": "experiments/compare_models_XY/",
         "task_label": "context_monotonicity",
         "tokenizer": "",
         "encoder_model": "", 

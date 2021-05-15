@@ -1,9 +1,11 @@
 from prefect import task
+from pathlib import Path
+import torch
 from nli_xy.encoding import parse_encode_config, build_split_datasets, \
 	encode_split_datasets, load_tokenizer, load_encoder_model
 
 @task
-def encode_from_config(encode_configs, write_encoded=True):
+def encode_from_config(encode_configs, save_encoded=True):
     """[summary]
 
     [extended_summary]
@@ -69,18 +71,70 @@ def encode_from_config(encode_configs, write_encoded=True):
 
 
     """
-    rep_names = encode_configs["representations"].keys()
+    SAVE_DIR = Path(encode_configs['shared_config']['save_dir']).joinpath('processed_data')
+    SAVE_DIR.mkdir(parents=True, exist_ok=True)
+
     all_data_encodings = {}
+    rep_names = encode_configs['representations'].keys()
 
     for rep_name in rep_names:
-        encode_config = encode_configs["representations"][rep_name]
-        tokenizer = load_tokenizer.run(encode_config)
-        split_datasets = build_split_datasets.run(encode_config['data_dir'], encode_config, tokenizer)
-        encoder_model = load_encoder_model.run(encode_config)
-        encoded_data = encode_split_datasets.run(split_datasets, 
-                                                        encoder_model, 
-                                                        encode_config,
-                                                        device='cuda')
+        REP_SAVE_DIR = SAVE_DIR.joinpath(rep_name)
+
+        try:
+            encoded_data = load_encoded_data(REP_SAVE_DIR)
+        except FileNotFoundError:
+            encode_config = encode_configs['representations'][rep_name]
+            tokenizer = load_tokenizer.run(encode_config)
+            split_datasets = build_split_datasets.run(encode_config['data_dir'], encode_config, tokenizer)
+            encoder_model = load_encoder_model.run(encode_config)
+            encoded_data = encode_split_datasets.run(split_datasets, 
+                                                            encoder_model, 
+                                                            encode_config,
+                                                            device='cuda')
+            if save_encoded:
+                save_encoded_data(encoded_data, REP_SAVE_DIR, split_datasets)
+
         all_data_encodings[rep_name] = encoded_data
 
     return all_data_encodings
+
+def load_encoded_data(REP_SAVE_DIR, task_label=None):
+
+    encoded_data = {}
+    for split in ['train', 'dev', 'test']:
+        encoded_data[split] = {}
+        SPLIT_SAVE_DIR = REP_SAVE_DIR.joinpath(f"{split}")
+
+        REP_SAVE_FILEPATH = SPLIT_SAVE_DIR.joinpath('representations.pt')
+        LABELS_SAVE_FILEPATH = SPLIT_SAVE_DIR.joinpath('labels.pt')
+        META_DF_SAVE_FILEPATH = SPLIT_SAVE_DIR.joinpath('meta.tsv')
+
+        encoded_data[split]['representations'] = torch.load(REP_SAVE_FILEPATH)
+
+        if not task_label:
+            try:
+                encoded_data[split]['labels'] = torch.load(LABELS_SAVE_FILEPATH)
+            except FileNotFoundError:
+                raise FileNotFoundError('No labels specified! Specify a column of the meta_df.')
+        else:
+            split_meta = pd.read_csv(META_DF_SAVE_FILEPATH, sep='\t') 
+            split_labels = torch.tensor(split_meta[task_label].numpy()).flatten()
+            encoded_data[split]['labels'] = split_labels
+
+    return encoded_data
+
+def save_encoded_data(encoded_data, REP_SAVE_DIR, split_datasets):
+
+    for split in ['train', 'dev', 'test']:
+        SPLIT_SAVE_DIR = REP_SAVE_DIR.joinpath(f'{split}')
+        SPLIT_SAVE_DIR.mkdir(parents=True, exist_ok=True)
+
+        REP_SAVE_FILEPATH = SPLIT_SAVE_DIR.joinpath('representations.pt')
+        LABELS_SAVE_FILEPATH = SPLIT_SAVE_DIR.joinpath('labels.pt')
+        META_DF_SAVE_FILEPATH = SPLIT_SAVE_DIR.joinpath('meta.tsv')
+        torch.save(encoded_data[split]['representations'], REP_SAVE_FILEPATH)
+        torch.save(encoded_data[split]['labels'], LABELS_SAVE_FILEPATH)
+
+        split_meta = split_datasets[split].meta_df
+        with open(META_DF_SAVE_FILEPATH, 'w+') as meta_file:
+            meta_file.write(split_meta.to_csv(sep='\t'))

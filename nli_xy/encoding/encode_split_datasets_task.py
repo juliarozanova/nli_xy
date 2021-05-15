@@ -14,9 +14,9 @@ def encode_split_datasets(split_datasets, encoder_model, encode_config, device):
                         ))
                                                 
     return {
-        'train_data': encoded_splits['train'],
-        'dev_data': encoded_splits['dev'],
-        'test_data': encoded_splits['test']
+        'train': encoded_splits['train'],
+        'dev': encoded_splits['dev'],
+        'test': encoded_splits['test']
     }  
 
 @task

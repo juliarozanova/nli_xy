@@ -1,4 +1,5 @@
 from prefect import task
+import json
 
 @task
 def parse_probe_config(PROBE_CONFIG_FILE):
