@@ -74,6 +74,8 @@ def set_of_insertions_into_context(context_row, insertions_df, tokenizer):
             'premise': [],
             'hypothesis':[],
             'insertion_pair':[],
+            'X_grammar':[],
+            'Y_grammar':[],
             'X_tokens':[],
             'Y_tokens':[],
             })
@@ -100,9 +102,9 @@ def set_of_insertions_into_context(context_row, insertions_df, tokenizer):
                                 tokenizer.convert_tokens_to_string)
     meta_df['insertion_pair'] = insertions_df['x'] +', ' + insertions_df['y']
     meta_df['insertion_rel'] = insertions_df['insertion_rel']
+    meta_df['X_grammar'] = insertions_df['x_grammar']
+    meta_df['Y_grammar'] = insertions_df['y_grammar']
     meta_df['source'] = context_row.source
-
-    #TODO: additional meta features
 
     return token_inputs_df, meta_df
 

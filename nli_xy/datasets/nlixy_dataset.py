@@ -1,5 +1,5 @@
 import pandas as pd
-from nli_xy.preprocessing import instantiate, set_of_insertions_into_context, prepare_model_inputs, expand_with_opposite_relations, gold_labeller
+from nli_xy.datasets.preprocessing import instantiate, set_of_insertions_into_context, prepare_model_inputs, expand_with_opposite_relations, gold_labeller
 from transformers import AutoTokenizer
 import torch
 import pdb
@@ -37,14 +37,9 @@ class NLI_XY_Dataset():
                                                     self.tokenizer)
             monotonicity = context_row.monotonicity
             context = context_row.context
-            try:
-                perturbation = context_row.perturbation
-            except:
-                perturbation = None
 
             meta_sub_df['context_monotonicity'] = monotonicity
             meta_sub_df['context'] = context
-            meta_sub_df['perturbation'] = perturbation
 
             input_dfs_per_context += [input_sub_df]
             meta_dfs_per_context += [meta_sub_df]

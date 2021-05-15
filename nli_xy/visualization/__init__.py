@@ -1,1 +1,1 @@
-from .plot_results_task import plot_results, plot_all_results
+from .plot_probing_results_task import plot_all_probing_results

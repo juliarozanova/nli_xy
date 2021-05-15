@@ -1,8 +1,24 @@
 from prefect import task
 from torch.utils.data import DataLoader
+from pathlib import Path
 from tqdm import tqdm
 import torch
 
+def get_rep_paths(rep_name, SAVE_DIR):
+    REP_SAVE_DIR = Path(SAVE_DIR).joinpath('processed_data',rep_name)
+
+    REP_SAVE_FILEPATHS = {}
+    LABELS_SAVE_FILEPATHS = {}
+    META_DF_SAVE_FILEPATHS = {}
+    for split in ['train', 'dev', 'test']:
+        SPLIT_SAVE_DIR = REP_SAVE_DIR.joinpath(f"{split}")
+
+        REP_SAVE_FILEPATHS[split] = SPLIT_SAVE_DIR.joinpath('representations.pt')
+        LABELS_SAVE_FILEPATHS[split] = SPLIT_SAVE_DIR.joinpath('labels.pt')
+        META_DF_SAVE_FILEPATHS[split] = SPLIT_SAVE_DIR.joinpath('meta.tsv')
+
+    return REP_SAVE_DIR, REP_SAVE_FILEPATHS, LABELS_SAVE_FILEPATHS, \
+            META_DF_SAVE_FILEPATHS
 
 def get_target_reps(hidden, X_ranges, Y_ranges, config, device):
     '''
