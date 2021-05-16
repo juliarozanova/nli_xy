@@ -50,7 +50,23 @@ for rep_name, encode_config in encode_configs["representations"].items():
 rep_name = 'roberta-large-mnli-help'
 meta_df = error_analysis(rep_name, encode_config)
 
+#%%
+meta_df = meta_df.loc[meta_df.context_monotonicity=='down']
+meta_df = meta_df.loc[meta_df.insertion_rel=='leq']
+import seaborn as sns
+heat_df = meta_df.pivot_table(values='correct', index='context', 
+								columns='insertion_pair')
+sns.heatmap(heat_df)
+#%%
+grouped = meta_df.groupby(by=['context'])
+heat = grouped.correct.apply(lambda x: pd.Series(x.values)).unstack()
+heat = heat.dropna(axis=1)
 
+#%%
+new_grouped = meta_df.groupby(by=['context', 'insertion_pair'])
+df =new_grouped.correct.apply(lambda x: pd.Series(x.values)).unstack()
+
+df.pivot_table(index='context', columns='insertion_pair')
 #%%
 from nli_xy.visualization import plot_all_probing_results
 

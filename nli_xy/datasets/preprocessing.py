@@ -257,8 +257,8 @@ def gold_labeller(meta_df_row):
     monotonicity = meta_df_row['context_monotonicity']
 
     if insertion_rel=='leq' and monotonicity in ['up', 'upward_monotone']:
-        return True
+        return 'entailment'
     elif insertion_rel=='geq' and monotonicity in ['down', 'downward_monotone']:
-        return True
+        return 'entailment'
     else:
-        return False
+        return 'non-entailment'

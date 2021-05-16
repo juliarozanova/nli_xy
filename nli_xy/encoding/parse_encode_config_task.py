@@ -24,11 +24,13 @@ def parse_encode_config(ENCODE_CONFIG_FILE: str):
 
 
 def verify_types(config: dict):
-
-    if config['include_cls'] == 'True':
-        config['include_cls'] = True
-    else:
-        config['include_cls'] = False
+    try:
+        if config['include_cls'] == 'True':
+            config['include_cls'] = True
+        else:
+            config['include_cls'] = False
+    except KeyError:
+        pass
 
     return config
 

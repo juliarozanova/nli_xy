@@ -1,5 +1,6 @@
 import pandas as pd
-from nli_xy.datasets.preprocessing import instantiate, set_of_insertions_into_context, prepare_model_inputs, expand_with_opposite_relations, gold_labeller
+from nli_xy.datasets.preprocessing import instantiate, set_of_insertions_into_context, \
+ prepare_model_inputs, expand_with_opposite_relations, gold_labeller
 from transformers import AutoTokenizer
 import torch
 import pdb
@@ -11,7 +12,7 @@ class NLI_XY_Dataset():
         self.meta_df = None
         self.rep_config = rep_config
         self.max_length = self.rep_config['max_length']
-        self.tokenizer = tokenizer
+        self.tokenizer=tokenizer
         # todo: calculate a new max_len for a given dataset?
         self.device = rep_config['device']
 

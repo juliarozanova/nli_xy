@@ -10,13 +10,13 @@ def build_split_datasets(DATA_DIR, config, tokenizer):
     data_dirs = [os.path.join(DATA_DIR, f'{split}/') for split in splits]
 
     split_datasets = dict(zip(splits, 
-            [build_dataset(data_dir, config, tokenizer) for data_dir in data_dirs]))
+            [build_dataset.run(data_dir, config, tokenizer) for data_dir in data_dirs]))
 
     return split_datasets
 
+@task
 def build_dataset(data_dir, config, tokenizer):
     dataset = NLI_XY_Dataset(config, tokenizer)
     dataset.from_contexts(data_dir)
 
     return dataset
-

@@ -28,8 +28,7 @@ def prep_task_data_for_probeably(all_data_encodings, task_name):
     :rtype: Dict
     """
 
-    # we consistently use one task per encode config file
-    prepared_data =  {
+    prepared_task_data =  {
         0:
         {
             "task_name": task_name,
@@ -38,7 +37,7 @@ def prep_task_data_for_probeably(all_data_encodings, task_name):
         }
     }
 
-    return prepared_data
+    return prepared_task_data
 
 
 def prepare_model_contents(rep_name, all_data_encodings):

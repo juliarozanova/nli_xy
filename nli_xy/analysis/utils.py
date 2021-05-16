@@ -1,5 +1,12 @@
 import pandas as pd
+from loguru import logger
+from sklearn.metrics import accuracy_score
 from nli_xy.encoding.utils import get_rep_paths
+
+def accuracy_from_meta_df(meta_df):
+    accuracy = accuracy_score(meta_df.y_pred, meta_df.y_true)
+    logger.info(f'\n Accuracy: {accuracy}')
+    return accuracy
 
 def fetch_full_meta(rep_name, encode_config):
 

@@ -1,0 +1,33 @@
+## To Do
+
+- Model Comparison Probing
+    * [ ] Label Figures from Code
+    * [ ] Add Config for All Models
+    * [ ] Copy Across Models
+    * [ ] Control Labels
+- Amnesic Probing
+- MDL Probing
+- NLI Evaluation
+    * [x] Test set loading scripts
+    * [x] Working Eval
+    * [x] Format Results Output
+    * [x] Save Meta DF
+    * [x] Verify Class labels
+    * [x] Flow for all test sets
+    * [x] Load form Meta if Possble?
+    * [x] Logging info while eval is ongoing
+- Error Analysis
+    * [x] Try DropNa Approaches 
+    * [ ] Return Set of Heatmaps
+    * [ ] Label Axes 
+    * [ ] Style Figure
+    * [x] Better grouping
+    * [ ] 
+    * [ ] 
+    * [ ] 
+
+## Doing
+
+
+## Done
+
