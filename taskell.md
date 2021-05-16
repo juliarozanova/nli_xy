@@ -1,10 +1,13 @@
 ## To Do
 
 - Model Comparison Probing
+    > `
     * [ ] Label Figures from Code
-    * [ ] Add Config for All Models
+    * [x] Add Config for All Models
     * [ ] Copy Across Models
     * [ ] Control Labels
+    * [ ] Add config for baseline (non-predicting) models
+    * [ ] 
 - Amnesic Probing
 - MDL Probing
 - NLI Evaluation

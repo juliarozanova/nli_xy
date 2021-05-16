@@ -16,7 +16,7 @@ from nli_xy.analysis.utils import accuracy_from_meta_df
 @task 
 def eval_on_nli_datasets(encode_configs, EVAL_SETS_DIR=None, from_nli_xy_datasets=False):
 
-    if not EVAL_SETS_DIR and not nli_xy_dataset:
+    if not EVAL_SETS_DIR and not from_nli_xy_datasets:
         raise ValueError('Must include either directory path of tsv eval dataset files \
                         or a NLI_XY_Dataset object!')
 
@@ -54,11 +54,14 @@ def eval_on_nli_datasets(encode_configs, EVAL_SETS_DIR=None, from_nli_xy_dataset
             with open(REP_META_DF_FILEPATH, 'w+') as meta_file:
                 meta_file.write(meta_df.to_csv(sep='\t', index=False))
 
+            results['index'] = ['nli_xy']
             results[rep_name] = accuracy
 
         else:
             EVAL_SETS_DIR = Path(EVAL_SETS_DIR)
             eval_set_filenames = os.listdir(EVAL_SETS_DIR)
+            results['index'] = eval_set_filenames
+
             for eval_set_filename in eval_set_filenames:
                 eval_set_name = eval_set_filename.strip('.tsv')
                 eval_set_path = EVAL_SETS_DIR.joinpath(eval_set_filename)
@@ -81,9 +84,10 @@ def eval_on_nli_datasets(encode_configs, EVAL_SETS_DIR=None, from_nli_xy_dataset
                 results[rep_name][eval_set_name] = accuracy
 
 
+
     with open(RESULTS_FILEPATH, 'w+') as results_file:
         results_df = pd.DataFrame(results)
-        results_file.write(results_df.to_csv(sep='\t', index=from_nli_xy_datasets))
+        results_file.write(results_df.to_csv(sep='\t', index='index'))
 
     return results
         

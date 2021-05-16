@@ -19,7 +19,7 @@ from nli_xy.analysis import eval_on_nli_datasets
 #%%
 ENCODE_CONFIG_FILE = './experiments/nli/eval_on_nli_xy/encode_configs.json'
 encode_configs = parse_encode_config.run(ENCODE_CONFIG_FILE)
-eval_on_nli_datasets.run(encode_configs, nli_xy_dataset=True)
+results = eval_on_nli_datasets.run(encode_configs, from_nli_xy_datasets=True)
 
 # %%
 # Error Breakdowns

@@ -4,7 +4,7 @@
         "save_dir": "experiments/probing/compare_models_XY/",
         "task_label": "context_monotonicity",
         "encoder_model": "", 
-        "X_or_Y": "both",
+        "X_or_Y": "X",
         "layer_range": -1,
         "layer_summary": "single",
         "phrase_summary": "mean",
@@ -20,37 +20,37 @@
         "roberta-large-mnli-help": {
             "tokenizer": "roberta-large-mnli", 
             "encoder_model": "./models/roberta-large-mnli-help",
-            "embedding_size": 2048
+            "embedding_size": 1024
         }, 
         "roberta-large-mnli": {
             "tokenizer": "roberta-large-mnli", 
             "encoder_model": "roberta-large-mnli",
-            "embedding_size": 2048
+            "embedding_size": 1024
         },
         "roberta-large-mnli-double-finetuning": {
             "tokenizer": "roberta-large-mnli", 
             "encoder_model": "./models/roberta-large-mnli-double_finetuning",
-            "embedding_size": 2048
+            "embedding_size": 1024
         },
         "bert-based-uncased-snli": {
             "tokenizer": "textattack/bert-base-uncased-snli", 
             "encoder_model": "textattack/bert-base-uncased-snli",
-            "embedding_size": 1536
+            "embedding_size": 768
         },
         "bert-based-uncased-snli-help": {
             "tokenizer": "textattack/bert-base-uncased-snli", 
             "encoder_model": "./models/bert-base-uncased-snli-help",
-            "embedding_size": 1536
+            "embedding_size": 768
         },
         "facebook-bart-large-mnli": {
             "tokenizer": "facebook/bart-large-mnli", 
             "encoder_model": "facebook/bart-large-mnli",
-            "embedding_size": 2048
+            "embedding_size": 1024
         },
         "facebook-bart-large-mnli-help": {
             "tokenizer": "facebook/bart-large-mnli", 
             "encoder_model": "./models/facebook-bart-large-mnli-help",
-            "embedding_size": 2048
+            "embedding_size": 1024
         }
     }
 }

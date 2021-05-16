@@ -16,8 +16,8 @@ from nli_xy.probing import parse_probe_config, prep_task_data_for_probeably
 PROBE_ABLY_DIR = '/data/Code/PhD/Probe-Ably/'
 sys.path.append(PROBE_ABLY_DIR)
 DATA_DIR = './data/nlixy_small/'
-ENCODE_CONFIG_FILE = './experiments/probing/compare_models_XY/encode_configs.json'
-PROBE_CONFIG_FILE = './experiments/probing/compare_models_XY/probe_config.json'
+ENCODE_CONFIG_FILE = './experiments/probing/compare_models_X/encode_configs.json'
+PROBE_CONFIG_FILE = './experiments/probing/compare_models_X/probe_config.json'
 
 #%%
 from probe_ably.core.tasks.probing import TrainProbingTask
@@ -32,7 +32,7 @@ all_data_encodings = encode_from_config.run(encode_configs)
 
 #%%
 prepared_data = prep_task_data_for_probeably.run(all_data_encodings, 
-							task_name=encode_configs["shared_config"]["task_label"])
+											task_name=encode_configs["shared_config"]["task_label"])
 probe_config = parse_probe_config.run(PROBE_CONFIG_FILE)
 train_results = train_probing_task.run(prepared_data, probe_config)
 processed_results = process_metric_task.run(
@@ -46,36 +46,3 @@ results_filepath = RESULTS_DIR.joinpath('results.pickle')
 
 with open(results_filepath, 'wb+') as results_file:
 	pickle.dump(processed_results, results_file)
-
-#%%
-# from nli_xy.analysis import error_analysis
-
-# for rep_name, encode_config in encode_configs["representations"].items():
-# 	print(rep_name)
-# 	meta_df = error_analysis(rep_name, encode_config)
-# #%%
-# rep_name = 'roberta-large-mnli-help'
-# meta_df = error_analysis(rep_name, encode_config)
-
-# #%%
-# meta_df = meta_df.loc[meta_df.context_monotonicity=='down']
-# meta_df = meta_df.loc[meta_df.insertion_rel=='leq']
-# import seaborn as sns
-# heat_df = meta_df.pivot_table(values='correct', index='context', 
-# 								columns='insertion_pair')
-# sns.heatmap(heat_df)
-# #%%
-# grouped = meta_df.groupby(by=['context'])
-# heat = grouped.correct.apply(lambda x: pd.Series(x.values)).unstack()
-# heat = heat.dropna(axis=1)
-
-# #%%
-# new_grouped = meta_df.groupby(by=['context', 'insertion_pair'])
-# df =new_grouped.correct.apply(lambda x: pd.Series(x.values)).unstack()
-
-# df.pivot_table(index='context', columns='insertion_pair')
-# #%%
-# from nli_xy.visualization import plot_all_probing_results
-
-# #%%
-# flow.run()
