@@ -30,9 +30,9 @@ encode_configs = parse_encode_config.run(ENCODE_CONFIG_FILE)
 all_data_encodings = encode_from_config.run(encode_configs)
 
 #%%
-prepared_data = prep_task_data_for_probeably.run(all_data_encodings, 
-							task_name=encode_configs["shared_config"]["task_label"])
+prepared_data = prep_task_data_for_probeably.run(all_data_encodings, encode_configs)
 probe_config = parse_probe_config.run(PROBE_CONFIG_FILE)
+#%%
 train_results = train_probing_task.run(prepared_data, probe_config)
 processed_results = process_metric_task.run(
 	train_results, probe_config

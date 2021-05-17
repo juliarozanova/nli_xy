@@ -1,15 +1,5 @@
 ## To Do
 
-- Model Comparison Probing
-    > `
-    * [ ] Label Figures from Code
-    * [x] Add Config for All Models
-    * [ ] Copy Across Models
-    * [ ] Control Labels
-    * [ ] Add config for baseline (non-predicting) models
-    * [ ] 
-- Amnesic Probing
-- MDL Probing
 - NLI Evaluation
     * [x] Test set loading scripts
     * [x] Working Eval
@@ -28,6 +18,15 @@
     * [ ] 
     * [ ] 
     * [ ] 
+- Model Comparison Probing
+    > `
+    * [ ] Label Figures from Code
+    * [x] Add Config for All Models
+    * [x] Copy Across Models
+    * [ ] Control Labels
+    * [ ] Add config for baseline (non-predicting) models
+- Amnesic Probing
+- MDL Probing
 
 ## Doing
 

@@ -2,13 +2,8 @@
 %load_ext autoreload
 %autoreload 2
 import sys
-import pandas as pd
-import numpy as np
 from prefect import Flow
-from tqdm import tqdm
-import torch
 from pathlib import Path
-from torch.utils.data import DataLoader
 
 #%%
 nli_xy_root = Path(__file__).parent.parent.parent.parent
