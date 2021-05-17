@@ -24,14 +24,13 @@ def eval_on_nli_datasets(encode_configs, EVAL_SETS_DIR=None, from_nli_xy_dataset
     SAVE_DIR.mkdir(parents=True, exist_ok=True)
     RESULTS_FILEPATH = SAVE_DIR.joinpath('summary_results.tsv')
     results = {}
+    meta_dfs = {}
 
     for rep_name, encode_config in encode_configs["representations"].items():
         logger.info(f'Evaluating the {rep_name} model: \n')
         results[rep_name] = {}
         REP_SAVE_DIR = SAVE_DIR.joinpath(rep_name)
         REP_SAVE_DIR.mkdir(parents=True, exist_ok=True)
-        tokenizer = load_tokenizer.run(encode_config)
-        encoder_model = load_encoder_model.run(encode_config)
         device = encode_config['device']
         batch_size=encode_config['batch_size']
 
@@ -41,7 +40,11 @@ def eval_on_nli_datasets(encode_configs, EVAL_SETS_DIR=None, from_nli_xy_dataset
 
             try:
                 meta_df = pd.read_csv(REP_META_DF_FILEPATH, sep='\t')
+                logger.info(f'Using cached meta outputs file for {rep_name} for \
+                    the nli_xy dataset.')
             except FileNotFoundError:
+                tokenizer = load_tokenizer.run(encode_config)
+                encoder_model = load_encoder_model.run(encode_config)
                 nli_xy_dataset = build_dataset.run(NLI_XY_DIR, encode_config, tokenizer)
                 nli_dataset = convert_nlixy_to_nli.run(nli_xy_dataset)
                 meta_df = eval_on_nli_dataset.run(nli_dataset, 
@@ -56,6 +59,7 @@ def eval_on_nli_datasets(encode_configs, EVAL_SETS_DIR=None, from_nli_xy_dataset
 
             results['index'] = ['nli_xy']
             results[rep_name] = accuracy
+            meta_dfs[rep_name] = meta_df
 
         else:
             EVAL_SETS_DIR = Path(EVAL_SETS_DIR)
@@ -69,7 +73,11 @@ def eval_on_nli_datasets(encode_configs, EVAL_SETS_DIR=None, from_nli_xy_dataset
 
                 try:
                     meta_df = pd.read_csv(REP_META_DF_FILEPATH, sep='\t')
+                    logger.info(f'Using cached meta outputs file for {rep_name} for \
+                        the {eval_set_name} dataset.')
                 except FileNotFoundError:
+                    tokenizer = load_tokenizer.run(encode_config)
+                    encoder_model = load_encoder_model.run(encode_config)
                     nli_dataset = load_nli_data.run(eval_set_path, tokenizer, device)
                     meta_df = eval_on_nli_dataset.run(nli_dataset, 
                                                     encoder_model, 
@@ -82,6 +90,7 @@ def eval_on_nli_datasets(encode_configs, EVAL_SETS_DIR=None, from_nli_xy_dataset
                     meta_file.write(meta_df.to_csv(sep='\t', index=False))
 
                 results[rep_name][eval_set_name] = accuracy
+                meta_dfs[rep_name][eval_set_name] = meta_df
 
 
 
@@ -89,7 +98,10 @@ def eval_on_nli_datasets(encode_configs, EVAL_SETS_DIR=None, from_nli_xy_dataset
         results_df = pd.DataFrame(results)
         results_file.write(results_df.to_csv(sep='\t', index='index'))
 
-    return results
+    return {
+        'results':results, 
+        'meta_dfs':meta_dfs
+        }
         
 @task
 def eval_on_nli_dataset(nli_dataset, encoder_model, encoder_model_name, batch_size=64):
@@ -107,12 +119,21 @@ def eval_on_nli_dataset(nli_dataset, encoder_model, encoder_model_name, batch_si
     meta_df['y_pred'] = y_pred
     meta_df['y_pred'] = meta_df['y_pred'].apply(int)
 
-    three_class_models = ['roberta-large-mnli', 'facebook/bart-large-mnli']
+    three_class_models = ['roberta-large-mnli', 
+        'facebook/bart-large-mnli', 
+        'facebook/bart-large-mnli-help', 
+        'facebook-bart-large-mnli', 
+        'facebook-bart-large-mnli-help', 
+        'roberta-large-mnli-double-finetuning',
+        'bert-base-uncased-snli-help',
+        'bert-base-uncased-snli',
+        'microsoft/deberta-large-mnli']
 
     if encoder_model_name in three_class_models:
         meta_df['y_pred'] = meta_df['y_pred'].apply(relabel_three_class_predictions)
     
 
+    meta_df['correct'] = (meta_df['y_true']==meta_df['y_pred']).apply(int)
     return meta_df
 
 

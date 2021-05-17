@@ -27,6 +27,11 @@
             "encoder_model": "roberta-large-mnli",
             "embedding_size": 1024
         },
+        "microsoft/deberta-large-mnli": {
+            "tokenizer": "microsoft/deberta-large-mnli", 
+            "encoder_model": "microsoft/deberta-large-mnli",
+            "embedding_size": 1024
+        },
         "roberta-large-mnli-double-finetuning": {
             "tokenizer": "roberta-large-mnli", 
             "encoder_model": "./models/roberta-large-mnli-double_finetuning",

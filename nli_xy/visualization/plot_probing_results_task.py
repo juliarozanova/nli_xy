@@ -29,7 +29,7 @@ def plot_results(processed_results,
 
 		fig.add_trace(go.Scatter(x=results_df.x, y=results_df.y,
 							mode='lines+markers',
-							name='lines+markers'))
+							name=rep_name))
 
 	fig.show()
 
@@ -41,6 +41,8 @@ def isolate_probe_ably_result(processed_results,
 							which_metric='accuracy'):
 
 	results_df = None
+
+	task_results = processed_results[0]
 	if task_results['name']==which_task:
 		for probe_model_type in task_results['probings']:
 			if probe_model_type['model_name']==which_probe_model:

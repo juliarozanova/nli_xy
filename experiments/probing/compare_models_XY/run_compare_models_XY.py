@@ -12,6 +12,7 @@ os.chdir(nli_xy_root)
 sys.path.append('.')
 from nli_xy.encoding import parse_encode_config, encode_from_config
 from nli_xy.probing import parse_probe_config, prep_task_data_for_probeably
+from nli_xy.visualization import plot_all_probing_results, plot_results
 
 PROBE_ABLY_DIR = '/data/Code/PhD/Probe-Ably/'
 sys.path.append(PROBE_ABLY_DIR)
@@ -37,6 +38,9 @@ train_results = train_probing_task.run(prepared_data, probe_config)
 processed_results = process_metric_task.run(
 	train_results, probe_config
 )
+
+#%%
+plot_all_probing_results.run(processed_results, encode_configs, processed_results)
 #%%
 import pickle
 SAVE_DIR = Path(encode_configs["shared_config"]["save_dir"])
