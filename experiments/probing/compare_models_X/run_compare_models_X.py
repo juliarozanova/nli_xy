@@ -1,6 +1,5 @@
 #%%
-%load_ext autoreload
-%autoreload 2
+import os
 import sys
 import pandas as pd
 import numpy as np
@@ -10,6 +9,8 @@ from prefect import Flow
 #%%
 nli_xy_root = Path(__file__).parent.parent.parent.parent
 os.chdir(nli_xy_root)
+sys.path.append('.')
+
 from nli_xy.encoding import parse_encode_config, encode_from_config
 from nli_xy.probing import parse_probe_config, prep_task_data_for_probeably
 

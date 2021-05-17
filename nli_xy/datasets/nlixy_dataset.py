@@ -13,6 +13,7 @@ class NLI_XY_Dataset():
         self.rep_config = rep_config
         self.max_length = self.rep_config['max_length']
         self.tokenizer=tokenizer
+        self.cls_token_id = self.tokenizer.cls_token_id
         # todo: calculate a new max_len for a given dataset?
         self.device = rep_config['device']
 
@@ -88,10 +89,10 @@ class NLI_XY_Dataset():
                 'example_index': index,
                 'input_ids': row['input_ids'].to(self.device), 
                 'attention_mask': row['attention_mask'].to(self.device),
+                'CLS_token_index': row['input_ids'].tolist().index(self.cls_token_id), 
                 'X_range': meta_row['X_range'],
                 'Y_range': meta_row['Y_range'],
                 'context': meta_row['context'],
                 'insertion_pair': meta_row['insertion_pair'],
                 'insertion_rel': meta_row['insertion_rel']
                 }
-

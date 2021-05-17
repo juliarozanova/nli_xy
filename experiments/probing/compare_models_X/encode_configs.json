@@ -32,12 +32,12 @@
             "encoder_model": "./models/roberta-large-mnli-double_finetuning",
             "embedding_size": 1024
         },
-        "bert-based-uncased-snli": {
+        "bert-base-uncased-snli": {
             "tokenizer": "textattack/bert-base-uncased-snli", 
             "encoder_model": "textattack/bert-base-uncased-snli",
             "embedding_size": 768
         },
-        "bert-based-uncased-snli-help": {
+        "bert-base-uncased-snli-help": {
             "tokenizer": "textattack/bert-base-uncased-snli", 
             "encoder_model": "./models/bert-base-uncased-snli-help",
             "embedding_size": 768

@@ -17,8 +17,7 @@ def parse_encode_config(ENCODE_CONFIG_FILE: str):
         rep_config = loaded_config["representations"][rep_name]
         full_rep_config =  shared_config
         full_rep_config.update(rep_config)
-        full_rep_config = verify_types(full_rep_config)
-        parsed_config["representations"][rep_name] = full_rep_config.copy()
+        parsed_config["representations"][rep_name] = verify_types(full_rep_config.copy())
 
     return parsed_config
 

@@ -3,6 +3,7 @@ from torch.utils.data import DataLoader
 from pathlib import Path
 from tqdm import tqdm
 import torch
+import pdb
 
 def get_rep_paths(rep_name, SAVE_DIR):
     REP_SAVE_DIR = Path(SAVE_DIR).joinpath('processed_data',rep_name)
@@ -62,6 +63,8 @@ def get_target_reps(hidden, X_ranges, Y_ranges, config, device):
 
 
     if config['include_cls']:
+
+        # assuming first token is [cls]/<s>
         CLS = get_phrase_tokens(layers, [torch.zeros(batch_size, dtype=torch.int64),
                                          torch.ones(batch_size, dtype=torch.int64)])
         CLS = summarise_phrase(CLS, strategy='mean')
