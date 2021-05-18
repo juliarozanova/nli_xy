@@ -5,10 +5,12 @@ import sys
 from prefect import Flow
 import torch
 from pathlib import Path
+import pandas as pd
 
 #%%
 nli_xy_root = Path(__file__).parent.parent.parent.parent
 os.chdir(nli_xy_root)
+sys.path.append('.')
 from nli_xy.encoding import parse_encode_config
 from nli_xy.analysis import eval_on_nli_datasets
 
@@ -28,27 +30,81 @@ results = eval_outputs['results']
 # 	meta_df = meta_dfs[rep_name]
 
 #%%
-rep_name = 'roberta-large-mnli'
+rep_name = 'roberta-large-mnli-double-finetuning'
 meta_df = meta_dfs[rep_name]
 #%%
-import plotly.express as px
-meta_df = meta_df.loc[meta_df.context_monotonicity=='up']
-meta_df = meta_df.loc[meta_df.insertion_rel=='leq']
-import seaborn as sns
-heat_df = meta_df.pivot_table(values='correct', index='context', 
+#%%
+
+#%%
+# grouped = meta_df.groupby(by=['context'])
+# heat = grouped.correct.apply(lambda x: pd.Series(x.values)).unstack()
+# heat = heat.dropna(axis=1)
+
+#%%
+# new_grouped = meta_df.groupby(by=['context', 'insertion_pair'])
+# df =new_grouped.correct.apply(lambda x: pd.Series(x.values)).unstack()
+up_df = meta_df.loc[meta_df.context_monotonicity=='up']
+up_leq_df = up_df.loc[meta_df.insertion_rel=='leq']
+heat = up_leq_df.pivot_table(values='correct', index='context', 
 								columns='insertion_pair')
-#%%
+
 import plotly.graph_objects as go
+fig = go.Figure()
+fig.add_trace(go.Heatmap(
+    z=heat,
+	colorscale='Viridis',
+    colorbar=dict(
+        titleside="top",
+        tickmode="array",
+        tickvals=[0, 1],
+        ticktext=["Incorrect", "Correct"],
+        ticks="outside"
+    )
+))
+
+fig.update_layout(
+    title=f"Decomposed Error Heatmap ({rep_name})",
+	title_x=0.5,
+	legend=dict(
+		orientation='h',
+		
+	),
+    xaxis_title="Insertion Pair (Forward Inclusion)",
+    yaxis_title="Context (Upward Monotone)",
+)
+fig.show()
 
 #%%
-grouped = meta_df.groupby(by=['context'])
-heat = grouped.correct.apply(lambda x: pd.Series(x.values)).unstack()
-heat = heat.dropna(axis=1)
+down_df = meta_df.loc[meta_df.context_monotonicity=='down']
+down_geq_df = down_df.loc[meta_df.insertion_rel=='geq']
+heat = down_geq_df.pivot_table(values='correct', index='context', 
+								columns='insertion_pair')
+fig = go.Figure()
+fig.add_trace(go.Heatmap(
+    z=heat,
+	colorscale='Viridis',
+    colorbar=dict(
+        titleside="top",
+        tickmode="array",
+        tickvals=[0, 1],
+        ticktext=["Incorrect", "Correct"],
+        ticks="outside"
+    )
+))
 
-#%%
-new_grouped = meta_df.groupby(by=['context', 'insertion_pair'])
-df =new_grouped.correct.apply(lambda x: pd.Series(x.values)).unstack()
+fig.update_layout(
+    title=f"Decomposed Error Heatmap ({rep_name})",
+	title_x=0.5,
+	legend=dict(
+		orientation='h',
+		
+	),
+    xaxis_title="Insertion Pair (Reverse Inclusion)",
+    yaxis_title="Context (Downward Monotone)",
+)
+fig.show()
 
-df.pivot_table(index='context', columns='insertion_pair')
 #%%
 from nli_xy.visualization import plot_all_probing_results
+
+# %%

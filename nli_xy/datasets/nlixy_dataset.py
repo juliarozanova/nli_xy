@@ -6,6 +6,14 @@ import torch
 import pdb
 import os
 
+def get_classifier_token_id(tokenizer):
+    if tokenizer.name_or_path in ['facebook/bart-large-mnli']:
+        return tokenizer.eos_token_id
+    else:
+        return tokenizer.cls_token_id
+    
+
+
 class NLI_XY_Dataset():
     def __init__(self, rep_config, tokenizer):
         self.input_df = None
@@ -13,7 +21,7 @@ class NLI_XY_Dataset():
         self.rep_config = rep_config
         self.max_length = self.rep_config['max_length']
         self.tokenizer=tokenizer
-        self.cls_token_id = self.tokenizer.cls_token_id
+        self.classifier_token_id = get_classifier_token_id(self.tokenizer)
         # todo: calculate a new max_len for a given dataset?
         self.device = rep_config['device']
 
@@ -89,7 +97,7 @@ class NLI_XY_Dataset():
                 'example_index': index,
                 'input_ids': row['input_ids'].to(self.device), 
                 'attention_mask': row['attention_mask'].to(self.device),
-                'CLS_token_index': row['input_ids'].tolist().index(self.cls_token_id), 
+                'CLS_token_index': row['input_ids'].tolist().index(self.classifier_token_id), 
                 'X_range': meta_row['X_range'],
                 'Y_range': meta_row['Y_range'],
                 'context': meta_row['context'],

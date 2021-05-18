@@ -65,6 +65,7 @@ def eval_on_nli_datasets(encode_configs, EVAL_SETS_DIR=None, from_nli_xy_dataset
             EVAL_SETS_DIR = Path(EVAL_SETS_DIR)
             eval_set_filenames = os.listdir(EVAL_SETS_DIR)
             results['index'] = eval_set_filenames
+            meta_dfs[rep_name] = {}
 
             for eval_set_filename in eval_set_filenames:
                 eval_set_name = eval_set_filename.strip('.tsv')
@@ -95,8 +96,11 @@ def eval_on_nli_datasets(encode_configs, EVAL_SETS_DIR=None, from_nli_xy_dataset
 
 
     with open(RESULTS_FILEPATH, 'w+') as results_file:
-        results_df = pd.DataFrame(results)
-        results_file.write(results_df.to_csv(sep='\t', index='index'))
+        try:
+            results_df = pd.DataFrame(results)
+            results_file.write(results_df.to_csv(sep='\t', index='index'))
+        except:
+            pass
 
     return {
         'results':results, 

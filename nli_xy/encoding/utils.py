@@ -21,7 +21,7 @@ def get_rep_paths(rep_name, SAVE_DIR):
     return REP_SAVE_DIR, REP_SAVE_FILEPATHS, LABELS_SAVE_FILEPATHS, \
             META_DF_SAVE_FILEPATHS
 
-def get_target_reps(hidden, X_ranges, Y_ranges, config, device):
+def get_target_reps(hidden, X_ranges, Y_ranges, CLS_token_indices, config, device):
     '''
     Args
     ____ 
@@ -64,9 +64,9 @@ def get_target_reps(hidden, X_ranges, Y_ranges, config, device):
 
     if config['include_cls']:
 
-        # assuming first token is [cls]/<s>
-        CLS = get_phrase_tokens(layers, [torch.zeros(batch_size, dtype=torch.int64),
-                                         torch.ones(batch_size, dtype=torch.int64)])
+        
+        CLS = get_phrase_tokens(layers, [CLS_token_indices,
+                                         CLS_token_indices + torch.ones(batch_size, dtype=torch.int64)])
         CLS = summarise_phrase(CLS, strategy='mean')
         reps_list = [CLS] + reps_list
 

@@ -36,31 +36,8 @@ all_data_encodings = encode_from_config.run(encode_configs)
 prepared_data = prep_data_for_probeably.run(all_data_encodings, 
 											encode_configs)
 
-#%%
-train_results = train_probing_task.run(prepared_data, probe_config)
-#%%
-import pickle
-SAVE_DIR = Path(encode_configs["shared_config"]["save_dir"])
-RESULTS_DIR = SAVE_DIR.joinpath('results')
-results_filepath = RESULTS_DIR.joinpath('results.pickle')
-try:
-	with open(results_filepath, 'rb') as results_file:
-		processed_results = pickle.load(results_file)
-except FileNotFoundError:
-	processed_results = process_metric_task.run(
-		train_results, probe_config
-		)
-# processed_results = process_metric_task.run(
-# 	train_results, probe_config
-# )
-#%%
-probe_model = probe_config['probing_models']['0']['probing_model_name']
-plot_results(processed_results, encode_configs, 
-		which_probe_model=probe_model,
-		which_complexity_control='norm',	
-		which_task='insertion_rel')
-#%%
-with open(results_filepath, 'wb+') as results_file:
-	pickle.dump(processed_results, results_file)
+# %%
+rep_name = 'roberta-large-mnli'
 
+reps = all_data_encodings[rep_name]['test']['representations']
 # %%

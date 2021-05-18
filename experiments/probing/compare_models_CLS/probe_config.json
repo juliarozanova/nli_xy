@@ -6,13 +6,13 @@
             "probing_model_name":"probe_ably.core.models.linear.LinearModel",
             "batch_size":64,
             "epochs":20,
-            "number_of_models": 50
+            "number_of_models": 50 
          },
          "1":{
             "probing_model_name":"probe_ably.core.models.mlp.MLPModel",
             "batch_size":64,
             "epochs":20,
-            "number_of_models": 50
+            "number_of_models": 50 
          }
 	  }
 }

@@ -1,8 +1,9 @@
 {
     "shared_config": {
+        "data_dir": "./data/nli_xy_small/all/",
         "save_dir": "./experiments/nli/eval_on_challenge_sets/",
         "task_label": "nli",
-        "batch_size": 64,
+        "batch_size": 32,
         "device": "cuda"
     }, 
     "representations": {
@@ -14,6 +15,11 @@
         "roberta-large-mnli": {
             "tokenizer": "roberta-large-mnli", 
             "encoder_model": "roberta-large-mnli",
+            "embedding_size": 2048
+        },
+        "microsoft/deberta-large-mnli": {
+            "tokenizer": "microsoft/deberta-large-mnli", 
+            "encoder_model": "microsoft/deberta-large-mnli",
             "embedding_size": 2048
         },
         "roberta-large-mnli-double-finetuning": {

@@ -1,5 +1,6 @@
 from prefect import task
 from pathlib import Path
+import pandas as pd
 import torch
 from nli_xy.encoding import parse_encode_config, build_split_datasets, \
 	encode_split_datasets, load_tokenizer, load_encoder_model
@@ -55,15 +56,15 @@ def encode_from_config(encode_configs, save_encoded=True):
                 (representation name): {
                     "train": {
                         "representations": (torch.Tensor, on cpu)
-                        "labels": (torch.Tensor, on cpu)
+                        "meta_df": (DataFrame)
                     }
                     "dev": {
                         "representations": (torch.Tensor, on cpu)
-                        "labels": (torch.Tensor, on cpu)
+                        "meta_df": (DataFrame)
                         }
                     "test": {
                         "representations": (torch.Tensor, on cpu)
-                        "labels": (torch.Tensor, on cpu)
+                        "meta_df": (DataFrame)
                     }
                 }
                 ...
@@ -98,28 +99,23 @@ def encode_from_config(encode_configs, save_encoded=True):
 
     return all_data_encodings
 
-def load_encoded_data(REP_SAVE_DIR, task_label=None):
+def load_encoded_data(REP_SAVE_DIR):
 
     encoded_data = {}
     for split in ['train', 'dev', 'test']:
         encoded_data[split] = {}
-        SPLIT_SAVE_DIR = REP_SAVE_DIR.joinpath(f"{split}")
 
+        SPLIT_SAVE_DIR = REP_SAVE_DIR.joinpath(f"{split}")
         REP_SAVE_FILEPATH = SPLIT_SAVE_DIR.joinpath('representations.pt')
-        LABELS_SAVE_FILEPATH = SPLIT_SAVE_DIR.joinpath('labels.pt')
         META_DF_SAVE_FILEPATH = SPLIT_SAVE_DIR.joinpath('meta.tsv')
 
         encoded_data[split]['representations'] = torch.load(REP_SAVE_FILEPATH)
+        split_meta = pd.read_csv(META_DF_SAVE_FILEPATH, sep='\t') 
 
-        if not task_label:
-            try:
-                encoded_data[split]['labels'] = torch.load(LABELS_SAVE_FILEPATH)
-            except FileNotFoundError:
-                raise FileNotFoundError('No labels specified! Specify a column of the meta_df.')
-        else:
-            split_meta = pd.read_csv(META_DF_SAVE_FILEPATH, sep='\t') 
-            split_labels = torch.tensor(split_meta[task_label].numpy()).flatten()
-            encoded_data[split]['labels'] = split_labels
+            #split_labels = torch.tensor(split_meta[task_label].numpy()).flatten()
+            #encoded_data[split]['labels'] = split_labels
+
+        encoded_data[split]["meta_df"] = split_meta
 
     return encoded_data
 
@@ -130,11 +126,25 @@ def save_encoded_data(encoded_data, REP_SAVE_DIR, split_datasets):
         SPLIT_SAVE_DIR.mkdir(parents=True, exist_ok=True)
 
         REP_SAVE_FILEPATH = SPLIT_SAVE_DIR.joinpath('representations.pt')
-        LABELS_SAVE_FILEPATH = SPLIT_SAVE_DIR.joinpath('labels.pt')
         META_DF_SAVE_FILEPATH = SPLIT_SAVE_DIR.joinpath('meta.tsv')
-        torch.save(encoded_data[split]['representations'], REP_SAVE_FILEPATH)
-        torch.save(encoded_data[split]['labels'], LABELS_SAVE_FILEPATH)
 
+        torch.save(encoded_data[split]['representations'], REP_SAVE_FILEPATH)
         split_meta = split_datasets[split].meta_df
+
+        split_meta['composite'] = split_meta.apply(create_composite_label, axis=1)
+
         with open(META_DF_SAVE_FILEPATH, 'w+') as meta_file:
             meta_file.write(split_meta.to_csv(sep='\t'))
+
+def create_composite_label(row):
+    pair = row['context_monotonicity'], row['insertion_rel']
+    mapping = {
+        ('up', 'leq'): 0,
+        ('down', 'geq'): 1,
+        ('up', 'geq'): 2,
+        ('down','leq'): 3,
+        ('up', 'none'):4,
+        ('down', 'none'):5
+    }
+
+    return mapping[pair]

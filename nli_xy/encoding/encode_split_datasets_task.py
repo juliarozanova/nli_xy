@@ -61,6 +61,7 @@ def encode_dataset(dataset, encoder_model, config, device, write_to_file=False):
             target_reps = get_target_reps(hidden,
                                             inputs['X_range'],
                                             inputs['Y_range'], 
+                                            inputs['CLS_token_index'],
                                             config, 
                                             device)
 
