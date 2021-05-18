@@ -58,7 +58,7 @@ def plot_results(processed_results,
 								col=cols[metric])
 
 	fig.update_layout(
-		title="Lexical Relation Probing Results",
+		title="Context Montonicity Probing Results",
 		title_x=0.5,
 		title_y=1,
 		title_font_size=25,
