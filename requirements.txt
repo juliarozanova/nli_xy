@@ -1,1 +1,5 @@
 python>=3.8
+numpy
+pandas
+sklearn
+umap-learn

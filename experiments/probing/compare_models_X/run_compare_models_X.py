@@ -12,9 +12,10 @@ os.chdir(nli_xy_root)
 sys.path.append('.')
 
 from nli_xy.encoding import parse_encode_config, encode_from_config
-from nli_xy.probing import parse_probe_config, prep_task_data_for_probeably
+from nli_xy.probing import parse_probe_config, prep_data_for_probeably
+from nli_xy.visualization import plot_results
 
-PROBE_ABLY_DIR = '/data/Code/PhD/Probe-Ably/'
+PROBE_ABLY_DIR = '/home/julia/Code/PhD/Probe-Ably/'
 sys.path.append(PROBE_ABLY_DIR)
 DATA_DIR = './data/nlixy_small/'
 ENCODE_CONFIG_FILE = './experiments/probing/compare_models_X/encode_configs.json'
@@ -29,13 +30,14 @@ process_metric_task = ProcessMetricTask()
 #%%
 #with Flow("Compare_Models") as flow:
 encode_configs = parse_encode_config.run(ENCODE_CONFIG_FILE)
+probe_config = parse_probe_config.run(PROBE_CONFIG_FILE)
+
 all_data_encodings = encode_from_config.run(encode_configs)
 
-#%%
-prepared_data = prep_task_data_for_probeably.run(all_data_encodings, 
-											task_name=encode_configs["shared_config"]["task_label"])
-probe_config = parse_probe_config.run(PROBE_CONFIG_FILE)
+prepared_data = prep_data_for_probeably.run(all_data_encodings, 
+											encode_configs)
 train_results = train_probing_task.run(prepared_data, probe_config)
+#%%
 processed_results = process_metric_task.run(
 	train_results, probe_config
 )
@@ -47,3 +49,12 @@ results_filepath = RESULTS_DIR.joinpath('results.pickle')
 
 with open(results_filepath, 'wb+') as results_file:
 	pickle.dump(processed_results, results_file)
+
+# %%
+probe_model = probe_config['probing_models']['0']['probing_model_name']
+plot_results(processed_results, encode_configs, 
+		which_probe_model=probe_model,
+		which_complexity_control='norm',	
+		which_task='context_monotonicity')
+
+# %%

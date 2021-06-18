@@ -21,6 +21,7 @@ eval_outputs = eval_on_nli_datasets.run(encode_configs, from_nli_xy_datasets=Tru
 
 # %%
 # Error Breakdowns
+
 meta_dfs = eval_outputs['meta_dfs']
 results = eval_outputs['results']
 
@@ -30,19 +31,10 @@ results = eval_outputs['results']
 # 	meta_df = meta_dfs[rep_name]
 
 #%%
-rep_name = 'roberta-large-mnli-double-finetuning'
+rep_name = 'bert-base-uncased-snli'
 meta_df = meta_dfs[rep_name]
-#%%
-#%%
+#%% #%%
 
-#%%
-# grouped = meta_df.groupby(by=['context'])
-# heat = grouped.correct.apply(lambda x: pd.Series(x.values)).unstack()
-# heat = heat.dropna(axis=1)
-
-#%%
-# new_grouped = meta_df.groupby(by=['context', 'insertion_pair'])
-# df =new_grouped.correct.apply(lambda x: pd.Series(x.values)).unstack()
 up_df = meta_df.loc[meta_df.context_monotonicity=='up']
 up_leq_df = up_df.loc[meta_df.insertion_rel=='leq']
 heat = up_leq_df.pivot_table(values='correct', index='context', 
