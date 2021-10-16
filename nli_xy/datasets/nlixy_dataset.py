@@ -48,12 +48,10 @@ class NLI_XY_Dataset():
             monotonicity = context_row.monotonicity
             context = context_row.context
             source = context_row.source
-            perturbation = context_row.perturbation
 
             meta_sub_df['context_monotonicity'] = monotonicity
             meta_sub_df['context'] = context
             meta_sub_df['source'] = source
-            meta_sub_df['perturbation'] = perturbation
 
             input_dfs_per_context += [input_sub_df]
             meta_dfs_per_context += [meta_sub_df]

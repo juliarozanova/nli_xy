@@ -17,7 +17,7 @@ from nli_xy.encoding import parse_encode_config, encode_from_config, load_encode
 from nli_xy.probing import parse_probe_config, prep_data_for_probeably
 from nli_xy.visualization import plot_all_probing_results, plot_results
 
-PROBE_ABLY_DIR = '/data/Code/PhD/Probe-Ably/'
+PROBE_ABLY_DIR = '/media/julia/Data/Code/PhD/Probe-Ably/'
 sys.path.append(PROBE_ABLY_DIR)
 ENCODE_CONFIG_FILE = './experiments/probing/compare_models_CLS/encode_configs.json'
 PROBE_CONFIG_FILE = './experiments/probing/compare_models_CLS/probe_config.json'

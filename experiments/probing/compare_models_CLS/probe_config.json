@@ -4,15 +4,15 @@
       "probing_models":{"0":
          {
             "probing_model_name":"probe_ably.core.models.linear.LinearModel",
-            "batch_size":64,
-            "epochs":20,
-            "number_of_models": 50 
+            "batch_size":128,
+            "epochs":10,
+            "number_of_models": 1
          },
          "1":{
             "probing_model_name":"probe_ably.core.models.mlp.MLPModel",
-            "batch_size":64,
-            "epochs":20,
-            "number_of_models": 50 
+            "batch_size":128,
+            "epochs":10,
+            "number_of_models": 1
          }
 	  }
 }

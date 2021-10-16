@@ -46,6 +46,7 @@ def encode_dataset(dataset, encoder_model, config, device, write_to_file=False):
 
     encoder_model.eval()
     with torch.no_grad():
+
         for inputs in tqdm(dataloader):
 
             outputs = encoder_model(inputs['input_ids'], inputs['attention_mask'])

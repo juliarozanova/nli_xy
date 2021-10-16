@@ -1,6 +1,4 @@
 #%%
-%load_ext autoreload
-%autoreload true
 import os
 import sys
 import pandas as pd
@@ -19,8 +17,7 @@ from nli_xy.visualization import plot_all_probing_results, plot_results
 
 PROBE_ABLY_DIR = '/media/julia/Data/Code/PhD/Probe-Ably/'
 sys.path.append(PROBE_ABLY_DIR)
-#ENCODE_CONFIG_FILE = './experiments/probing/compare_models_CLS/encode_configs.json'
-ENCODE_CONFIG_FILE = './experiments/probing/compare_models_CLS/perturbed_encode_configs.json'
+ENCODE_CONFIG_FILE = './experiments/probing/compare_models_CLS/encode_configs.json'
 PROBE_CONFIG_FILE = './experiments/probing/compare_models_CLS/probe_config.json'
 
 from probe_ably.core.tasks.probing import TrainProbingTask
@@ -33,6 +30,7 @@ process_metric_task = ProcessMetricTask()
 encode_configs = parse_encode_config.run(ENCODE_CONFIG_FILE)
 probe_config = parse_probe_config.run(PROBE_CONFIG_FILE)
 #%%
+
 all_data_encodings = encode_from_config.run(encode_configs)
 
 #%%

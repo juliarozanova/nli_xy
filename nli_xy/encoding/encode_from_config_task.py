@@ -2,6 +2,7 @@ from prefect import task
 from pathlib import Path
 import pandas as pd
 import torch
+from loguru import logger
 from nli_xy.encoding import parse_encode_config, build_split_datasets, \
 	encode_split_datasets, load_tokenizer, load_encoder_model
 
@@ -75,14 +76,18 @@ def encode_from_config(encode_configs, save_encoded=True):
     SAVE_DIR = Path(encode_configs['shared_config']['save_dir']).joinpath('processed_data')
     SAVE_DIR.mkdir(parents=True, exist_ok=True)
 
+    logger.info('Running encoding task for each model in config:\n')
+
     all_data_encodings = {}
     rep_names = encode_configs['representations'].keys()
 
     for rep_name in rep_names:
+        logger.info(f'Encoding data for {rep_name}: ')
         REP_SAVE_DIR = SAVE_DIR.joinpath(rep_name)
 
         try:
             encoded_data = load_encoded_data(REP_SAVE_DIR)
+            logger.info('Loaded from saved embeddings file. \n')
         except FileNotFoundError:
             encode_config = encode_configs['representations'][rep_name]
             tokenizer = load_tokenizer.run(encode_config)
