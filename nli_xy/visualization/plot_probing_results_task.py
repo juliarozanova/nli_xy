@@ -57,12 +57,19 @@ def plot_results(processed_results,
 								row=1, 
 								col=cols[metric])
 
+	if which_task == 'context_monotonicity':
+		title = "Context Montonicity Probing Results:"
+	elif which_task == 'insertion_rel':
+		title = "XY Insertion Relation Probing Results:"
+	else:
+		title = None
+ 
 	fig.update_layout(
-		title="Context Montonicity Probing Results",
+		title=title,
 		title_x=0.5,
-		title_y=1,
+		title_y=0.98,
 		title_font_size=25,
-		width=1500,
+		width=1300,
 		margin=dict(
 			t=125,
 		),
@@ -82,9 +89,10 @@ def plot_results(processed_results,
 
 	# Update yaxis properties
 	fig.update_yaxes(title_text="Probe Test Accuracy", range=[0,1], row=1, col=1)
-	fig.update_yaxes(title_text="Selectivity", range=[-0.2, 1],row=1, col=2)
+	fig.update_yaxes(title_text="Selectivity", range=[-0.2, 0.5],row=1, col=2)
 
 	fig.show()
+	return fig
 
 def plot_old_results():
 	fig = make_subplots(rows=1, cols=2)

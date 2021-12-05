@@ -27,11 +27,6 @@
             "encoder_model": "roberta-large-mnli",
             "embedding_size": 1024
         },
-        "roberta-large-mnli-double-finetuning": {
-            "tokenizer": "roberta-large-mnli", 
-            "encoder_model": "./models/roberta-large-mnli-double_finetuning",
-            "embedding_size": 1024
-        },
         "bert-base-uncased-snli": {
             "tokenizer": "textattack/bert-base-uncased-snli", 
             "encoder_model": "textattack/bert-base-uncased-snli",

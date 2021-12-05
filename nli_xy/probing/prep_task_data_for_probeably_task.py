@@ -78,6 +78,8 @@ def prepare_model_contents(rep_name, task_label, encode_configs, all_data_encodi
                 "default_control": False
 	}
 
+    #TODO: return RepresentationData Object
+
 def get_num_classes(task_label, encoded_data):
     return len(encoded_data['train']['meta_df'][task_label].unique())
 
