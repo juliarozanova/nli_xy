@@ -30,7 +30,6 @@ def plot_results(processed_results,
 		cols = {
 			'accuracy':1, 
 			'selectivity':2,
-
 		}
 
 		cycle_colors = cycle(colors)
@@ -39,12 +38,16 @@ def plot_results(processed_results,
 			color=next(cycle_colors)
 			symbol=next(cycle_symbols)
 
+			print('rep_name:', rep_name)
+			print('which_task:', which_task)
+			print('which_complexity_control', which_complexity_control)
 			results_df = isolate_probe_ably_result(processed_results,
 													rep_name,
 													which_task,
 													which_probe_model,
 													which_complexity_control,
 													which_metric=metric)
+			print(results_df)
 
 			fig.add_trace(go.Scatter(x=results_df.x, y=results_df.y,
 								mode='lines+markers',

@@ -24,14 +24,10 @@ experiment = ProbingExperiment.from_json(PROBE_CONFIG_FILE)
 
 # Create a list of ProbingTask objects
 # TODO: create Probing Task Objects
-probing_tasks = 
-
+probing_tasks = []
 experiment.load_tasks = probing_tasks
-
-
 
 print(all_data_encodings['roberta-large-mnli']['train'].keys())
 
 # experiment.from_split_datasets(trainloader, devloader, testloader)
-
 # for a set of representations: one task (one label set)

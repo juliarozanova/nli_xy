@@ -44,7 +44,7 @@ def prep_task_data_for_probeably(all_data_encodings, task_label, encode_configs)
 
     prepared_task_data = {
             "task_name": task_label,
-            "models": dict(enumerate([prepare_model_contents(rep_name, 
+            "representations": dict(enumerate([prepare_model_contents(rep_name, 
                                         task_label,
                                         encode_configs, 
                                         all_data_encodings) 
@@ -70,8 +70,8 @@ def prepare_model_contents(rep_name, task_label, encode_configs, all_data_encodi
                                            task_label, 
                                            encode_configs,
                                            control=True) for split in splits]))
-    return {"model_name": rep_name,
-                "model": model_data_dict,
+    return {"representation_name": rep_name,
+                "representation": model_data_dict,
                 "control": control_data_dict,
                 "representation_size": encoded_data["train"]["representations"].shape[1],
                 "number_of_classes": get_num_classes(task_label, encoded_data),

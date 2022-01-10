@@ -4,7 +4,7 @@
 import sys
 from prefect import Flow
 import torch
-from pathlib import Path
+from pathlib import Pathjk
 import pandas as pd
 
 #%%
@@ -21,7 +21,6 @@ eval_outputs = eval_on_nli_datasets.run(encode_configs, from_nli_xy_datasets=Tru
 
 # %%
 # Error Breakdowns
-
 meta_dfs = eval_outputs['meta_dfs']
 results = eval_outputs['results']
 
@@ -31,7 +30,7 @@ results = eval_outputs['results']
 # 	meta_df = meta_dfs[rep_name]
 
 #%%
-rep_name = 'bert-base-uncased-snli'
+rep_name = 'facebook-bart-large-mnli'
 meta_df = meta_dfs[rep_name]
 #%% #%%
 
@@ -59,7 +58,6 @@ fig.update_layout(
 	title_x=0.5,
 	legend=dict(
 		orientation='h',
-		
 	),
     xaxis_title="Insertion Pair (Forward Inclusion)",
     yaxis_title="Context (Upward Monotone)",
@@ -83,7 +81,6 @@ fig.add_trace(go.Heatmap(
         ticks="outside"
     )
 ))
-
 fig.update_layout(
     title=f"Decomposed Error Heatmap ({rep_name})",
 	title_x=0.5,
