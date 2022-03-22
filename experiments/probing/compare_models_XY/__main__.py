@@ -1,109 +1,61 @@
-#%%
-%load_ext autoreload
-%autoreload true
 import os
 import sys
 import pandas as pd
 import numpy as np
 from pathlib import Path
-from prefect import Flow
+import pickle
+from datetime import datetime
+from torch.utils.data import TensorDataset
 
-#%%
-nli_xy_root = Path(__file__).parent.parent.parent.parent
-os.chdir(nli_xy_root)
-sys.path.append('.')
-
-from nli_xy.encoding.load_tokenizer_task import load_tokenizer
-from nli_xy.encoding import parse_encode_config, encode_from_config, load_encoder_model
-from nli_xy.probing import parse_probe_config, prep_data_for_probeably
-from nli_xy.visualization import plot_all_probing_results, plot_results
-
-PROBE_ABLY_DIR = '/media/julia/Data/Code/PhD/Probe-Ably/'
+# PROBE_ABLY_DIR = '/media/julia/Data/Code/PhD/Probe-Ably'
+PROBE_ABLY_DIR = '/home/julia/Code/PhD/Probe-Ably'
 sys.path.append(PROBE_ABLY_DIR)
-
 ENCODE_CONFIG_FILE = './experiments/probing/compare_models_XY/encode_configs.json'
 PROBE_CONFIG_FILE = './experiments/probing/compare_models_XY/probe_config.json'
 
-from probe_ably.probing import TrainProbingTask
-from probe_ably.metrics import ProcessMetricTask
-train_probing_task = TrainProbingTask()
-process_metric_task = ProcessMetricTask()
-probe_config = parse_probe_config.run(PROBE_CONFIG_FILE)
+from nli_xy.encoding import parse_encode_config, encode_from_config, load_encoder_model
+from nli_xy.probing import parse_probe_config, prep_data_for_probeably
+from probe_ably import ProbingExperiment
+
+##  nli_xy create representations
 encode_configs = parse_encode_config.run(ENCODE_CONFIG_FILE)
-#%%
-#with Flow("Compare_Models") as flow:
+all_data_encodings = encode_from_config.run(encode_configs)
+
+# for a single representation
+experiment = ProbingExperiment.from_json(PROBE_CONFIG_FILE)
+
 all_data_encodings = encode_from_config.run(encode_configs)
 prepared_data = prep_data_for_probeably.run(all_data_encodings, 
 											encode_configs)
-	# task['representations'] = [task["representations"][key] for key in task["representations"].keys()]
+tasks = [prepared_data[key] for key in prepared_data.keys()]
+    #%%
+for item in tasks:
+    item["representations"] = [item["representations"][key] for key in item["representations"].keys()]
 
-#%%
-prepared_data = [prepared_data[key] for key in prepared_data.keys()]
-#%%
-for item in prepared_data:
-	item["representations"] = [item["representations"][key] for key in item["representations"].keys()]
+experiment.load_tasks(tasks)
 
-#%%
-train_results = train_probing_task.run(prepared_data, probe_config)
-processed_results = process_metric_task.run(
-	train_results, probe_config
-)
-#%%
-import pickle
+results = experiment.run()
+
 SAVE_DIR = Path(encode_configs["shared_config"]["save_dir"])
 RESULTS_DIR = SAVE_DIR.joinpath('results')
-results_filepath = RESULTS_DIR.joinpath('results.pickle')
 
-# try:
-# 	with open(results_filepath, 'rb') as results_file:
-# 		processed_results = pickle.load(results_file)
-# except FileNotFoundError:
-# 	processed_results = process_metric_task.run(
-# 		train_results, probe_config
-# 		)
+results_filepath = RESULTS_DIR.joinpath(f'results_{datetime.now()}.pickle')
 
-#%%
-# plot_results(processed_results, encode_configs)
-probe_model = probe_config['probing_models'][0]['probing_model_name']
-plot_results(processed_results,
-		encode_configs, 
-		which_probe_model=probe_model,
-		which_complexity_control='norm',	
-		which_task='context_monotonicity')
-
-#%%
 with open(results_filepath, 'wb+') as results_file:
-	pickle.dump(processed_results, results_file)
+	pickle.dump(results, results_file)
 
-#%%
-# from nli_xy.analysis import error_analysis
+for model_index in [0,1]:
+    probe_model = experiment.probing_config['probing_models'][model_index]['probing_model_name']
+    fig_mono = plot_results(processed_results, encode_configs, 
+            which_probe_model=probe_model,
+            which_complexity_control='norm',	
+            which_task='context_monotonicity')
 
-# for rep_name, encode_config in encode_configs["representations"].items():
-# 	print(rep_name)
-# 	meta_df = error_analysis(rep_name, encode_config)
-# #%%
-# rep_name = 'roberta-large-mnli-help'
-# meta_df = error_analysis(rep_name, encode_config)
 
-# #%%
-# meta_df = meta_df.loc[meta_df.context_monotonicity=='down']
-# meta_df = meta_df.loc[meta_df.insertion_rel=='leq']
-# import seaborn as sns
-# heat_df = meta_df.pivot_table(values='correct', index='context', 
-# 								columns='insertion_pair')
-# sns.heatmap(heat_df)
-# #%%
-# grouped = meta_df.groupby(by=['context'])
-# heat = grouped.correct.apply(lambda x: pd.Series(x.values)).unstack()
-# heat = heat.dropna(axis=1)
+    fig_insertions = plot_results(processed_results, encode_configs, 
+            which_probe_model=probe_model,
+            which_complexity_control='norm',	
+            which_task='insertion_rel')
 
-# #%%
-# new_grouped = meta_df.groupby(by=['context', 'insertion_pair'])
-# df =new_grouped.correct.apply(lambda x: pd.Series(x.values)).unstack()
-
-# df.pivot_table(index='context', columns='insertion_pair')
-#%%
-# from nli_xy.visualization import plot_all_probing_results
-
-# #%%
-# flow.run()
+    fig_mono.write_image(str(RESULTS_DIR)+f'/plots/context_mono_probing_{model_index}.png')
+    fig_insertions.write_image(str(RESULTS_DIR)+f'/plots/insertion_rel_probing_{model_index}.png')
