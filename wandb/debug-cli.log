@@ -1,0 +1,45 @@
+2022-03-24 13:07:34 INFO open for scan: /media/julia/Data/Code/PhD/nli_xy/wandb/offline-run-20220324_130611-3nkd3go7/run-3nkd3go7.wandb
+2022-03-24 13:07:35 INFO watching files in: /media/julia/Data/Code/PhD/nli_xy/wandb/offline-run-20220324_130611-3nkd3go7/files
+2022-03-24 13:07:35 INFO run started: 3nkd3go7 with start time 1648127171
+2022-03-24 13:07:35 INFO saving file wandb-metadata.json with policy now
+2022-03-24 13:07:35 INFO saving file wandb-summary.json with policy end
+2022-03-24 13:07:35 INFO handling exit code: 0
+2022-03-24 13:07:35 INFO handling runtime: 7
+2022-03-24 13:07:35 INFO saving file wandb-summary.json with policy end
+2022-03-24 13:07:35 INFO send defer
+2022-03-24 13:07:35 INFO handle sender defer: 0
+2022-03-24 13:07:35 INFO send defer: 1
+2022-03-24 13:07:35 INFO handle sender defer: 1
+2022-03-24 13:07:35 INFO send defer: 2
+2022-03-24 13:07:35 INFO handle sender defer: 2
+2022-03-24 13:07:35 INFO send defer: 3
+2022-03-24 13:07:35 INFO handle sender defer: 3
+2022-03-24 13:07:35 INFO send defer: 4
+2022-03-24 13:07:35 INFO handle sender defer: 4
+2022-03-24 13:07:35 INFO send defer: 5
+2022-03-24 13:07:35 INFO handle sender defer: 5
+2022-03-24 13:07:35 INFO send defer: 6
+2022-03-24 13:07:35 INFO handle sender defer: 6
+2022-03-24 13:07:35 INFO shutting down directory watcher
+2022-03-24 13:07:35 INFO Uploaded file /tmp/tmppc862qxpwandb/36n68ppu-wandb-metadata.json
+2022-03-24 13:07:36 INFO file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/offline-run-20220324_130611-3nkd3go7/files/wandb-summary.json
+2022-03-24 13:07:36 INFO file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/offline-run-20220324_130611-3nkd3go7/files/config.yaml
+2022-03-24 13:07:36 INFO scan: /media/julia/Data/Code/PhD/nli_xy/wandb/offline-run-20220324_130611-3nkd3go7/files
+2022-03-24 13:07:36 INFO scan save: /media/julia/Data/Code/PhD/nli_xy/wandb/offline-run-20220324_130611-3nkd3go7/files/conda-environment.yaml conda-environment.yaml
+2022-03-24 13:07:36 INFO scan save: /media/julia/Data/Code/PhD/nli_xy/wandb/offline-run-20220324_130611-3nkd3go7/files/config.yaml config.yaml
+2022-03-24 13:07:36 INFO scan save: /media/julia/Data/Code/PhD/nli_xy/wandb/offline-run-20220324_130611-3nkd3go7/files/output.log output.log
+2022-03-24 13:07:36 INFO scan save: /media/julia/Data/Code/PhD/nli_xy/wandb/offline-run-20220324_130611-3nkd3go7/files/requirements.txt requirements.txt
+2022-03-24 13:07:36 INFO scan save: /media/julia/Data/Code/PhD/nli_xy/wandb/offline-run-20220324_130611-3nkd3go7/files/wandb-metadata.json wandb-metadata.json
+2022-03-24 13:07:36 INFO scan save: /media/julia/Data/Code/PhD/nli_xy/wandb/offline-run-20220324_130611-3nkd3go7/files/wandb-summary.json wandb-summary.json
+2022-03-24 13:07:36 INFO send defer: 7
+2022-03-24 13:07:36 INFO handle sender defer: 7
+2022-03-24 13:07:36 INFO shutting down file pusher
+2022-03-24 13:07:36 INFO shutting down sender
+2022-03-24 13:07:36 INFO shutting down file pusher
+2022-03-24 13:07:36 INFO waiting for file pusher
+2022-03-24 13:07:36 INFO Uploaded file /media/julia/Data/Code/PhD/nli_xy/wandb/offline-run-20220324_130611-3nkd3go7/files/wandb-summary.json
+2022-03-24 13:07:36 INFO Uploaded file /media/julia/Data/Code/PhD/nli_xy/wandb/offline-run-20220324_130611-3nkd3go7/files/output.log
+2022-03-24 13:07:36 INFO Uploaded file /media/julia/Data/Code/PhD/nli_xy/wandb/offline-run-20220324_130611-3nkd3go7/files/requirements.txt
+2022-03-24 13:07:36 INFO Uploaded file /media/julia/Data/Code/PhD/nli_xy/wandb/offline-run-20220324_130611-3nkd3go7/files/config.yaml
+2022-03-24 13:07:38 INFO Uploaded file /media/julia/Data/Code/PhD/nli_xy/wandb/offline-run-20220324_130611-3nkd3go7/files/conda-environment.yaml
+2022-03-24 13:07:38 INFO send defer: 8

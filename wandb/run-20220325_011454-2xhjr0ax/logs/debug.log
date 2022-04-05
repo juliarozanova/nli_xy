@@ -1,0 +1,48 @@
+2022-03-25 01:14:54,501 INFO    MainThread:20175 [wandb_setup.py:_flush():75] Loading settings from /home/julia/.config/wandb/settings
+2022-03-25 01:14:54,501 INFO    MainThread:20175 [wandb_setup.py:_flush():75] Loading settings from /media/julia/Data/Code/PhD/nli_xy/wandb/settings
+2022-03-25 01:14:54,501 INFO    MainThread:20175 [wandb_setup.py:_flush():75] Loading settings from environment variables: {}
+2022-03-25 01:14:54,501 INFO    MainThread:20175 [wandb_setup.py:_flush():75] Inferring run settings from compute environment: {'program': '<python with no main file>'}
+2022-03-25 01:14:54,502 INFO    MainThread:20175 [wandb_init.py:_log_setup():405] Logging user logs to /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220325_011454-2xhjr0ax/logs/debug.log
+2022-03-25 01:14:54,502 INFO    MainThread:20175 [wandb_init.py:_log_setup():406] Logging internal logs to /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220325_011454-2xhjr0ax/logs/debug-internal.log
+2022-03-25 01:14:54,502 INFO    MainThread:20175 [wandb_init.py:init():439] calling init triggers
+2022-03-25 01:14:54,502 INFO    MainThread:20175 [wandb_init.py:init():443] wandb.init called with sweep_config: {}
+config: {'encoder': 'roberta-large-mnli', 'property': 'context_monotonicity', 'layer': 'last'}
+2022-03-25 01:14:54,502 INFO    MainThread:20175 [wandb_init.py:init():492] starting backend
+2022-03-25 01:14:54,502 INFO    MainThread:20175 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-03-25 01:14:54,507 INFO    MainThread:20175 [backend.py:ensure_launched():219] starting backend process...
+2022-03-25 01:14:54,569 ERROR   MainThread:20175 [wandb_init.py:init():981] error
+Traceback (most recent call last):
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/site-packages/wandb/sdk/wandb_init.py", line 954, in init
+    run = wi.init()
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/site-packages/wandb/sdk/wandb_init.py", line 499, in init
+    backend.ensure_launched()
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/site-packages/wandb/sdk/backend/backend.py", line 222, in ensure_launched
+    self.wandb_process.start()
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/multiprocessing/process.py", line 112, in start
+    self._popen = self._Popen(self)
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/multiprocessing/popen_fork.py", line 20, in __init__
+    self._launch(process_obj)
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/multiprocessing/popen_spawn_posix.py", line 42, in _launch
+    prep_data = spawn.get_preparation_data(process_obj._name)
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/multiprocessing/spawn.py", line 143, in get_preparation_data
+    _check_not_importing_main()
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/multiprocessing/spawn.py", line 136, in _check_not_importing_main
+    is not going to be frozen to produce an executable.''')
+RuntimeError: 
+        An attempt has been made to start a new process before the
+        current process has finished its bootstrapping phase.
+
+        This probably means that you are not using fork to start your
+        child processes and you have forgotten to use the proper idiom
+        in the main module:
+
+            if __name__ == '__main__':
+                freeze_support()
+                ...
+
+        The "freeze_support()" line can be omitted if the program
+        is not going to be frozen to produce an executable.

@@ -1,0 +1,11 @@
+projection saved timestamp: 4
+3 iterations under the minimum accuracy.. stopping the process
+iteration: 9, accuracy: 0.5090311986863711:  45%|████████████████████████████████████████                                                 | 9/20 [00:02<00:03,  3.19it/s]
+Traceback (most recent call last):
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/media/julia/Data/Code/PhD/nli_xy/experiments/interventions/__main__.py", line 85, in <module>
+    json.dump(meta_dic, open(out_dir + '/meta.json', 'w'))
+NameError: name 'json' is not defined

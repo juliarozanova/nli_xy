@@ -1,0 +1,7 @@
+
+projection saved timestamp: 2
+iteration: 3, accuracy: 0.32861091914305457:  20%|████▌                  | 4/20 [00:01<00:05,  3.03it/s]
+3 iterations under the minimum accuracy.. stopping the process
+number of classes: 3
+
+iteration: 6, accuracy: 0.32861091914305457:  30%|██████▉                | 6/20 [00:02<00:04,  2.89it/s]

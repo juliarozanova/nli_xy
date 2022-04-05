@@ -23,7 +23,6 @@ eval_outputs = eval_on_nli_datasets.run(encode_configs, from_nli_xy_datasets=Tru
 # Error Breakdowns
 meta_dfs = eval_outputs['meta_dfs']
 results = eval_outputs['results']
-
 #%%
 # for rep_name, encode_config in encode_configs["representations"].items():
 # 	print(rep_name)
@@ -95,5 +94,3 @@ fig.show()
 
 #%%
 from nli_xy.visualization import plot_all_probing_results
-
-# %%

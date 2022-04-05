@@ -1,0 +1,190 @@
+2022-03-24 19:10:24,556 INFO    MainThread:56752 [wandb_setup.py:_flush():75] Loading settings from /home/julia/.config/wandb/settings
+2022-03-24 19:10:24,556 INFO    MainThread:56752 [wandb_setup.py:_flush():75] Loading settings from /media/julia/Data/Code/PhD/nli_xy/wandb/settings
+2022-03-24 19:10:24,556 INFO    MainThread:56752 [wandb_setup.py:_flush():75] Loading settings from environment variables: {}
+2022-03-24 19:10:24,556 WARNING MainThread:56752 [wandb_setup.py:_flush():75] Could not find program at -m experiments.interventions.__main__
+2022-03-24 19:10:24,556 INFO    MainThread:56752 [wandb_setup.py:_flush():75] Inferring run settings from compute environment: {'program_relpath': None, 'program': '-m experiments.interventions.__main__'}
+2022-03-24 19:10:24,556 INFO    MainThread:56752 [wandb_init.py:_log_setup():405] Logging user logs to /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220324_191024-2p77em8v/logs/debug.log
+2022-03-24 19:10:24,557 INFO    MainThread:56752 [wandb_init.py:_log_setup():406] Logging internal logs to /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220324_191024-2p77em8v/logs/debug-internal.log
+2022-03-24 19:10:24,557 INFO    MainThread:56752 [wandb_init.py:init():439] calling init triggers
+2022-03-24 19:10:24,557 INFO    MainThread:56752 [wandb_init.py:init():443] wandb.init called with sweep_config: {}
+config: {'encoder': 'facebook-bart-large-mnli', 'property': 'context_monotonicity', 'layer': 'last'}
+2022-03-24 19:10:24,557 INFO    MainThread:56752 [wandb_init.py:init():487] wandb.init() called when a run is still active
+2022-03-24 19:10:28,132 INFO    MainThread:56752 [wandb_setup.py:_flush():75] Loading settings from /home/julia/.config/wandb/settings
+2022-03-24 19:10:28,132 INFO    MainThread:56752 [wandb_setup.py:_flush():75] Loading settings from /media/julia/Data/Code/PhD/nli_xy/wandb/settings
+2022-03-24 19:10:28,132 INFO    MainThread:56752 [wandb_setup.py:_flush():75] Loading settings from environment variables: {}
+2022-03-24 19:10:28,132 WARNING MainThread:56752 [wandb_setup.py:_flush():75] Could not find program at -m experiments.interventions.__main__
+2022-03-24 19:10:28,132 INFO    MainThread:56752 [wandb_setup.py:_flush():75] Inferring run settings from compute environment: {'program_relpath': None, 'program': '-m experiments.interventions.__main__'}
+2022-03-24 19:10:28,133 INFO    MainThread:56752 [wandb_init.py:_log_setup():405] Logging user logs to /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220324_191028-175oz8hh/logs/debug.log
+2022-03-24 19:10:28,133 INFO    MainThread:56752 [wandb_init.py:_log_setup():406] Logging internal logs to /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220324_191028-175oz8hh/logs/debug-internal.log
+2022-03-24 19:10:28,133 INFO    MainThread:56752 [wandb_init.py:init():439] calling init triggers
+2022-03-24 19:10:28,133 INFO    MainThread:56752 [wandb_init.py:init():443] wandb.init called with sweep_config: {}
+config: {'encoder': 'facebook-bart-large-mnli-help', 'property': 'context_monotonicity', 'layer': 'last'}
+2022-03-24 19:10:28,133 INFO    MainThread:56752 [wandb_init.py:init():487] wandb.init() called when a run is still active
+2022-03-24 19:10:31,208 INFO    MainThread:56752 [wandb_setup.py:_flush():75] Loading settings from /home/julia/.config/wandb/settings
+2022-03-24 19:10:31,208 INFO    MainThread:56752 [wandb_setup.py:_flush():75] Loading settings from /media/julia/Data/Code/PhD/nli_xy/wandb/settings
+2022-03-24 19:10:31,208 INFO    MainThread:56752 [wandb_setup.py:_flush():75] Loading settings from environment variables: {}
+2022-03-24 19:10:31,208 WARNING MainThread:56752 [wandb_setup.py:_flush():75] Could not find program at -m experiments.interventions.__main__
+2022-03-24 19:10:31,208 INFO    MainThread:56752 [wandb_setup.py:_flush():75] Inferring run settings from compute environment: {'program_relpath': None, 'program': '-m experiments.interventions.__main__'}
+2022-03-24 19:10:31,209 INFO    MainThread:56752 [wandb_init.py:_log_setup():405] Logging user logs to /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220324_191031-59g3zug6/logs/debug.log
+2022-03-24 19:10:31,209 INFO    MainThread:56752 [wandb_init.py:_log_setup():406] Logging internal logs to /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220324_191031-59g3zug6/logs/debug-internal.log
+2022-03-24 19:10:31,209 INFO    MainThread:56752 [wandb_init.py:init():439] calling init triggers
+2022-03-24 19:10:31,209 INFO    MainThread:56752 [wandb_init.py:init():443] wandb.init called with sweep_config: {}
+config: {'encoder': 'bert-base-uncased-snli', 'property': 'context_monotonicity', 'layer': 'last'}
+2022-03-24 19:10:31,210 INFO    MainThread:56752 [wandb_init.py:init():487] wandb.init() called when a run is still active
+2022-03-24 19:10:34,787 INFO    MainThread:56752 [wandb_setup.py:_flush():75] Loading settings from /home/julia/.config/wandb/settings
+2022-03-24 19:10:34,787 INFO    MainThread:56752 [wandb_setup.py:_flush():75] Loading settings from /media/julia/Data/Code/PhD/nli_xy/wandb/settings
+2022-03-24 19:10:34,787 INFO    MainThread:56752 [wandb_setup.py:_flush():75] Loading settings from environment variables: {}
+2022-03-24 19:10:34,787 WARNING MainThread:56752 [wandb_setup.py:_flush():75] Could not find program at -m experiments.interventions.__main__
+2022-03-24 19:10:34,788 INFO    MainThread:56752 [wandb_setup.py:_flush():75] Inferring run settings from compute environment: {'program_relpath': None, 'program': '-m experiments.interventions.__main__'}
+2022-03-24 19:10:34,788 INFO    MainThread:56752 [wandb_init.py:_log_setup():405] Logging user logs to /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220324_191034-3jfv4cek/logs/debug.log
+2022-03-24 19:10:34,788 INFO    MainThread:56752 [wandb_init.py:_log_setup():406] Logging internal logs to /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220324_191034-3jfv4cek/logs/debug-internal.log
+2022-03-24 19:10:34,788 INFO    MainThread:56752 [wandb_init.py:init():439] calling init triggers
+2022-03-24 19:10:34,788 INFO    MainThread:56752 [wandb_init.py:init():443] wandb.init called with sweep_config: {}
+config: {'encoder': 'bert-base-uncased-snli-help', 'property': 'context_monotonicity', 'layer': 'last'}
+2022-03-24 19:10:34,789 INFO    MainThread:56752 [wandb_init.py:init():487] wandb.init() called when a run is still active
+2022-03-24 19:10:35,724 INFO    MainThread:56752 [wandb_run.py:_atexit_cleanup():1702] got exitcode: 0
+2022-03-24 19:10:35,726 INFO    MainThread:56752 [wandb_run.py:_restore():1674] restore
+2022-03-24 19:10:37,840 INFO    MainThread:56752 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 759
+  total_bytes: 759
+}
+
+2022-03-24 19:10:37,958 INFO    MainThread:56752 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 759
+  total_bytes: 759
+}
+
+2022-03-24 19:10:38,153 INFO    MainThread:56752 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 759
+  total_bytes: 759
+}
+
+2022-03-24 19:10:38,662 INFO    MainThread:56752 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 759
+  total_bytes: 16808
+}
+
+2022-03-24 19:10:38,764 INFO    MainThread:56752 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 759
+  total_bytes: 16808
+}
+
+2022-03-24 19:10:38,866 INFO    MainThread:56752 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 16201
+  total_bytes: 16808
+}
+
+2022-03-24 19:10:38,969 INFO    MainThread:56752 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 16201
+  total_bytes: 16808
+}
+
+2022-03-24 19:10:39,073 INFO    MainThread:56752 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 16201
+  total_bytes: 16808
+}
+
+2022-03-24 19:10:39,178 INFO    MainThread:56752 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 16201
+  total_bytes: 16808
+}
+
+2022-03-24 19:10:39,281 INFO    MainThread:56752 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 16201
+  total_bytes: 16808
+}
+
+2022-03-24 19:10:39,383 INFO    MainThread:56752 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 16808
+  total_bytes: 16808
+}
+
+2022-03-24 19:10:39,486 INFO    MainThread:56752 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 16808
+  total_bytes: 16808
+}
+
+2022-03-24 19:10:39,591 INFO    MainThread:56752 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 16808
+  total_bytes: 16808
+}
+
+2022-03-24 19:10:39,695 INFO    MainThread:56752 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 16808
+  total_bytes: 16808
+}
+
+2022-03-24 19:10:39,796 INFO    MainThread:56752 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 16808
+  total_bytes: 16808
+}
+
+2022-03-24 19:10:40,756 INFO    MainThread:56752 [wandb_run.py:_on_finish():1831] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 16808
+  total_bytes: 16808
+}
+
+2022-03-24 19:10:41,242 INFO    MainThread:56752 [wandb_run.py:_on_finish():1831] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 16808
+  total_bytes: 16808
+}
+local_info {
+}
+
+2022-03-24 19:10:42,347 INFO    MainThread:56752 [wandb_run.py:_footer_history_summary_info():2865] rendering history
+2022-03-24 19:10:42,348 INFO    MainThread:56752 [wandb_run.py:_footer_history_summary_info():2894] rendering summary
+2022-03-24 19:10:42,349 INFO    MainThread:56752 [wandb_run.py:_footer_sync_info():2822] logging synced files

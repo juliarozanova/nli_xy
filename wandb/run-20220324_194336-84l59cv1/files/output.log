@@ -1,0 +1,24 @@
+
+iteration: 5, accuracy: 0.5425017277125086:  25%|██████                  | 5/20 [00:01<00:03,  3.75it/s]
+projection saved timestamp: 1
+3 iterations under the minimum accuracy.. stopping the process
+number of classes: 2
+most common class (dev): 0.548030407740152
+iteration: 0, accuracy: 0.8455425017277125:   0%|                                | 0/20 [00:00<?, ?it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 0 < 5; dropping {'dev_acc': 0.8455425017277125}.
+iteration: 1, accuracy: 0.6589495507947477:   5%|█▏                      | 1/20 [00:00<00:07,  2.44it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 1 < 5; dropping {'dev_acc': 0.6589495507947477}.
+iteration: 2, accuracy: 0.6510020732550104:  10%|██▍                     | 2/20 [00:01<00:09,  1.84it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 2 < 5; dropping {'dev_acc': 0.6510020732550104}.
+iteration: 3, accuracy: 0.6561852107809261:  15%|███▌                    | 3/20 [00:01<00:11,  1.50it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 3 < 5; dropping {'dev_acc': 0.6561852107809261}.
+iteration: 4, accuracy: 0.6530753282653766:  20%|████▊                   | 4/20 [00:02<00:09,  1.69it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 4 < 5; dropping {'dev_acc': 0.6530753282653766}.
+iteration: 4, accuracy: 0.6530753282653766:  20%|████▊                   | 4/20 [00:03<00:12,  1.30it/s]
+Traceback (most recent call last):
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/media/julia/Data/Code/PhD/nli_xy/experiments/interventions/__main__.py", line 66, in <module>
+    summary_writer=writer)
+  File "/media/julia/Data/Code/PhD/nli_xy/nli_xy/constants/../../../amnesic_probing/amnesic_probing/tasks/utils.py", line 144, in get_projection_matrix
+    summary_writer=summary_writer)
+  File "/media/julia/Data/Code/PhD/nli_xy/nli_xy/constants/../../../amnesic_probing/amnesic_probing/debias/debias.py", line 145, in get_debiasing_projection
+    X_dev_cp = X_dev.dot(P)
+KeyboardInterrupt

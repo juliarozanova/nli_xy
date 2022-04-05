@@ -1,0 +1,26 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+iteration: 19, accuracy: 0.5697865353037767: 100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 20/20 [01:29<00:00,  4.45s/it]
+projection saved timestamp: 20
+using all of the iterations as the final projection
+number of classes: 3
+most common class (dev): 0.4051724137931034

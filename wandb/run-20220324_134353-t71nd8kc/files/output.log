@@ -1,0 +1,10 @@
+
+
+
+
+
+
+iteration: 6, accuracy: 0.5034554250172771:  30%|██████████████████████████▋                                                              | 6/20 [00:20<00:48,  3.47s/it]
+
+iteration: 10, accuracy: 0.5003455425017277:  50%|███████████████████████████████████████████▌                                           | 10/20 [00:24<00:24,  2.46s/it]
+3 iterations under the minimum accuracy.. stopping the process

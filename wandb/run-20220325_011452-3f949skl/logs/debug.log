@@ -1,0 +1,42 @@
+2022-03-25 01:14:52,700 INFO    MainThread:20126 [wandb_setup.py:_flush():75] Loading settings from /home/julia/.config/wandb/settings
+2022-03-25 01:14:52,700 INFO    MainThread:20126 [wandb_setup.py:_flush():75] Loading settings from /media/julia/Data/Code/PhD/nli_xy/wandb/settings
+2022-03-25 01:14:52,700 INFO    MainThread:20126 [wandb_setup.py:_flush():75] Loading settings from environment variables: {}
+2022-03-25 01:14:52,700 WARNING MainThread:20126 [wandb_setup.py:_flush():75] Could not find program at -m experiments.interventions.run_debias
+2022-03-25 01:14:52,700 INFO    MainThread:20126 [wandb_setup.py:_flush():75] Inferring run settings from compute environment: {'program_relpath': None, 'program': '-m experiments.interventions.run_debias'}
+2022-03-25 01:14:52,700 INFO    MainThread:20126 [wandb_init.py:_log_setup():405] Logging user logs to /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220325_011452-3f949skl/logs/debug.log
+2022-03-25 01:14:52,700 INFO    MainThread:20126 [wandb_init.py:_log_setup():406] Logging internal logs to /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220325_011452-3f949skl/logs/debug-internal.log
+2022-03-25 01:14:52,700 INFO    MainThread:20126 [wandb_init.py:init():439] calling init triggers
+2022-03-25 01:14:52,701 INFO    MainThread:20126 [wandb_init.py:init():443] wandb.init called with sweep_config: {}
+config: {'encoder': 'roberta-large-mnli', 'property': 'context_monotonicity', 'layer': 'last'}
+2022-03-25 01:14:52,701 INFO    MainThread:20126 [wandb_init.py:init():492] starting backend
+2022-03-25 01:14:52,701 INFO    MainThread:20126 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-03-25 01:14:52,706 INFO    MainThread:20126 [backend.py:ensure_launched():219] starting backend process...
+2022-03-25 01:14:52,712 INFO    MainThread:20126 [backend.py:ensure_launched():225] started backend process with pid: 20175
+2022-03-25 01:14:52,713 INFO    MainThread:20126 [wandb_init.py:init():501] backend started and connected
+2022-03-25 01:14:52,716 INFO    MainThread:20126 [wandb_init.py:init():565] updated telemetry
+2022-03-25 01:14:52,731 INFO    MainThread:20126 [wandb_init.py:init():596] communicating run to backend with 30 second timeout
+2022-03-25 01:15:22,732 INFO    MainThread:20126 [interface_shared.py:_communicate_run():322] couldn't get run from backend
+2022-03-25 01:15:22,733 ERROR   MainThread:20126 [wandb_init.py:init():601] backend process timed out
+2022-03-25 01:15:22,733 ERROR   MainThread:20126 [wandb_init.py:init():610] encountered error: Error communicating with wandb process
+try: wandb.init(settings=wandb.Settings(start_method='fork'))
+or:  wandb.init(settings=wandb.Settings(start_method='thread'))
+For more info see: https://docs.wandb.ai/library/init#init-start-error
+2022-03-25 01:15:22,754 ERROR   MainThread:20126 [wandb_init.py:init():981] error
+Traceback (most recent call last):
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/site-packages/wandb/sdk/wandb_init.py", line 954, in init
+    run = wi.init()
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/site-packages/wandb/sdk/wandb_init.py", line 614, in init
+    backend.cleanup()
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/site-packages/wandb/sdk/backend/backend.py", line 248, in cleanup
+    self.interface.join()
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/site-packages/wandb/sdk/interface/interface_shared.py", line 467, in join
+    super().join()
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/site-packages/wandb/sdk/interface/interface.py", line 630, in join
+    _ = self._communicate_shutdown()
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/site-packages/wandb/sdk/interface/interface_shared.py", line 464, in _communicate_shutdown
+    _ = self._communicate(record)
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/site-packages/wandb/sdk/interface/interface_shared.py", line 222, in _communicate
+    return self._communicate_async(rec, local=local).get(timeout=timeout)
+  File "/home/julia/miniconda3/envs/nlp37/lib/python3.7/site-packages/wandb/sdk/interface/interface_shared.py", line 227, in _communicate_async
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown

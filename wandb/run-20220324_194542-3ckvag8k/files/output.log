@@ -1,0 +1,19 @@
+
+
+
+iteration: 14, accuracy: 0.5438838977194195:  70%|███████████████▍      | 14/20 [00:05<00:02,  2.51it/s]
+
+iteration: 19, accuracy: 0.5069108500345543: 100%|██████████████████████| 20/20 [00:07<00:00,  2.83it/s]
+number of classes: 2
+most common class (dev): 0.548030407740152
+iteration: 0, accuracy: 0.8455425017277125:   0%|                                | 0/20 [00:00<?, ?it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 0 < 19; dropping {'dev_acc': 0.8455425017277125}.
+iteration: 1, accuracy: 0.6589495507947477:   5%|█▏                      | 1/20 [00:00<00:06,  2.78it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 1 < 19; dropping {'dev_acc': 0.6589495507947477}.
+iteration: 2, accuracy: 0.6510020732550104:  10%|██▍                     | 2/20 [00:00<00:08,  2.20it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 2 < 19; dropping {'dev_acc': 0.6510020732550104}.
+iteration: 3, accuracy: 0.6561852107809261:  15%|███▌                    | 3/20 [00:01<00:09,  1.80it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 3 < 19; dropping {'dev_acc': 0.6561852107809261}.
+iteration: 4, accuracy: 0.6530753282653766:  20%|████▊                   | 4/20 [00:02<00:08,  1.85it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 4 < 19; dropping {'dev_acc': 0.6530753282653766}.
+iteration: 5, accuracy: 0.625086385625432:  25%|██████▎                  | 5/20 [00:02<00:08,  1.87it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 5 < 19; dropping {'dev_acc': 0.625086385625432}.
+iteration: 6, accuracy: 0.6472011057360055:  30%|███████▏                | 6/20 [00:03<00:07,  1.96it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 6 < 19; dropping {'dev_acc': 0.6472011057360055}.
+iteration: 7, accuracy: 0.6530753282653766:  35%|████████▍               | 7/20 [00:03<00:06,  2.05it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 7 < 19; dropping {'dev_acc': 0.6530753282653766}.
+iteration: 8, accuracy: 0.6606772633033863:  40%|█████████▌              | 8/20 [00:04<00:05,  2.09it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 8 < 19; dropping {'dev_acc': 0.6606772633033863}.
+iteration: 9, accuracy: 0.6710435383552177:  45%|██████████▊             | 9/20 [00:04<00:05,  2.11it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 9 < 19; dropping {'dev_acc': 0.6710435383552177}.
+iteration: 10, accuracy: 0.6195577055977886:  50%|███████████           | 10/20 [00:04<00:04,  2.15it/s][34m[1mwandb[39m[22m: [33mWARNING[39m Step must only increase in log calls.  Step 10 < 19; dropping {'dev_acc': 0.6195577055977886}.
