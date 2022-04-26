@@ -1,0 +1,7 @@
+
+iteration: 3, accuracy: 0.6863711001642037:   4%|████▍                                                                                                                | 3/80 [00:01<00:46,  1.65it/s]
+
+iteration: 9, accuracy: 0.5266830870279147:  11%|█████████████▏                                                                                                       | 9/80 [00:04<00:33,  2.11it/s]
+3 iterations under the minimum accuracy.. stopping the process
+number of classes: 2
+most common class (dev): 0.5812807881773399

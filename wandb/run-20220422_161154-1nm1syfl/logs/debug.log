@@ -1,0 +1,168 @@
+2022-04-22 16:11:54,548 INFO    MainThread:8984 [wandb_setup.py:_flush():75] Loading settings from /home/julia/.config/wandb/settings
+2022-04-22 16:11:54,548 INFO    MainThread:8984 [wandb_setup.py:_flush():75] Loading settings from /media/julia/Data/Code/PhD/nli_xy/wandb/settings
+2022-04-22 16:11:54,548 INFO    MainThread:8984 [wandb_setup.py:_flush():75] Loading settings from environment variables: {}
+2022-04-22 16:11:54,548 WARNING MainThread:8984 [wandb_setup.py:_flush():75] Could not find program at -m experiments.interventions.__main__
+2022-04-22 16:11:54,548 INFO    MainThread:8984 [wandb_setup.py:_flush():75] Inferring run settings from compute environment: {'program_relpath': None, 'program': '-m experiments.interventions.__main__'}
+2022-04-22 16:11:54,548 INFO    MainThread:8984 [wandb_init.py:_log_setup():438] Logging user logs to /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_161154-1nm1syfl/logs/debug.log
+2022-04-22 16:11:54,548 INFO    MainThread:8984 [wandb_init.py:_log_setup():439] Logging internal logs to /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_161154-1nm1syfl/logs/debug-internal.log
+2022-04-22 16:11:54,548 INFO    MainThread:8984 [wandb_init.py:init():472] calling init triggers
+2022-04-22 16:11:54,548 INFO    MainThread:8984 [wandb_init.py:init():475] wandb.init called with sweep_config: {}
+config: {'encoder': 'roberta-large-mnli', 'property': 'insertion_rel', 'layer': 'last'}
+2022-04-22 16:11:54,548 INFO    MainThread:8984 [wandb_init.py:init():525] starting backend
+2022-04-22 16:11:54,548 INFO    MainThread:8984 [backend.py:_multiprocessing_setup():99] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-04-22 16:11:54,567 INFO    MainThread:8984 [backend.py:ensure_launched():219] starting backend process...
+2022-04-22 16:11:54,571 INFO    MainThread:8984 [backend.py:ensure_launched():224] started backend process with pid: 9027
+2022-04-22 16:11:54,572 INFO    MainThread:8984 [wandb_init.py:init():534] backend started and connected
+2022-04-22 16:11:54,575 INFO    MainThread:8984 [wandb_init.py:init():598] updated telemetry
+2022-04-22 16:11:54,615 INFO    MainThread:8984 [wandb_init.py:init():629] communicating run to backend with 30 second timeout
+2022-04-22 16:11:55,325 INFO    MainThread:8984 [wandb_run.py:_on_init():1922] communicating current version
+2022-04-22 16:11:55,431 INFO    MainThread:8984 [wandb_run.py:_on_init():1926] got version response upgrade_message: "wandb version 0.12.15 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2022-04-22 16:11:55,432 INFO    MainThread:8984 [wandb_init.py:init():660] starting run threads in backend
+2022-04-22 16:12:00,437 INFO    MainThread:8984 [wandb_run.py:_console_start():1896] atexit reg
+2022-04-22 16:12:00,438 INFO    MainThread:8984 [wandb_run.py:_redirect():1769] redirect: SettingsConsole.REDIRECT
+2022-04-22 16:12:00,438 INFO    MainThread:8984 [wandb_run.py:_redirect():1774] Redirecting console.
+2022-04-22 16:12:00,439 INFO    MainThread:8984 [wandb_run.py:_redirect():1830] Redirects installed.
+2022-04-22 16:12:00,439 INFO    MainThread:8984 [wandb_init.py:init():685] run started, returning control to user process
+2022-04-22 16:13:09,978 INFO    MainThread:8984 [wandb_setup.py:_flush():75] Loading settings from /home/julia/.config/wandb/settings
+2022-04-22 16:13:09,978 INFO    MainThread:8984 [wandb_setup.py:_flush():75] Loading settings from /media/julia/Data/Code/PhD/nli_xy/wandb/settings
+2022-04-22 16:13:09,978 INFO    MainThread:8984 [wandb_setup.py:_flush():75] Loading settings from environment variables: {}
+2022-04-22 16:13:09,978 WARNING MainThread:8984 [wandb_setup.py:_flush():75] Could not find program at -m experiments.interventions.__main__
+2022-04-22 16:13:09,979 INFO    MainThread:8984 [wandb_setup.py:_flush():75] Inferring run settings from compute environment: {'program_relpath': None, 'program': '-m experiments.interventions.__main__'}
+2022-04-22 16:13:09,979 INFO    MainThread:8984 [wandb_init.py:_log_setup():438] Logging user logs to /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_161309-ptbf5r52/logs/debug.log
+2022-04-22 16:13:09,979 INFO    MainThread:8984 [wandb_init.py:_log_setup():439] Logging internal logs to /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_161309-ptbf5r52/logs/debug-internal.log
+2022-04-22 16:13:09,979 INFO    MainThread:8984 [wandb_init.py:init():472] calling init triggers
+2022-04-22 16:13:09,979 INFO    MainThread:8984 [wandb_init.py:init():475] wandb.init called with sweep_config: {}
+config: {'encoder': 'roberta-large-mnli-help', 'property': 'insertion_rel', 'layer': 'last'}
+2022-04-22 16:13:09,979 INFO    MainThread:8984 [wandb_init.py:init():491] re-initializing run, found existing run on stack: 1nm1syfl
+2022-04-22 16:13:09,979 INFO    MainThread:8984 [wandb_run.py:_finish():1684] finishing run juliarozanova/amnesic_insertion_rel_CLS/1nm1syfl
+2022-04-22 16:13:09,979 INFO    MainThread:8984 [wandb_run.py:_atexit_cleanup():1865] got exitcode: 0
+2022-04-22 16:13:09,980 INFO    MainThread:8984 [wandb_run.py:_restore():1837] restore
+2022-04-22 16:13:12,355 INFO    MainThread:8984 [wandb_run.py:_on_finish():1995] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 748
+  total_bytes: 748
+}
+
+2022-04-22 16:13:12,466 INFO    MainThread:8984 [wandb_run.py:_on_finish():1995] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 748
+  total_bytes: 748
+}
+
+2022-04-22 16:13:12,692 INFO    MainThread:8984 [wandb_run.py:_on_finish():1995] got exit ret: file_counts {
+  wandb_count: 1
+}
+pusher_stats {
+  uploaded_bytes: 748
+  total_bytes: 748
+}
+
+2022-04-22 16:13:13,429 INFO    MainThread:8984 [wandb_run.py:_on_finish():1995] got exit ret: file_counts {
+  wandb_count: 5
+}
+pusher_stats {
+  uploaded_bytes: 748
+  total_bytes: 8308
+}
+
+2022-04-22 16:13:13,533 INFO    MainThread:8984 [wandb_run.py:_on_finish():1995] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 748
+  total_bytes: 8462
+}
+
+2022-04-22 16:13:13,637 INFO    MainThread:8984 [wandb_run.py:_on_finish():1995] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 7856
+  total_bytes: 8462
+}
+
+2022-04-22 16:13:13,742 INFO    MainThread:8984 [wandb_run.py:_on_finish():1995] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 7856
+  total_bytes: 8462
+}
+
+2022-04-22 16:13:13,847 INFO    MainThread:8984 [wandb_run.py:_on_finish():1995] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 7856
+  total_bytes: 8462
+}
+
+2022-04-22 16:13:13,956 INFO    MainThread:8984 [wandb_run.py:_on_finish():1995] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 8462
+  total_bytes: 8462
+}
+
+2022-04-22 16:13:14,061 INFO    MainThread:8984 [wandb_run.py:_on_finish():1995] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 8462
+  total_bytes: 8462
+}
+
+2022-04-22 16:13:14,166 INFO    MainThread:8984 [wandb_run.py:_on_finish():1995] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 8462
+  total_bytes: 8462
+}
+
+2022-04-22 16:13:14,271 INFO    MainThread:8984 [wandb_run.py:_on_finish():1995] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 8462
+  total_bytes: 8462
+}
+
+2022-04-22 16:13:14,376 INFO    MainThread:8984 [wandb_run.py:_on_finish():1995] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 8462
+  total_bytes: 8462
+}
+
+2022-04-22 16:13:14,558 INFO    MainThread:8984 [wandb_run.py:_on_finish():1995] got exit ret: file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 8462
+  total_bytes: 8462
+}
+
+2022-04-22 16:13:15,107 INFO    MainThread:8984 [wandb_run.py:_on_finish():1995] got exit ret: done: true
+exit_result {
+}
+file_counts {
+  wandb_count: 6
+}
+pusher_stats {
+  uploaded_bytes: 8462
+  total_bytes: 8462
+}
+local_info {
+}
+
+2022-04-22 16:13:16,335 INFO    MainThread:8984 [wandb_run.py:_footer_history_summary_info():3087] rendering history
+2022-04-22 16:13:16,337 INFO    MainThread:8984 [wandb_run.py:_footer_history_summary_info():3116] rendering summary
+2022-04-22 16:13:16,340 INFO    MainThread:8984 [wandb_run.py:_footer_sync_info():3044] logging synced files

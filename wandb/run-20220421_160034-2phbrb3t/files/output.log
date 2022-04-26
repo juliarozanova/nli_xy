@@ -1,0 +1,7 @@
+
+iteration: 2, accuracy: 0.8160919540229885:   4%|████▍                                                                                                                | 3/80 [00:01<00:37,  2.04it/s]
+projection saved timestamp: 5
+
+iteration: 9, accuracy: 0.5164203612479474:  11%|█████████████▏                                                                                                       | 9/80 [00:03<00:25,  2.83it/s]
+number of classes: 2
+most common class (dev): 0.5812807881773399

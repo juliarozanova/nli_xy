@@ -1,0 +1,23 @@
+{
+    "os": "Linux-5.13.0-40-generic-x86_64-with-glibc2.31",
+    "python": "3.9.7",
+    "heartbeatAt": "2022-04-22T12:01:38.356683",
+    "startedAt": "2022-04-22T12:01:30.632714",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 2070 SUPER",
+    "gpu_count": 1,
+    "cpu_count": 12,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "-m experiments.interventions.__main__",
+    "git": {
+        "remote": "https://github.com/juliarozanova/nli_xy.git",
+        "commit": "e407991604a46fa81b77b43db93b0dfde23f50a5"
+    },
+    "email": "juliarozanova@gmail.com",
+    "root": "/media/julia/Data/Code/PhD/nli_xy",
+    "host": "GLaDOS",
+    "username": "julia",
+    "executable": "/home/julia/miniconda3/envs/nlp39/bin/python"
+}

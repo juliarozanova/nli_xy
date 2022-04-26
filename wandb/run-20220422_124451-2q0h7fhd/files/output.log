@@ -1,0 +1,5 @@
+
+projection saved timestamp: 2
+iteration: 3, accuracy: 0.4051724137931034:   5%|█████▊                                                                                                               | 4/80 [00:01<00:23,  3.20it/s]
+
+iteration: 6, accuracy: 0.4051724137931034:   8%|████████▊                                                                                                            | 6/80 [00:01<00:22,  3.31it/s]

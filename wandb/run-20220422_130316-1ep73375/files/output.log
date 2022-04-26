@@ -1,0 +1,8 @@
+
+
+
+iteration: 15, accuracy: 0.6416256157635468:  19%|█████████████████████▌                                                                                             | 15/80 [00:05<00:23,  2.73it/s]
+
+
+iteration: 23, accuracy: 0.5615763546798029:  29%|█████████████████████████████████                                                                                  | 23/80 [00:08<00:20,  2.77it/s]
+3 iterations under the minimum accuracy.. stopping the process

@@ -1,0 +1,9 @@
+{
+    "python.pythonPath": "/home/julia/miniconda3/envs/nlp/bin/python",
+    "jupyter.jupyterServerType": "local",
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}

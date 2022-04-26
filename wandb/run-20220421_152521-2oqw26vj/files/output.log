@@ -1,0 +1,42 @@
+
+
+
+
+
+
+
+
+
+iteration: 28, accuracy: 0.4133825944170772:  56%|████████████████████████████████████████████████████████████████▍                                                  | 28/50 [00:17<00:13,  1.61it/s]
+
+iteration: 31, accuracy: 0.4351395730706076:  62%|███████████████████████████████████████████████████████████████████████▎                                           | 31/50 [00:19<00:12,  1.54it/s]
+
+iteration: 35, accuracy: 0.34441707717569786:  70%|███████████████████████████████████████████████████████████████████████████████▊                                  | 35/50 [00:20<00:08,  1.69it/s]
+Traceback (most recent call last):
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/media/julia/Data/Code/PhD/nli_xy/experiments/interventions/__main__.py", line 34, in <module>
+    x_train = torch.load(TRAIN_DATA_PATH.joinpath('representations.pt')).numpy()
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'experiments/probing/compare_models_CLS/processed_data/roberta-large-mnli-double-finetuning/train/representations.pt'
+Traceback (most recent call last):
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/media/julia/Data/Code/PhD/nli_xy/experiments/interventions/__main__.py", line 34, in <module>
+    x_train = torch.load(TRAIN_DATA_PATH.joinpath('representations.pt')).numpy()
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/site-packages/torch/serialization.py", line 594, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/site-packages/torch/serialization.py", line 230, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/site-packages/torch/serialization.py", line 211, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'experiments/probing/compare_models_CLS/processed_data/roberta-large-mnli-double-finetuning/train/representations.pt'

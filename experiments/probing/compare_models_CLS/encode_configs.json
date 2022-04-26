@@ -22,6 +22,11 @@
             "encoder_model": "./models/roberta-large-mnli-help",
             "embedding_size": 1024
         }, 
+        "roberta-large-mnli-double-finetuning": {
+            "tokenizer": "roberta-large-mnli", 
+            "encoder_model": "./models/roberta-large-mnli-double_finetuning",
+            "embedding_size": 1024
+        }, 
         "roberta-large-mnli": {
             "tokenizer": "roberta-large-mnli", 
             "encoder_model": "roberta-large-mnli",

@@ -1,0 +1,2 @@
+	roberta-large-mnli-help	index	roberta-large-mnli	microsoft/deberta-large-mnli	roberta-large-mnli-double-finetuning	bert-base-uncased-snli	bert-base-uncased-snli-help	facebook-bart-large-mnli	facebook-bart-large-mnli-help
+0	0.8076672529476907	nli_xy	0.5896358543417367	0.6123379584391896	0.7934010813627776	0.49081493062341214	0.4482118428766856	0.605563155494756	0.7942153605628298

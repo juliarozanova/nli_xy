@@ -15,7 +15,6 @@ from nli_xy.analysis.utils import accuracy_from_meta_df
 
 @task 
 def eval_on_nli_datasets(encode_configs, EVAL_SETS_DIR=None, from_nli_xy_datasets=False):
-
     if not EVAL_SETS_DIR and not from_nli_xy_datasets:
         raise ValueError('Must include either directory path of tsv eval dataset files \
                         or a NLI_XY_Dataset object!')

@@ -1,0 +1,196 @@
+2022-04-22 12:49:14,521 INFO    MainThread:77288 [internal.py:wandb_internal():92] W&B internal server running at pid: 77288, started at: 2022-04-22 12:49:14.521369
+2022-04-22 12:49:14,523 INFO    WriterThread:77288 [datastore.py:open_for_write():77] open: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/run-6s0zt7ai.wandb
+2022-04-22 12:49:14,524 DEBUG   SenderThread:77288 [sender.py:send():235] send: header
+2022-04-22 12:49:14,524 DEBUG   SenderThread:77288 [sender.py:send():235] send: run
+2022-04-22 12:49:14,743 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: check_version
+2022-04-22 12:49:14,786 INFO    SenderThread:77288 [dir_watcher.py:__init__():169] watching files in: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files
+2022-04-22 12:49:14,787 INFO    SenderThread:77288 [sender.py:_start_run_threads():812] run started: 6s0zt7ai with start time 1650628154
+2022-04-22 12:49:14,787 DEBUG   SenderThread:77288 [sender.py:send():235] send: summary
+2022-04-22 12:49:14,787 INFO    SenderThread:77288 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:49:14,787 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: check_version
+2022-04-22 12:49:14,853 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: run_start
+2022-04-22 12:49:14,858 DEBUG   HandlerThread:77288 [meta.py:__init__():37] meta init
+2022-04-22 12:49:14,858 DEBUG   HandlerThread:77288 [meta.py:__init__():51] meta init done
+2022-04-22 12:49:14,858 DEBUG   HandlerThread:77288 [meta.py:probe():211] probe
+2022-04-22 12:49:14,868 DEBUG   HandlerThread:77288 [meta.py:_setup_git():201] setup git
+2022-04-22 12:49:14,877 DEBUG   HandlerThread:77288 [meta.py:_setup_git():208] setup git done
+2022-04-22 12:49:14,877 DEBUG   HandlerThread:77288 [meta.py:_save_pip():55] save pip
+2022-04-22 12:49:14,878 DEBUG   HandlerThread:77288 [meta.py:_save_pip():69] save pip done
+2022-04-22 12:49:14,878 DEBUG   HandlerThread:77288 [meta.py:_save_conda():76] save conda
+2022-04-22 12:49:15,788 INFO    Thread-7  :77288 [dir_watcher.py:_on_file_created():217] file/dir created: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/requirements.txt
+2022-04-22 12:49:15,788 INFO    Thread-7  :77288 [dir_watcher.py:_on_file_created():217] file/dir created: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/conda-environment.yaml
+2022-04-22 12:49:15,789 INFO    Thread-7  :77288 [dir_watcher.py:_on_file_created():217] file/dir created: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/wandb-summary.json
+2022-04-22 12:49:19,302 DEBUG   HandlerThread:77288 [meta.py:_save_conda():86] save conda done
+2022-04-22 12:49:19,302 DEBUG   HandlerThread:77288 [meta.py:probe():249] probe done
+2022-04-22 12:49:19,339 DEBUG   SenderThread:77288 [sender.py:send():235] send: files
+2022-04-22 12:49:19,339 INFO    SenderThread:77288 [sender.py:_save_file():947] saving file wandb-metadata.json with policy now
+2022-04-22 12:49:19,342 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-22 12:49:19,342 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: stop_status
+2022-04-22 12:49:19,446 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:49:19,490 DEBUG   SenderThread:77288 [sender.py:send():235] send: telemetry
+2022-04-22 12:49:19,791 INFO    Thread-7  :77288 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/conda-environment.yaml
+2022-04-22 12:49:19,791 INFO    Thread-7  :77288 [dir_watcher.py:_on_file_created():217] file/dir created: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/wandb-metadata.json
+2022-04-22 12:49:19,791 INFO    Thread-7  :77288 [dir_watcher.py:_on_file_created():217] file/dir created: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/output.log
+2022-04-22 12:49:19,864 INFO    Thread-11 :77288 [upload_job.py:push():137] Uploaded file /tmp/tmp4fxj6jwiwandb/j2un15lj-wandb-metadata.json
+2022-04-22 12:49:19,919 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:49:19,920 DEBUG   SenderThread:77288 [sender.py:send():235] send: history
+2022-04-22 12:49:19,920 DEBUG   SenderThread:77288 [sender.py:send():235] send: summary
+2022-04-22 12:49:19,922 INFO    SenderThread:77288 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:49:20,338 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:49:20,339 DEBUG   SenderThread:77288 [sender.py:send():235] send: history
+2022-04-22 12:49:20,339 DEBUG   SenderThread:77288 [sender.py:send():235] send: summary
+2022-04-22 12:49:20,340 INFO    SenderThread:77288 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:49:20,750 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:49:20,750 DEBUG   SenderThread:77288 [sender.py:send():235] send: history
+2022-04-22 12:49:20,751 DEBUG   SenderThread:77288 [sender.py:send():235] send: summary
+2022-04-22 12:49:20,751 INFO    SenderThread:77288 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:49:20,791 INFO    Thread-7  :77288 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/wandb-summary.json
+2022-04-22 12:49:21,225 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:49:21,225 DEBUG   SenderThread:77288 [sender.py:send():235] send: history
+2022-04-22 12:49:21,225 DEBUG   SenderThread:77288 [sender.py:send():235] send: summary
+2022-04-22 12:49:21,226 INFO    SenderThread:77288 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:49:21,792 INFO    Thread-7  :77288 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/wandb-summary.json
+2022-04-22 12:49:22,174 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:49:22,174 DEBUG   SenderThread:77288 [sender.py:send():235] send: history
+2022-04-22 12:49:22,174 DEBUG   SenderThread:77288 [sender.py:send():235] send: summary
+2022-04-22 12:49:22,175 INFO    SenderThread:77288 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:49:22,259 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:49:22,259 DEBUG   SenderThread:77288 [sender.py:send():235] send: history
+2022-04-22 12:49:22,260 DEBUG   SenderThread:77288 [sender.py:send():235] send: summary
+2022-04-22 12:49:22,260 INFO    SenderThread:77288 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:49:22,344 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:49:22,344 DEBUG   SenderThread:77288 [sender.py:send():235] send: history
+2022-04-22 12:49:22,345 DEBUG   SenderThread:77288 [sender.py:send():235] send: summary
+2022-04-22 12:49:22,345 INFO    SenderThread:77288 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:49:22,429 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:49:22,430 DEBUG   SenderThread:77288 [sender.py:send():235] send: history
+2022-04-22 12:49:22,430 DEBUG   SenderThread:77288 [sender.py:send():235] send: summary
+2022-04-22 12:49:22,431 INFO    SenderThread:77288 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:49:22,792 INFO    Thread-7  :77288 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/output.log
+2022-04-22 12:49:22,793 INFO    Thread-7  :77288 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/wandb-summary.json
+2022-04-22 12:49:23,006 DEBUG   SenderThread:77288 [sender.py:send():235] send: summary
+2022-04-22 12:49:23,006 INFO    SenderThread:77288 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:49:23,006 DEBUG   SenderThread:77288 [sender.py:send():235] send: summary
+2022-04-22 12:49:23,006 INFO    SenderThread:77288 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:49:23,107 DEBUG   SenderThread:77288 [sender.py:send():235] send: telemetry
+2022-04-22 12:49:23,109 DEBUG   SenderThread:77288 [sender.py:send():235] send: telemetry
+2022-04-22 12:49:23,794 INFO    Thread-7  :77288 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/wandb-summary.json
+2022-04-22 12:49:24,796 INFO    Thread-7  :77288 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/output.log
+2022-04-22 12:49:25,971 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 12:49:25,971 DEBUG   SenderThread:77288 [sender.py:send():235] send: exit
+2022-04-22 12:49:25,971 INFO    SenderThread:77288 [sender.py:send_exit():371] handling exit code: 0
+2022-04-22 12:49:25,971 INFO    SenderThread:77288 [sender.py:send_exit():373] handling runtime: 11
+2022-04-22 12:49:25,973 INFO    SenderThread:77288 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:49:25,973 INFO    SenderThread:77288 [sender.py:send_exit():379] send defer
+2022-04-22 12:49:25,973 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 12:49:25,974 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 12:49:25,974 INFO    HandlerThread:77288 [handler.py:handle_request_defer():164] handle defer: 0
+2022-04-22 12:49:25,974 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: defer
+2022-04-22 12:49:25,974 INFO    SenderThread:77288 [sender.py:send_request_defer():388] handle sender defer: 0
+2022-04-22 12:49:25,974 INFO    SenderThread:77288 [sender.py:transition_state():392] send defer: 1
+2022-04-22 12:49:25,974 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 12:49:25,975 INFO    HandlerThread:77288 [handler.py:handle_request_defer():164] handle defer: 1
+2022-04-22 12:49:26,046 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: defer
+2022-04-22 12:49:26,046 INFO    SenderThread:77288 [sender.py:send_request_defer():388] handle sender defer: 1
+2022-04-22 12:49:26,046 INFO    SenderThread:77288 [sender.py:transition_state():392] send defer: 2
+2022-04-22 12:49:26,046 DEBUG   SenderThread:77288 [sender.py:send():235] send: stats
+2022-04-22 12:49:26,047 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 12:49:26,047 INFO    HandlerThread:77288 [handler.py:handle_request_defer():164] handle defer: 2
+2022-04-22 12:49:26,047 DEBUG   SenderThread:77288 [sender.py:send():235] send: history
+2022-04-22 12:49:26,047 DEBUG   SenderThread:77288 [sender.py:send():235] send: summary
+2022-04-22 12:49:26,047 INFO    SenderThread:77288 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:49:26,047 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: defer
+2022-04-22 12:49:26,047 INFO    SenderThread:77288 [sender.py:send_request_defer():388] handle sender defer: 2
+2022-04-22 12:49:26,047 INFO    SenderThread:77288 [sender.py:transition_state():392] send defer: 3
+2022-04-22 12:49:26,048 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 12:49:26,048 INFO    HandlerThread:77288 [handler.py:handle_request_defer():164] handle defer: 3
+2022-04-22 12:49:26,048 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: defer
+2022-04-22 12:49:26,048 INFO    SenderThread:77288 [sender.py:send_request_defer():388] handle sender defer: 3
+2022-04-22 12:49:26,048 INFO    SenderThread:77288 [sender.py:transition_state():392] send defer: 4
+2022-04-22 12:49:26,048 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 12:49:26,048 INFO    HandlerThread:77288 [handler.py:handle_request_defer():164] handle defer: 4
+2022-04-22 12:49:26,048 DEBUG   SenderThread:77288 [sender.py:send():235] send: summary
+2022-04-22 12:49:26,049 INFO    SenderThread:77288 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:49:26,049 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: defer
+2022-04-22 12:49:26,049 INFO    SenderThread:77288 [sender.py:send_request_defer():388] handle sender defer: 4
+2022-04-22 12:49:26,049 INFO    SenderThread:77288 [sender.py:transition_state():392] send defer: 5
+2022-04-22 12:49:26,049 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 12:49:26,049 INFO    HandlerThread:77288 [handler.py:handle_request_defer():164] handle defer: 5
+2022-04-22 12:49:26,049 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: defer
+2022-04-22 12:49:26,049 INFO    SenderThread:77288 [sender.py:send_request_defer():388] handle sender defer: 5
+2022-04-22 12:49:26,075 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 12:49:26,225 INFO    SenderThread:77288 [sender.py:transition_state():392] send defer: 6
+2022-04-22 12:49:26,225 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 12:49:26,225 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 12:49:26,225 INFO    HandlerThread:77288 [handler.py:handle_request_defer():164] handle defer: 6
+2022-04-22 12:49:26,226 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: defer
+2022-04-22 12:49:26,226 INFO    SenderThread:77288 [sender.py:send_request_defer():388] handle sender defer: 6
+2022-04-22 12:49:26,226 INFO    SenderThread:77288 [dir_watcher.py:finish():283] shutting down directory watcher
+2022-04-22 12:49:26,327 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 12:49:26,798 INFO    SenderThread:77288 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/wandb-summary.json
+2022-04-22 12:49:26,798 INFO    SenderThread:77288 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/output.log
+2022-04-22 12:49:26,798 INFO    SenderThread:77288 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/config.yaml
+2022-04-22 12:49:26,799 INFO    SenderThread:77288 [dir_watcher.py:finish():313] scan: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files
+2022-04-22 12:49:26,799 INFO    SenderThread:77288 [dir_watcher.py:finish():327] scan save: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/conda-environment.yaml conda-environment.yaml
+2022-04-22 12:49:26,799 INFO    SenderThread:77288 [dir_watcher.py:finish():327] scan save: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/config.yaml config.yaml
+2022-04-22 12:49:26,801 INFO    SenderThread:77288 [dir_watcher.py:finish():327] scan save: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/output.log output.log
+2022-04-22 12:49:26,803 INFO    SenderThread:77288 [dir_watcher.py:finish():327] scan save: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/requirements.txt requirements.txt
+2022-04-22 12:49:26,804 INFO    SenderThread:77288 [dir_watcher.py:finish():327] scan save: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/wandb-metadata.json wandb-metadata.json
+2022-04-22 12:49:26,804 INFO    SenderThread:77288 [dir_watcher.py:finish():327] scan save: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/wandb-summary.json wandb-summary.json
+2022-04-22 12:49:26,806 INFO    SenderThread:77288 [sender.py:transition_state():392] send defer: 7
+2022-04-22 12:49:26,808 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 12:49:26,810 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 12:49:26,811 INFO    HandlerThread:77288 [handler.py:handle_request_defer():164] handle defer: 7
+2022-04-22 12:49:26,811 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: defer
+2022-04-22 12:49:26,811 INFO    SenderThread:77288 [sender.py:send_request_defer():388] handle sender defer: 7
+2022-04-22 12:49:26,811 INFO    SenderThread:77288 [file_pusher.py:finish():145] shutting down file pusher
+2022-04-22 12:49:26,912 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 12:49:26,912 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 12:49:27,013 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 12:49:27,013 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 12:49:27,115 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 12:49:27,115 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 12:49:27,217 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 12:49:27,217 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 12:49:27,282 INFO    Thread-13 :77288 [upload_job.py:push():137] Uploaded file /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/config.yaml
+2022-04-22 12:49:27,285 INFO    Thread-12 :77288 [upload_job.py:push():137] Uploaded file /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/conda-environment.yaml
+2022-04-22 12:49:27,294 INFO    Thread-14 :77288 [upload_job.py:push():137] Uploaded file /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/output.log
+2022-04-22 12:49:27,306 INFO    Thread-15 :77288 [upload_job.py:push():137] Uploaded file /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/requirements.txt
+2022-04-22 12:49:27,320 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 12:49:27,321 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 12:49:27,334 INFO    Thread-16 :77288 [upload_job.py:push():137] Uploaded file /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/files/wandb-summary.json
+2022-04-22 12:49:27,424 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 12:49:27,425 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 12:49:27,530 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 12:49:27,530 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 12:49:27,535 INFO    Thread-6  :77288 [sender.py:transition_state():392] send defer: 8
+2022-04-22 12:49:27,537 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 12:49:27,537 INFO    HandlerThread:77288 [handler.py:handle_request_defer():164] handle defer: 8
+2022-04-22 12:49:27,538 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: defer
+2022-04-22 12:49:27,538 INFO    SenderThread:77288 [sender.py:send_request_defer():388] handle sender defer: 8
+2022-04-22 12:49:27,634 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 12:49:28,185 INFO    SenderThread:77288 [sender.py:transition_state():392] send defer: 9
+2022-04-22 12:49:28,185 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 12:49:28,186 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 12:49:28,187 INFO    HandlerThread:77288 [handler.py:handle_request_defer():164] handle defer: 9
+2022-04-22 12:49:28,188 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: defer
+2022-04-22 12:49:28,188 INFO    SenderThread:77288 [sender.py:send_request_defer():388] handle sender defer: 9
+2022-04-22 12:49:28,189 INFO    SenderThread:77288 [sender.py:transition_state():392] send defer: 10
+2022-04-22 12:49:28,191 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: defer
+2022-04-22 12:49:28,192 DEBUG   SenderThread:77288 [sender.py:send():235] send: final
+2022-04-22 12:49:28,192 INFO    HandlerThread:77288 [handler.py:handle_request_defer():164] handle defer: 10
+2022-04-22 12:49:28,192 DEBUG   SenderThread:77288 [sender.py:send():235] send: footer
+2022-04-22 12:49:28,194 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: defer
+2022-04-22 12:49:28,194 INFO    SenderThread:77288 [sender.py:send_request_defer():388] handle sender defer: 10
+2022-04-22 12:49:28,290 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: poll_exit
+2022-04-22 12:49:28,291 DEBUG   SenderThread:77288 [sender.py:send_request():249] send_request: poll_exit
+2022-04-22 12:49:28,292 INFO    SenderThread:77288 [file_pusher.py:join():150] waiting for file pusher
+2022-04-22 12:49:28,996 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: sampled_history
+2022-04-22 12:49:28,997 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: get_summary
+2022-04-22 12:49:28,998 DEBUG   HandlerThread:77288 [handler.py:handle_request():141] handle_request: shutdown
+2022-04-22 12:49:28,998 INFO    HandlerThread:77288 [handler.py:finish():790] shutting down handler
+2022-04-22 12:49:29,191 INFO    WriterThread:77288 [datastore.py:close():281] close: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124914-6s0zt7ai/run-6s0zt7ai.wandb
+2022-04-22 12:49:29,700 INFO    SenderThread:77288 [sender.py:finish():1107] shutting down sender
+2022-04-22 12:49:29,701 INFO    SenderThread:77288 [file_pusher.py:finish():145] shutting down file pusher
+2022-04-22 12:49:29,701 INFO    SenderThread:77288 [file_pusher.py:join():150] waiting for file pusher
+2022-04-22 12:49:29,705 INFO    MainThread:77288 [internal.py:handle_exit():82] Internal process exited

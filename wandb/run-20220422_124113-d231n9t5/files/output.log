@@ -1,0 +1,36 @@
+
+iteration: 3, accuracy: 0.8321018062397373:   5%|█████▊                                                                                                               | 4/80 [00:03<01:09,  1.09it/s]
+Traceback (most recent call last):
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/runpy.py", line 197, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/media/julia/Data/Code/PhD/nli_xy/experiments/interventions/__main__.py", line 75, in <module>
+    P, all_projections, best_projection = get_projection_matrix(num_clfs,
+  File "/media/julia/Data/Code/PhD/nli_xy/nli_xy/constants/../../../amnesic_probing/amnesic_probing/tasks/utils.py", line 139, in get_projection_matrix
+    P, _, _, all_projections, best_projection = get_debiasing_projection(clf, params, num_clfs, dim,
+  File "/media/julia/Data/Code/PhD/nli_xy/nli_xy/constants/../../../amnesic_probing/amnesic_probing/debias/debias.py", line 102, in get_debiasing_projection
+    acc = clf.train_network(X_train_cp, Y_train, X_dev_cp, Y_dev)
+  File "/media/julia/Data/Code/PhD/nli_xy/nli_xy/constants/../../../amnesic_probing/amnesic_probing/debias/classifier.py", line 42, in train_network
+    self.model.fit(X_train, Y_train)
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/site-packages/sklearn/linear_model/_stochastic_gradient.py", line 890, in fit
+    return self._fit(
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/site-packages/sklearn/linear_model/_stochastic_gradient.py", line 684, in _fit
+    self._partial_fit(
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/site-packages/sklearn/linear_model/_stochastic_gradient.py", line 610, in _partial_fit
+    self._fit_multiclass(
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/site-packages/sklearn/linear_model/_stochastic_gradient.py", line 761, in _fit_multiclass
+    result = Parallel(
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/site-packages/joblib/parallel.py", line 968, in __call__
+    n_jobs = self._initialize_backend()
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/site-packages/joblib/parallel.py", line 735, in _initialize_backend
+    n_jobs = self._backend.configure(n_jobs=self.n_jobs, parallel=self,
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/site-packages/joblib/_parallel_backends.py", line 391, in configure
+    n_jobs = self.effective_n_jobs(n_jobs)
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/site-packages/joblib/_parallel_backends.py", line 236, in effective_n_jobs
+    n_jobs = max(cpu_count() + 1 + n_jobs, 1)
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/site-packages/joblib/externals/loky/backend/context.py", line 138, in cpu_count
+    cpu_count_user = _cpu_count_user(cpu_count_mp)
+  File "/home/julia/miniconda3/envs/nlp39/lib/python3.9/site-packages/joblib/externals/loky/backend/context.py", line 190, in _cpu_count_user
+    cfs_period_us = int(fh.read())
+KeyboardInterrupt

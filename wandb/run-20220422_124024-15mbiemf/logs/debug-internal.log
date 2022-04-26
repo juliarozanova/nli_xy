@@ -1,0 +1,180 @@
+2022-04-22 12:40:24,627 INFO    MainThread:72648 [internal.py:wandb_internal():92] W&B internal server running at pid: 72648, started at: 2022-04-22 12:40:24.627511
+2022-04-22 12:40:24,629 INFO    WriterThread:72648 [datastore.py:open_for_write():77] open: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/run-15mbiemf.wandb
+2022-04-22 12:40:24,630 DEBUG   SenderThread:72648 [sender.py:send():235] send: header
+2022-04-22 12:40:24,630 DEBUG   SenderThread:72648 [sender.py:send():235] send: run
+2022-04-22 12:40:24,836 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: check_version
+2022-04-22 12:40:24,882 INFO    SenderThread:72648 [dir_watcher.py:__init__():169] watching files in: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files
+2022-04-22 12:40:24,882 INFO    SenderThread:72648 [sender.py:_start_run_threads():812] run started: 15mbiemf with start time 1650627624
+2022-04-22 12:40:24,882 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:24,883 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:24,883 DEBUG   SenderThread:72648 [sender.py:send_request():249] send_request: check_version
+2022-04-22 12:40:24,946 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: run_start
+2022-04-22 12:40:24,951 DEBUG   HandlerThread:72648 [meta.py:__init__():37] meta init
+2022-04-22 12:40:24,951 DEBUG   HandlerThread:72648 [meta.py:__init__():51] meta init done
+2022-04-22 12:40:24,951 DEBUG   HandlerThread:72648 [meta.py:probe():211] probe
+2022-04-22 12:40:24,960 DEBUG   HandlerThread:72648 [meta.py:_setup_git():201] setup git
+2022-04-22 12:40:24,969 DEBUG   HandlerThread:72648 [meta.py:_setup_git():208] setup git done
+2022-04-22 12:40:24,969 DEBUG   HandlerThread:72648 [meta.py:_save_pip():55] save pip
+2022-04-22 12:40:24,969 DEBUG   HandlerThread:72648 [meta.py:_save_pip():69] save pip done
+2022-04-22 12:40:24,969 DEBUG   HandlerThread:72648 [meta.py:_save_conda():76] save conda
+2022-04-22 12:40:25,888 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_created():217] file/dir created: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/requirements.txt
+2022-04-22 12:40:25,889 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_created():217] file/dir created: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/conda-environment.yaml
+2022-04-22 12:40:25,889 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_created():217] file/dir created: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/wandb-summary.json
+2022-04-22 12:40:30,893 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_created():217] file/dir created: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/output.log
+2022-04-22 12:40:31,401 DEBUG   HandlerThread:72648 [meta.py:_save_conda():86] save conda done
+2022-04-22 12:40:31,401 DEBUG   HandlerThread:72648 [meta.py:probe():249] probe done
+2022-04-22 12:40:31,502 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: stop_status
+2022-04-22 12:40:31,503 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:31,503 DEBUG   SenderThread:72648 [sender.py:send_request():249] send_request: stop_status
+2022-04-22 12:40:31,503 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:31,658 DEBUG   SenderThread:72648 [sender.py:send():235] send: telemetry
+2022-04-22 12:40:31,658 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:31,658 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:31,660 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:31,660 DEBUG   SenderThread:72648 [sender.py:send():235] send: files
+2022-04-22 12:40:31,661 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-metadata.json with policy now
+2022-04-22 12:40:31,814 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:31,814 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:31,814 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:31,815 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:31,894 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/conda-environment.yaml
+2022-04-22 12:40:31,894 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/wandb-summary.json
+2022-04-22 12:40:31,894 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_created():217] file/dir created: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/wandb-metadata.json
+2022-04-22 12:40:32,169 INFO    Thread-11 :72648 [upload_job.py:push():137] Uploaded file /tmp/tmprlgte3b0wandb/3q407u52-wandb-metadata.json
+2022-04-22 12:40:32,415 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:32,415 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:32,415 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:32,416 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:32,894 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/output.log
+2022-04-22 12:40:32,894 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/wandb-summary.json
+2022-04-22 12:40:32,989 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:32,989 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:32,989 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:32,990 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:33,550 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:33,550 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:33,550 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:33,551 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:33,895 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/wandb-summary.json
+2022-04-22 12:40:34,045 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:34,046 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:34,047 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:34,049 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:34,554 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:34,555 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:34,555 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:34,556 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:34,895 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/output.log
+2022-04-22 12:40:34,895 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/wandb-summary.json
+2022-04-22 12:40:35,090 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:35,091 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:35,091 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:35,091 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:35,644 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:35,644 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:35,645 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:35,645 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:35,895 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/wandb-summary.json
+2022-04-22 12:40:36,214 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:36,215 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:36,215 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:36,217 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:36,775 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:36,776 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:36,776 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:36,776 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:36,896 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/output.log
+2022-04-22 12:40:36,896 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/wandb-summary.json
+2022-04-22 12:40:37,374 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:37,375 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:37,375 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:37,376 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:37,896 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/wandb-summary.json
+2022-04-22 12:40:37,931 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:37,932 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:37,932 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:37,933 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:38,482 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:38,485 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:38,485 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:38,485 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:38,897 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/output.log
+2022-04-22 12:40:38,897 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/wandb-summary.json
+2022-04-22 12:40:39,104 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:39,104 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:39,105 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:39,105 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:39,675 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:39,675 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:39,676 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:39,676 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:39,897 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/wandb-summary.json
+2022-04-22 12:40:40,228 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:40,229 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:40,229 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:40,230 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:40,806 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:40,807 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:40,807 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:40,808 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:40,898 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/output.log
+2022-04-22 12:40:40,898 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/wandb-summary.json
+2022-04-22 12:40:41,399 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:41,400 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:41,400 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:41,400 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:41,898 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/wandb-summary.json
+2022-04-22 12:40:41,986 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:41,987 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:41,987 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:41,987 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:42,615 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:42,616 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:42,616 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:42,617 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:42,899 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/output.log
+2022-04-22 12:40:42,899 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/wandb-summary.json
+2022-04-22 12:40:43,239 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:43,239 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:43,239 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:43,240 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:43,899 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/wandb-summary.json
+2022-04-22 12:40:43,927 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:43,927 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:43,927 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:43,928 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:44,530 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:44,530 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:44,530 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:44,531 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:44,900 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/output.log
+2022-04-22 12:40:44,900 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/wandb-summary.json
+2022-04-22 12:40:45,205 DEBUG   HandlerThread:72648 [handler.py:handle_request():141] handle_request: partial_history
+2022-04-22 12:40:45,205 DEBUG   SenderThread:72648 [sender.py:send():235] send: history
+2022-04-22 12:40:45,205 DEBUG   SenderThread:72648 [sender.py:send():235] send: summary
+2022-04-22 12:40:45,206 INFO    SenderThread:72648 [sender.py:_save_file():947] saving file wandb-summary.json with policy end
+2022-04-22 12:40:45,647 WARNING MainThread:72648 [internal.py:wandb_internal():155] Internal process interrupt: 1
+2022-04-22 12:40:45,943 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/wandb-summary.json
+2022-04-22 12:40:46,195 DEBUG   SenderThread:72648 [sender.py:send():235] send: telemetry
+2022-04-22 12:40:46,945 INFO    Thread-7  :72648 [dir_watcher.py:_on_file_modified():230] file/dir modified: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/output.log
+2022-04-22 12:40:47,883 WARNING MainThread:72648 [internal.py:wandb_internal():155] Internal process interrupt: 2
+2022-04-22 12:40:47,884 ERROR   MainThread:72648 [internal.py:wandb_internal():158] Internal process interrupted.
+2022-04-22 12:40:48,519 INFO    WriterThread:72648 [datastore.py:close():281] close: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/run-15mbiemf.wandb
+2022-04-22 12:40:48,519 INFO    SenderThread:72648 [sender.py:finish():1107] shutting down sender
+2022-04-22 12:40:48,520 INFO    SenderThread:72648 [dir_watcher.py:finish():283] shutting down directory watcher
+2022-04-22 12:40:48,520 INFO    HandlerThread:72648 [handler.py:finish():790] shutting down handler
+2022-04-22 12:40:48,949 INFO    SenderThread:72648 [dir_watcher.py:finish():313] scan: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files
+2022-04-22 12:40:48,949 INFO    SenderThread:72648 [dir_watcher.py:finish():327] scan save: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/conda-environment.yaml conda-environment.yaml
+2022-04-22 12:40:48,950 INFO    SenderThread:72648 [dir_watcher.py:finish():327] scan save: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/config.yaml config.yaml
+2022-04-22 12:40:48,951 INFO    SenderThread:72648 [dir_watcher.py:finish():327] scan save: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/output.log output.log
+2022-04-22 12:40:48,954 INFO    SenderThread:72648 [dir_watcher.py:finish():327] scan save: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/requirements.txt requirements.txt
+2022-04-22 12:40:48,956 INFO    SenderThread:72648 [dir_watcher.py:finish():327] scan save: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/wandb-metadata.json wandb-metadata.json
+2022-04-22 12:40:48,956 INFO    SenderThread:72648 [dir_watcher.py:finish():327] scan save: /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/wandb-summary.json wandb-summary.json
+2022-04-22 12:40:48,960 INFO    SenderThread:72648 [file_pusher.py:finish():145] shutting down file pusher
+2022-04-22 12:40:48,961 INFO    SenderThread:72648 [file_pusher.py:join():150] waiting for file pusher
+2022-04-22 12:40:49,633 INFO    Thread-13 :72648 [upload_job.py:push():137] Uploaded file /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/config.yaml
+2022-04-22 12:40:49,634 INFO    Thread-15 :72648 [upload_job.py:push():137] Uploaded file /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/requirements.txt
+2022-04-22 12:40:49,636 INFO    Thread-14 :72648 [upload_job.py:push():137] Uploaded file /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/output.log
+2022-04-22 12:40:49,637 INFO    Thread-16 :72648 [upload_job.py:push():137] Uploaded file /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/wandb-summary.json
+2022-04-22 12:40:49,662 INFO    Thread-12 :72648 [upload_job.py:push():137] Uploaded file /media/julia/Data/Code/PhD/nli_xy/wandb/run-20220422_124024-15mbiemf/files/conda-environment.yaml
+2022-04-22 12:40:50,138 INFO    MainThread:72648 [internal.py:handle_exit():82] Internal process exited

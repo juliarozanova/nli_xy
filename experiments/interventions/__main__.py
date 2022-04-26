@@ -1,119 +1,101 @@
 #%%
-import os
-os.chdir('../')
-
-#%%
-import torch
-import numpy as np
-import pandas as pd
 from pathlib import Path
-import plotly.express as px
-from sklearn.decomposition import PCA
-from transformers import AutoModelForSequenceClassification as Model
+import sys
+from nli_xy.constants import AMNESIC_PATH 
+sys.path.append(AMNESIC_PATH)
 
-model_names = ['roberta-large-mnli', 'roberta-large-mnli-help', 'bert-base-uncased-snli','bert-base-uncased-snli-help']
-
-label_column = 'insertion_rel'
-token_choice = 'CLS'
-classification_type = label_column
-layer = 'last'
-show = True
-flipped = False
-
+import torch
+import pandas as pd
+import numpy as np
+from collections import Counter
+import wandb
+import json
+from torch.utils.tensorboard import SummaryWriter
+from amnesic_probing.tasks.utils import get_projection_matrix
 
 #%%
-def compare_debiased(debiased, model_name):
-    if model_name == 'roberta-large-mnli-help':
-        model_name = './models/roberta-large-mnli-help'
-    if model_name == 'facebook-bart-large-mnli':
-        model_name = 'facebook/bart-large-mnli'
-    if model_name == 'facebook-bart-large-mnli':
-        model_name = './models/facebook-bart-large-mnli-help'
-    if model_name == 'bert-base-uncased-snli':
-        model_name = 'textattack/bert-base-uncased-snli'
-    if model_name == 'bert-base-uncased-snli-help':
-        model_name = './models/bert-base-uncased-snli-help'
+if __name__=='__main__':
+    np.random.seed(0)
+    models = ['roberta-large-mnli', 'roberta-large-mnli-help', 'roberta-large-mnli-double-finetuning', 'facebook-bart-large-mnli', 'facebook-bart-large-mnli-help',  'bert-base-uncased-snli','bert-base-uncased-snli-help']
 
-    nli_clf = Model.from_pretrained(model_name).classifier
-    if 'roberta' in model_name:
-        features = torch.tensor(debiased).view(debiased.shape[0],-1,1024).type(torch.float32)
-    elif 'snli' in model_name:
-        features = torch.tensor(debiased).view(debiased.shape[0],-1,768).type(torch.float32)
+    label_column = 'context_monotonicity'
+    token_choice = 'CLS'
+    classification_type = label_column
+    layer = 'last'
 
-    new_preds=nli_clf(features).detach()
+    flipped=False
 
-    def relabel(three_class_label):
-        if three_class_label == 2:
-            two_class_label = 'entailment'
-        if three_class_label in [0,1]:
-            two_class_label = 'non-entailment'
-        return two_class_label
-        
+    for model in models:
+        out_dir = f'experiments/interventions/results/{label_column}/{token_choice}/{model}/'
+        writer = SummaryWriter(out_dir)
 
-    entailment_dev = dev_meta_df['gold_label']
-    model_predictions_entailment = dev_meta_df['model_predictions'].apply(relabel)
-    dev_meta_df['correct'] = model_predictions_entailment == dev_meta_df['gold_label']
+        TRAIN_DATA_PATH = Path(f'./experiments/probing/compare_models_{token_choice}/processed_data/{model}/test/')
+        DEV_DATA_PATH = Path(f'./experiments/probing/compare_models_{token_choice}/processed_data/{model}/dev/')
+        x_train = torch.load(TRAIN_DATA_PATH.joinpath('representations.pt')).numpy()
+        train_meta_df = pd.read_csv(TRAIN_DATA_PATH.joinpath('meta.tsv'), sep='\t')
+        y_train = train_meta_df[label_column]
 
-    int_new_preds = list(np.argmax(new_preds, axis=1))
-    final_preds = [relabel(x) for x in int_new_preds]
+        x_dev = torch.load(DEV_DATA_PATH.joinpath('representations.pt')).numpy()
+        dev_meta_df = pd.read_csv(DEV_DATA_PATH.joinpath('meta.tsv'), sep='\t')
+        y_dev = dev_meta_df[label_column]
+        if flipped:
+            x_train, y_train, x_dev, y_dev = x_dev, y_dev, x_train, y_train
 
-    from sklearn.metrics import accuracy_score
-    debiased_acc = accuracy_score(entailment_dev, final_preds)
-    #%%
-    original_acc = accuracy_score(entailment_dev, model_predictions_entailment)
-    print(f'''Model: {model_name}, \n Debiased Accuracy: {debiased_acc}, \n
-            Original Accuracy: {original_acc} \n
-            ''')
+        num_clfs = 80
+        n_classes = len(set(y_train))
+        majority = Counter(y_dev).most_common(1)[0][1] / float(len(y_dev))
+        max_iter = 100000
+        print('number of classes:', n_classes)
+        print('most common class (dev):', majority)
 
-    return dev_meta_df
 
-# %%
-for model_name in model_names:
-    out_dir = f'experiments/interventions/results/{label_column}/{token_choice}/{model_name}/'
+        config = dict(
+            encoder=model,
+            property=label_column,
+            layer=layer
+        )
 
-    # TRAIN_DATA_PATH = Path(f'./experiments/probing/compare_models_{token_choice}/processed_data/{model_name}/train/')
-    DEV_DATA_PATH = Path(f'./experiments/probing/compare_models_{token_choice}/processed_data/{model_name}/train/')
-    # x_train = torch.load(TRAIN_DATA_PATH.joinpath('representations.pt')).numpy()
-    # train_meta_df = pd.read_csv(TRAIN_DATA_PATH.joinpath('meta.tsv'), sep='\t')
-    # y_train = train_meta_df[label_column]
+        if flipped:
+            wandb.init(
+                name=f'{model}_{layer}_inlp',
+                project=f"amnesic_{label_column}_{token_choice}_flipped_datasets",
+                tags=["inlp", classification_type],
+                config=config,
+                reinit=True
+            )
+        else:
+            wandb.init(
+                name=f'{model}_{layer}_inlp',
+                project=f"amnesic_{label_column}_{token_choice}",
+                tags=["inlp", classification_type],
+                config=config,
+                reinit=True
+            )
 
-    x_dev = torch.load(DEV_DATA_PATH.joinpath('representations.pt')).numpy()
-    dev_meta_df = pd.read_csv(DEV_DATA_PATH.joinpath('meta.tsv'), sep='\t')
-    y_dev = dev_meta_df[label_column]
+        P, all_projections, best_projection = get_projection_matrix(num_clfs,
+                                                                    x_train, y_train, x_dev, y_dev,
+                                                                    majority_acc=majority, max_iter=max_iter,
+                                                                    summary_writer=writer)
 
-    # if flipped:
-    #     x_train, y_train, x_dev, y_dev = x_dev, y_dev, x_train, y_train
+        for i, projection in enumerate(all_projections):
+            np.save(out_dir + '/P_{}.npy'.format(i), projection)
 
-    P = np.load(Path(out_dir).joinpath('P.npy'))
-    debiased = np.dot(x_dev, P)
+        np.save(out_dir + '/P.npy', best_projection[0])
 
-    # debiased = x_train
-    if show:
-        pca = PCA(n_components=3)
-        projected = pca.fit_transform(debiased)
-        projected = pd.DataFrame(projected, columns=['x', 'y', 'z'])
-        pca = PCA(n_components=3)
-        orig_projected = pca.fit_transform(x_dev)
-        orig_projected = pd.DataFrame(orig_projected, columns=['x', 'y', 'z'])
-        # fig = px.scatter_3d(projected)
-        fig1 = px.scatter_3d(projected, 
-        x=projected.x, 
-        y=projected.y, 
-        z=projected.z, 
-        color=y_dev,
-        title=f'{model_name}',
-        hover_data=projected.columns)
+        removed_directions = int((best_projection[1]) * n_classes)
+            # in case of 2 classes, each inlp iteration we remove a single direction
+        if n_classes == 2:
+            removed_directions /= 2
 
-        fig2 = px.scatter_3d(orig_projected, 
-        x=orig_projected.x, 
-        y=orig_projected.y, 
-        z=orig_projected.z, 
-        color=y_dev,
-        title=f'{model_name}',
-        hover_data=projected.columns)
+        else:  # in regression tasks, each iteration we remove a single dimension
+            removed_directions = int((best_projection[1]))
 
-        fig1.show()
-        fig2.show()
+        meta_dic = {'best_i': best_projection[1],
+                    'n_classes': n_classes,
+                    'majority': majority,
+                    'removed_directions': removed_directions}
 
-    df = compare_debiased(debiased, model_name)
-#%% 
+        wandb.run.summary['best_i'] = best_projection[1]
+        wandb.run.summary['removed_directions'] = removed_directions
+
+        json.dump(meta_dic, open(out_dir + '/meta.json', 'w'))
