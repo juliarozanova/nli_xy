@@ -15,8 +15,8 @@ from amnesic_probing.tasks.utils import get_projection_matrix
 
 #%%
 if __name__=='__main__':
-    np.random.seed(0)
-    models = ['roberta-large-mnli', 'roberta-large-mnli-help', 'roberta-large-mnli-double-finetuning', 'facebook-bart-large-mnli', 'facebook-bart-large-mnli-help',  'bert-base-uncased-snli','bert-base-uncased-snli-help']
+    np.random.seed(1)
+    models = ['roberta-large-mnli', 'roberta-large-mnli-help', 'roberta-large-mnli-double-finetuning', 'bert-base-uncased-snli','bert-base-uncased-snli-help']
 
     label_column = 'context_monotonicity'
     token_choice = 'CLS'
@@ -29,19 +29,26 @@ if __name__=='__main__':
         out_dir = f'experiments/interventions/results/{label_column}/{token_choice}/{model}/'
         writer = SummaryWriter(out_dir)
 
-        TRAIN_DATA_PATH = Path(f'./experiments/probing/compare_models_{token_choice}/processed_data/{model}/test/')
+        TRAIN_DATA_PATH = Path(f'./experiments/probing/compare_models_{token_choice}/processed_data/{model}/train/')
         DEV_DATA_PATH = Path(f'./experiments/probing/compare_models_{token_choice}/processed_data/{model}/dev/')
-        x_train = torch.load(TRAIN_DATA_PATH.joinpath('representations.pt')).numpy()
-        train_meta_df = pd.read_csv(TRAIN_DATA_PATH.joinpath('meta.tsv'), sep='\t')
+        TEST_DATA_PATH = Path(f'./experiments/probing/compare_models_{token_choice}/processed_data/{model}/test/')
+
+        # combine train and dev sets to train amnesic probe
+
+        x_train_a = torch.load(TRAIN_DATA_PATH.joinpath('representations.pt'))
+        x_train_b = torch.load(DEV_DATA_PATH.joinpath('representations.pt'))
+        x_train = torch.vstack([x_train_a, x_train_b]).numpy()
+        train_meta_df_a = pd.read_csv(TRAIN_DATA_PATH.joinpath('meta.tsv'), sep='\t')
+        train_meta_df_b = pd.read_csv(DEV_DATA_PATH.joinpath('meta.tsv'), sep='\t')
+        train_meta_df = pd.concat([train_meta_df_a, train_meta_df_b])
         y_train = train_meta_df[label_column]
 
-        x_dev = torch.load(DEV_DATA_PATH.joinpath('representations.pt')).numpy()
-        dev_meta_df = pd.read_csv(DEV_DATA_PATH.joinpath('meta.tsv'), sep='\t')
+        # use nli_xy test set to 
+        x_dev = torch.load(TEST_DATA_PATH.joinpath('representations.pt')).numpy()
+        dev_meta_df = pd.read_csv(TEST_DATA_PATH.joinpath('meta.tsv'), sep='\t')
         y_dev = dev_meta_df[label_column]
-        if flipped:
-            x_train, y_train, x_dev, y_dev = x_dev, y_dev, x_train, y_train
 
-        num_clfs = 80
+        num_clfs = 100
         n_classes = len(set(y_train))
         majority = Counter(y_dev).most_common(1)[0][1] / float(len(y_dev))
         max_iter = 100000
@@ -55,22 +62,13 @@ if __name__=='__main__':
             layer=layer
         )
 
-        if flipped:
-            wandb.init(
-                name=f'{model}_{layer}_inlp',
-                project=f"amnesic_{label_column}_{token_choice}_flipped_datasets",
-                tags=["inlp", classification_type],
-                config=config,
-                reinit=True
-            )
-        else:
-            wandb.init(
-                name=f'{model}_{layer}_inlp',
-                project=f"amnesic_{label_column}_{token_choice}",
-                tags=["inlp", classification_type],
-                config=config,
-                reinit=True
-            )
+        wandb.init(
+            name=f'{model}_{layer}_inlp',
+            project=f"larger_set_amnesic_{label_column}_{token_choice}",
+            tags=["inlp", classification_type],
+            config=config,
+            reinit=True
+        )
 
         P, all_projections, best_projection = get_projection_matrix(num_clfs,
                                                                     x_train, y_train, x_dev, y_dev,
@@ -99,3 +97,5 @@ if __name__=='__main__':
         wandb.run.summary['removed_directions'] = removed_directions
 
         json.dump(meta_dic, open(out_dir + '/meta.json', 'w'))
+
+# %%

@@ -1,6 +1,6 @@
 {
     "shared_config": {
-        "data_dir": "./data/nli_xy_small/test/",
+        "data_dir": "./data/nli_xy_small/all/",
         "save_dir": "./experiments/nli/eval_on_nli_xy/",
         "task_label": "nli",
         "context_option": "all",
