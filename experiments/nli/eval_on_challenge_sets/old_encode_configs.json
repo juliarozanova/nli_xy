@@ -1,0 +1,51 @@
+{
+    "shared_config": {
+        "data_dir": "./data/nli_xy_small/all/",
+        "save_dir": "./experiments/nli/eval_on_challenge_sets/",
+        "task_label": "nli",
+        "batch_size": 32,
+        "device": "cuda"
+    }, 
+    "representations": {
+        "roberta-large-mnli": {
+            "tokenizer": "roberta-large-mnli", 
+            "encoder_model": "roberta-large-mnli",
+            "embedding_size": 2048
+        },
+        "roberta-large-mnli-help": {
+            "tokenizer": "roberta-large-mnli", 
+            "encoder_model": "./models/roberta-large-mnli-help",
+            "embedding_size": 2048
+        }, 
+        "microsoft/deberta-large-mnli": {
+            "tokenizer": "microsoft/deberta-large-mnli", 
+            "encoder_model": "microsoft/deberta-large-mnli",
+            "embedding_size": 2048
+        },
+        "roberta-large-mnli-double-finetuning": {
+            "tokenizer": "roberta-large-mnli", 
+            "encoder_model": "./models/roberta-large-mnli-double_finetuning",
+            "embedding_size": 2048
+        },
+        "bert-base-uncased-snli": {
+            "tokenizer": "textattack/bert-base-uncased-snli", 
+            "encoder_model": "textattack/bert-base-uncased-snli",
+            "embedding_size": 1536
+        },
+        "bert-base-uncased-snli-help": {
+            "tokenizer": "textattack/bert-base-uncased-snli", 
+            "encoder_model": "./models/bert-base-uncased-snli-help",
+            "embedding_size": 1536
+        },
+        "facebook-bart-large-mnli": {
+            "tokenizer": "facebook/bart-large-mnli", 
+            "encoder_model": "facebook/bart-large-mnli",
+            "embedding_size": 2048
+        },
+        "facebook-bart-large-mnli-help": {
+            "tokenizer": "facebook/bart-large-mnli", 
+            "encoder_model": "./models/facebook-bart-large-mnli-help",
+            "embedding_size": 2048
+        }
+    }
+}

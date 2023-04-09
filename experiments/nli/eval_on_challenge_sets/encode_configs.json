@@ -1,0 +1,18 @@
+{
+    "shared_config": {
+        "data_dir": "./data/nli_xy_small/all/",
+        "save_dir": "./experiments/nli/eval_on_nli_xy/",
+        "task_label": "nli",
+        "context_option": "all",
+        "max_length": 200,
+        "batch_size": 64,
+        "device": "cuda"
+    }, 
+    "representations": {
+        "roberta-large-mnli-double-finetuning": {
+            "tokenizer": "roberta-large-mnli", 
+            "encoder_model": "./models/roberta-large-mnli-double_finetuning",
+            "embedding_size": 2048
+        }
+    }
+}

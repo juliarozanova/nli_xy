@@ -1,0 +1,151 @@
+source	x_grammar	x	y	y_grammar	insertion_rel				
+MoNLI	m	rice	food	m	leq				
+MoNLI	m	cake	food	m	leq				
+MoNLI	m	corn	food	m	leq				
+MoNLI	m	bread	food	m	leq				
+MoNLI	m	rap	music	m	leq				
+MoNLI	m	punk	music	m	leq				
+MoNLI	m	folk	music	m	leq				
+MoNLI	m	rock	music	m	leq				
+MoNLI	m	swing	music	m	leq				
+MoNLI	s	girl	person	s	leq				
+MoNLI	s	woman	person	s	leq				
+MoNLI	s	smith	person	s	leq				
+MoNLI	s	conservative	person	s	leq				
+MoNLI	s	king	person	s	leq				
+MoNLI	s	official	person	s	leq				
+MoNLI	s	adult	person	s	leq				
+MoNLI	s	child	person	s	leq				
+MoNLI	s	uncle	person	s	leq				
+MoNLI	s	hunter	person	s	leq				
+MoNLI	s	plant	tree	s	leq				
+MoNLI	s	ash	tree	s	leq				
+MoNLI	s	pine	tree	s	leq				
+MoNLI	s	oak	tree	s	leq				
+MoNLI	s	man	person	s	leq				
+MoNLI	m	bass	fish	m	leq				
+MoNLI	s	man	adult	s	leq				
+MoNLI	s	gent	man	s	leq				
+MoNLI	s	woman	adult	s	leq				
+MoNLI	s	maid	woman	s	leq				
+MoNLI	s	girlfriend	woman	s	leq				
+MoNLI	s	lass	woman	s	leq				 
+MoNLI	s	wife	woman	s	leq				
+MoNLI	s	mother	woman	s	leq				
+MoNLI	s	gun	woman	s	leq				
+MoNLI	s	mare	horse	s	leq				
+MoNLI	s	computer	machine	s	leq				
+MoNLI	s	PC	machine	s	leq				
+MoNLI	s	dog	hound	s	leq				
+MoNLI	s	hound	dog	s	leq				
+MoNLI	s	dog	animal	s	leq				
+MoNLI	s	house	building	s	leq				
+MoNLI	s	school	building	s	leq				
+MoNLI	s	court	building	s	leq				
+MoNLI	s	pub	building	s	leq				
+MoNLI	s	club	building	s	leq				
+MoNLI	s	hospital	building	s	leq				
+MoNLI	s	library	building	s	leq				
+MoNLI	s	basketball	ball	s	leq				
+MoNLI	s	football	ball	s	leq				
+MoNLI	p	women	people	p	leq				
+MoNLI	p	blocks	things	p	leq				
+MoNLI	p	rats	things	p	leq				
+MoNLI	p	files	things	p	leq				
+MoNLI	p	reports	things	p	leq				
+own	p	apples	fruit	m	leq				
+own	s	apple	fruit	s	leq				
+own	s	strawberry	fruit	s	leq				
+own	p	strawberries	fruit	m	leq				
+own	p	oranges	fruit	m	leq				
+own	p	peaches	fruit	m	leq				
+own	s	peach	fruit	s	leq				
+own	s	watermelon	fruit	s	leq				
+own	p	watermelons	fruit	m	leq				
+own	p	tomatoes	fruit	m	leq				
+own	m	ham	meat	m	leq				
+own	m	beef	meat	m	leq				
+own	m	pork	meat	m	leq				
+own	m	lamb	meat	m	leq				
+own	p	lamb chops	meat	m	leq				
+own	p	sausages	meat	m	leq				
+own	p	oysters	seafood	m	leq				
+own	p	prawns	seafood	m	leq				
+own	m	fish	seafood	m	leq				
+own	m	fish	food	m	leq				
+own	m	cheese	food	m	leq				
+own	m	fruit	food	m	leq				
+own	m	seafood	food	m	leq				
+own	m	meat	food	m	leq				
+own	m	yoghurt	food	m	leq				
+own	m	pasta	food	m	leq				
+own	p	sausages	food	m	leq				
+own	p	hats	food	m	none				
+own	p	dogs	food	m	none				
+own	m	snow	food	m	none				
+own	s	hat	food	s	none				
+own	p	peaches	clothes	p	none				
+own	p	files	clothes	p	none				
+own	p	rats	clothes	p	none				
+own	p	shoes	clothes	p	leq				
+own	s	creature	vehicle	s	none				
+own	s	pen	vehicle	s	none				
+own	s	building	vehicle	s	none				
+own	s	palace	building	s	leq				
+own	s	school	building	s	leq				
+own	s	library	building	s	leq				
+own	s	courthouse	building	s	leq				
+own	s	church	building	s	leq				
+own	s	cottage	building	s	leq				
+own	p	shoes	clothes	p	leq				
+own	p	socks	clothes	p	leq				
+own	p	mittens	clothes	p	leq				
+own	p	gloves	clothes	p	leq				
+own	p	hats	clothes	p	leq				
+own	p	leggings	clothes	p	leq				
+own	s	sock 	animal	s	none				
+own	s	shoe 	animal	s	none				
+own	p	potatoes	animals	p	none				
+own	p	chairs	clothes	p	none				
+own	p	items	animals	p	none				
+own	p	cups	animals	p	none				
+own	p	pencils	animals	p	none				
+own	p	computers	clothes	p	none				
+own	m	cheese	music	m	none				
+own	m	fish	music	m	none				
+own	m	jazz	food	m	none				
+own	m	rap	food	m	none				
+own	m	ham	fruit	m	none				
+own	m	pasta	fruit	m	none				
+own	m	meat	fruit	m	none				
+own	m	lasagne	fruit	m	none				
+own	p	sausages	fruit	m	none				
+own	m	sleet	weather	m	leq				
+own	m	rain	weather	m	leq				
+own	m	snow	weather	m	leq				
+own	m	wind	weather	m	leq				
+own	p	mittens	weather	m	none				
+own	p	mittens	food	m	none				
+own	m	pasta	weather	m	none				
+own	p	socks	buildings	p	none				
+MED	s	potato	vegetable	s	leq				
+MED	s	tomato	vegetable	s	leq				
+MED	s	pumpkin	vegetable	s	leq				
+MED	s	giant rat	rat	s	leq				
+MED	s	summer hat	hat	s	leq				
+MED	s	poisonous spider	spider	s	leq				
+MED	s	big spider	spider	s	leq				
+MED	s	tear of happiness	tear	s	leq				
+MED	s	fruit tree	tree	s	leq				
+MED	s	cherry tree	tree	s	leq				
+MED	s	soup bowl	bowl	s	leq				
+MED	s	red diary	diary	s	leq				
+MED	m	high-protein dog food	dog food	m	leq				
+MED	m	powdered sugar	sugar	m	leq				
+MED	m	brown sugar	sugar	m	leq				
+MED	s	violin shop	shop	s	leq				
+MED	m	apple pie	pie	m	leq				
+MED	s	sentence about oranges	sentence	s	leq				
+MED	s	cold lasting more than one week	cold	s	leq				
+MED	p	first-year students	students	p	leq				
+MED	p	cherry trees	trees	p	leq				

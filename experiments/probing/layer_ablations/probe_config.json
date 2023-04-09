@@ -1,0 +1,18 @@
+{
+      "intra_metric":"probe_ably.core.metrics.accuracy.AccuracyMetric",
+      "inter_metric":"probe_ably.core.metrics.selectivity.SelectivityMetric",
+      "probing_models":{"0":
+         {
+            "probing_model_name":"probe_ably.core.models.linear.LinearModel",
+            "batch_size":64,
+            "epochs":20,
+            "number_of_models": 50
+         },
+         "1":{
+            "probing_model_name":"probe_ably.core.models.mlp.MLPModel",
+            "batch_size":64,
+            "epochs":20,
+            "number_of_models": 50
+         }
+	  }
+}

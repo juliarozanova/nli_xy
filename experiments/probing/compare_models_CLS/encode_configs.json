@@ -1,0 +1,56 @@
+{
+    "shared_config": {
+        "data_dir": "data/nli_xy_small/", 
+        "save_dir": "experiments/probing/compare_models_CLS/",
+        "task_labels": ["context_monotonicity", "insertion_rel", "composite"],
+        "encoder_model": "", 
+        "X_or_Y": "neither",
+        "layer_range": -1,
+        "layer_summary": "single",
+        "phrase_summary": "mean",
+        "pair_summary": "concat",
+        "embedding_size": "",
+        "include_cls": "True",
+        "context_option": "all",
+        "max_length": 100,
+        "batch_size": 64,
+        "device": "cuda"
+    }, 
+    "representations": {
+        "roberta-large-mnli-help": {
+            "tokenizer": "roberta-large-mnli", 
+            "encoder_model": "./models/roberta-large-mnli-help",
+            "embedding_size": 1024
+        }, 
+        "roberta-large-mnli-double-finetuning": {
+            "tokenizer": "roberta-large-mnli", 
+            "encoder_model": "./models/roberta-large-mnli-double_finetuning",
+            "embedding_size": 1024
+        }, 
+        "roberta-large-mnli": {
+            "tokenizer": "roberta-large-mnli", 
+            "encoder_model": "roberta-large-mnli",
+            "embedding_size": 1024
+        },
+        "bert-base-uncased-snli": {
+            "tokenizer": "textattack/bert-base-uncased-snli", 
+            "encoder_model": "textattack/bert-base-uncased-snli",
+            "embedding_size": 768
+        },
+        "bert-base-uncased-snli-help": {
+            "tokenizer": "textattack/bert-base-uncased-snli", 
+            "encoder_model": "./models/bert-base-uncased-snli-help",
+            "embedding_size": 768
+        },
+        "facebook-bart-large-mnli": {
+            "tokenizer": "facebook/bart-large-mnli", 
+            "encoder_model": "facebook/bart-large-mnli",
+            "embedding_size": 1024
+        },
+        "facebook-bart-large-mnli-help": {
+            "tokenizer": "facebook/bart-large-mnli", 
+            "encoder_model": "./models/facebook-bart-large-mnli-help",
+            "embedding_size": 1024
+        }
+    }
+}

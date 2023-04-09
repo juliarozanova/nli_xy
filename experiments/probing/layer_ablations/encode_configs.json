@@ -1,0 +1,75 @@
+{
+    "shared_config": {
+        "data_dir": "data/nli_xy_small", 
+        "save_dir": "experiments/layer_ablations/",
+        "tokenizer": "roberta-large-mnli", 
+        "encoder_model": "./models/roberta-large-mnli-help",
+        "X_or_Y": "both",
+        "layer_range": 24,
+        "layer_summary": "single",
+        "phrase_summary": "mean",
+        "pair_summary": "concat",
+        "embedding_size": "2048",
+        "include_cls": "False",
+        "context_option": "all",
+        "max_length": 100,
+        "batch_size": 64,
+        "device": "cuda"
+    }, 
+    "representations": {
+        "layer_0": {
+            "layer_range": 0
+        }, 
+        "layer_1": {
+            "layer_range": 1
+        }, 
+        "layer_2": {
+            "layer_range": 2
+        }, 
+        "layer_3": {
+            "layer_range": 3
+        }, 
+        "layer_4": {
+            "layer_range": 4
+        }, 
+        "layer_5": {
+            "layer_range": 5
+        }, 
+        "layer_6": {
+            "layer_range": 6
+        }, 
+        "layer_7": {
+            "layer_range": 7
+        }, 
+        "layer_8": {
+            "layer_range": 8
+        }, 
+        "layer_9": {
+            "layer_range": 9
+        }, 
+        "layer_10": {
+            "layer_range": 10
+        }, 
+        "layer_11": {
+            "layer_range": 11
+        }, 
+        "layer_12": {
+            "layer_range": 12
+        }, 
+        "layer_13": {
+            "layer_range": 13
+        }, 
+        "layer_17": {
+            "layer_range": 17 
+        }, 
+        "layer_20": {
+            "layer_range": 20
+        }, 
+        "layer_23": {
+            "layer_range": 23
+        }, 
+        "layer_24": {
+            "layer_range": 24
+        }
+    }
+}

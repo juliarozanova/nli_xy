@@ -1,0 +1,213 @@
+source	context	monotonicity	operator	distractor operator	singular	mass	plural								
+MED	An Irishman won a x.	up			x										
+MED	No x finished the report on time.	down	no		x										
+MED	No delegate finished the x on time.	up		no	x	x	x								
+MED	Some x finished the survey on time.	up	some		x		x								
+MED	Many delegates obtained x from the survey.	up				x	x								
+MED	Both commissioners used to be x.	up					x								
+MED	Neither x spends time at home.	down	neither		x										
+MED	At least three x spend time at home.	up	at least				x								
+MED	At most ten x spend time at home.	down	at most				x								
+MED	Several x got the results published.	up	several				x								
+MED	Several x got the results published on time.	up	several				x								
+MED	Most x can travel freely within Europe.	down	most				x								
+MED	Most Europeans can travel freely within x.	down		most			x								
+MED	A few x are from Scandinavia.	up	a few				x								
+MED	Few x are from southern Europe.	down	few				x								
+MED	Some x like to scratch their ears.	up	some				x								
+MED	Cruz has frequently derided as amnesty various x that confer legal status or citizenship on people living in the country illegally.	up					x								
+MED	In many x, human activity has changed the form of river channels, altering magnitudes and frequencies of flooding.	up	many				x								
+MED	We consider some x as positive examples and sample negatives at random from the dictionary.	up	some				x								
+MED	We consider all x as positive examples and sample negatives at random from the dictionary.	down	all				x								
+MED	We consider all words as x and sample negatives at random from the dictionary.	up		all		x	x								
+MED	All x like to scratch their ears.	down	all				x								
+MED	Cruz has frequently derided as amnesty any x that confers legal status or citizenship on people living in the country illegally.	down	any		x	x									
+MED	In all x, human activity has changed the form of river channels, altering magnitudes and frequencies of flooding.	down	all				x								
+MED	No x made it to Abbott’s desk by the end of the legislative session in May.	down	no		x	x	x								
+MED	No bills made it to Abbott’s x by the end of the legislative session in May.	down	no		x	x	x								
+MED	You know that some x must be taken when grandma reacts with the sad emoji.	up	some			x	x								
+MED	I have never seen a x.	down	never		x										
+MED	Regional governors could not rely on x for help in times of crisis, and the ensuing food shortages and political disputes escalated into famines and small-scale civil wars.	down	not			x	x								
+MED	The 15th tank corps was a tank corps of the soviet union's x.	up			x										
+MED	In grounded communication tasks, speakers face pressures in choosing referential expressions that distinguish their x from others in the context, leading to many kinds of pragmatic meaning enrichment.	up			x	x	x								
+MED	So there is no dedicated x for every entity and no distinction between entity mentions and non-mention words.	down	no		x										
+MED	A x rolled across the glade.	up			x										x
+MED	I don't want to have to keep entertaining x.	down				x	x								
+MED	I want to keep entertaining x.	down		don't		x	x								
+MED	The x gradually shifted to the left lane.	up			x	x	x								
+MED	There are some x around Mt. Fuji.	up	some				x								
+MED	A x knows the difference between the 2009 and 2013 vintage of a German riesling.	down			x										
+MED	Some people say thirteen is an unlucky x.	up			x	x									
+MED	I can not do without x in my coffee.	up		not, without		x	x								
+MED	You can't live without x.	up		not, without		x	x								
+MED	Every sentence in that x is important.	up		every	x	x									
+MED	x is no laughing matter.	up		no		x									
+MED	All is in the hands of x, therefore wash them often.	up		all			x								
+MED	Some x bloom in spring and others in autumn.	up	some				x								
+MED	x can not exist without water.	up		without		x	x								
+help-test-contexts	We have to abolish all x , because they are deadly to mankind .	down	all			x	x								
+help-test-contexts	I want to learn all x on this list by July .	down	all				x								
+help-test-contexts	all x study English .	down	all			x	x								
+help-test-contexts	Tom put all his x in one basket .	down	all			x	x								
+help-test-contexts	With all his x , he is not happy .	down	all			x	x								
+help-test-contexts	Tom soon realized that Mary had stolen all his x .	down	all			x	x								
+help-test-contexts	Tom put all his x in a box and hid it under his bed .	down	all			x	x								
+help-test-contexts	For all his x , he is unhappy .	down	all			x	x								
+help-test-contexts	The host showed off his rare stamps to all his x .	down	all			x	x								
+help-test-contexts	There is no precedent for such a x .	down			x	x									
+help-test-contexts	There is no time to quarrel over such a x .	down	no		x	x									
+help-test-contexts	In the wagon were a few tools and some extra x .	up			x	x									
+help-test-contexts	Every x praises its tail .	down	every		x	x									
+help-test-contexts	Madonna is known to every x .	down	every		x	x									
+help-test-contexts	He chose every x .	down	every		x	x									
+help-test-contexts	I know I can count on every x .	down	every		x	x									
+help-test-contexts	His name is known to every x in this area .	down	every		x	x									
+help-test-contexts	He said they wanted to fight until every x was free .	down	every		x	x									
+help-test-contexts	every x looked tired .	down	every		x	x									
+help-test-contexts	There are false friends in every x .	down	every		x	x									
+help-test-contexts	He tried to approach her using every x .	down	every		x	x									
+help-test-contexts	Tom saved every x .	down	every		x	x									
+help-test-contexts	My partner and I have been winning every x today .	down	every		x	x									
+help-test-contexts	In Esperanto there is no x .	down	no		x	x									
+help-test-contexts	There is no x without pain .	down	no		x										
+help-test-contexts	It is no x that she won the first prize .	down	no		x	x									
+help-test-contexts	I can not use a computer . There is no x .	down	no		x	x									
+help-test-contexts	It is said that there is no x .	down	no		x	x									
+help-test-contexts	I can not heat the dinner . There is no x .	down	no		x	x									
+help-test-contexts	Football is no x !	down	no		x	x									
+help-test-contexts	There is no x today .	down	no		x	x									
+help-test-contexts	There is no x in this room .	down	no		x	x									
+help-test-contexts	Dawn breaks , which is no x .	down	no		x	x									
+help-test-contexts	There was no x .	down	no		x	x									
+help-test-contexts	Tom felt that there was no x .	down	no		x	x									
+help-test-contexts	I was hungry but there was no x for me .	down	no		x	x									
+help-test-contexts	He thought that there was no x in studying further in this field .	down	no		x	x									
+help-test-contexts	There was no x in the house .	down	no		x	x									
+help-test-contexts	He said there was no x .	down	no		x	x									
+help-test-contexts	There is no room for further improvement in this x .	down	no		x	x									
+help-test-contexts	There is no access to the building from this x .	down	no		x	x									
+help-test-contexts	I cry every time I listen to this x .	down	no		x	x									
+help-test-contexts	There are some old houses in this x .	up	some		x	x									
+own	I ate some x for dinner.	up	some			x	x								
+own	I went out for x.	up				x	x								
+own	I could not help but notice a few x on the road.	up		not		x	x								
+own	He picked up a x.	up			x										
+help-test-contexts	There are no x in this forest .	down	no				x								
+help-test-contexts	There are no x yet .	down	no				x								
+help-test-contexts	I bought all of these x .	down	all				x								
+help-test-contexts	I thought you , of all x , would understand .	down	all				x								
+help-test-contexts	In those days , there were no x .	down	no				x								
+help-test-contexts	There were no x in the garden .	down	no				x								
+help-test-contexts	She gave a x some milk .	up			x										
+help-test-contexts	A man is talking to someone in a x	up			x										
+help-test-contexts	A couple of hikers cross a x	up			x										
+help-test-contexts	A group of men and women are singing a x	up			x										
+help-test-contexts	Two women laughing at a x walking on the furniture.	up			x										
+help-test-contexts	Two young males working in a x	up			x										
+help-test-contexts	A gentleman coming out of a x	up			x										
+help-test-contexts	Two men stand beneath a x as they watch the sunset over the ocean.	up			x										
+help-test-contexts	An elderly man is sitting on a bench with his foot propped up on a x	up			x										
+help-test-contexts	A choir is singing with a conductor guiding a symphony in a roman style building in front of a large gold statue of a woman and a x	up			x										
+help-test-contexts	This is a young guy reaching for a x on a perch.	up			x										
+help-test-contexts	A group of people eat a meal at a x	up			x										
+help-test-contexts	A man is standing in a field looking at a x in his hand.	up			x										
+help-test-contexts	A woman holding a x stands in front of a marketplace tableau of vibrant green produce, including, lettuce of various types, cactus, radishes, and various herbs.	up			x										
+help-test-contexts	two young girls wearing bonnets standing by a tree watching a x nearby.	up			x										
+help-test-contexts	A swimming pool with men tossing a x around.	up			x										
+help-test-contexts	A little girl in a flowery, pink jacket, picks out a x from a vendors table.	up			x										
+help-test-contexts	A man in a gray collared shirt working on a x	up			x										
+help-test-contexts	A man holds up a x he just caught.	up			x										
+help-test-contexts	A person is walking down a x picker trail.	up			x										
+help-test-contexts	A man is swinging a x at his sculpture.	up			x										
+help-test-contexts	Boys dragging a x on the African plains.	up			x										
+help-test-contexts	A boy is holding a x with trees in the background.	up			x										
+help-test-contexts	A dancer in a red costume has her hands raised up to form a x	up			x										
+help-test-contexts	A man is posing while sitting with a x beside him.	up			x										
+help-test-contexts	In all of my travels , I have never seen a more beautiful mountain than x .	up			x										
+help-test-contexts	An Asian x with yellow sandals sitting with a basket to their right.	up			x										
+help-test-contexts	A young boy looks at an x under a microscope.	up			x										
+help-test-contexts	A man can not find a x	down			x										
+help-test-contexts	A man is not wearing a x	down			x										
+help-test-contexts	There is no rule without a x .	down			x										
+MED	A x is taking a bath in the pond.	up			x										
+MED	Tom and Mary were speaking to each other in a x i didn't recognize.	down			x										
+MED	There is a glass x in the garden.	up			x										
+MED	A cow chases away flies with its x.	up			x										
+MED	A x chases away flies with its tail.	up			x										
+MED	Brian bought a x for Kate.	up			x										
+MED	There's a x on the desk.	up			x										
+MED	There's a cat on the x.	up			x										
+MED	She bought him a x.	up			x										
+MED	She gave a cat some x.	up				x	x								
+MED	A lot of x around the world are studying English.	up					x								
+MED	There are some x in that box.	up					x								
+MED	There are some apples in that x.	up			x										
+MED	A dog chased a x.	up			x										
+MED	A x chased a cat.	up			x										
+MED	I bought a few x.	up	a few	few			x								
+MED	Tom is driving a x.	up			x										
+MED	I'm expecting a x.	up			x										
+MED	I saw a x at the zoo.	up			x										
+MED	She was clad in a x.	up			x										
+MED	He thinks nothing of x.	down	nothing			x	x								
+MED	I'm using a x and I can't read a windows 95 file.	up			x										
+MED	A x proved her innocence.	up			x										
+MED	We have some unfinished x.	up	some			x	x								
+MED	I buy x every day.	up				x	x								
+MED	This is only a temporary x.	up			x										
+MED	That x does nothing but cry.	up		nothing	x	x									
+MED	Tom isn't very good at x.	down	n't			x	x								
+MED	x isn't good for a man of my age.	up	n't			x									
+MED	He has no interest in x.	down	no			x	x								
+MED	Some people think that x is a form of brainwashing.	up				x									
+MED	Some x think that advertising is a form of brainwashing.	up					x								
+MED	Some animals, such as lions, eat x.	up				x	x								
+MED	Cameras don't tend to capture x.	down	n't			x	x								
+MED	x don't tend to capture reality.	up		n't			x								
+MED	Some x go to church on Sunday morning.	up	some				x								
+MED	Stracciatella ice-cream is nothing but a plain ice-cream with x.	up		nothing		x	x								
+MED	x have no respect for girls.	down	no				x								
+MED	Boys have no respect for x.	down	no			x	x								
+MED	All Tom wanted was a nice hot x.	up			x										
+MED	x doesn't interest me.	down	n't			x									
+MED	He was watchful for any sign of x.	down	any			x	x								
+MED	If the x is nice tomorrow, we will have a picnic.	down			x	x									
+MED	If the weather is nice tomorrow, we will have a x.	up			x										
+MED	It was a mistake to refuse his x.	down			x	x									
+MED	He was in Rome and he didn't see the x.	down	n't		x	x	x								
+MED	A dolphin is no more a fish than a x is.	down	no		x										
+MED	A x is no more a fish than a dog is.	up		no	x										
+MED	A x has no legs.	down			x										
+MED	Some x have a great effect on their students.	up	some				x								
+MED	Don't make fun of x.	down	n't			x	x								
+MED	If I go to the party, I'll take some x.	up	some			x	x								
+MED	Tom threw a x at Mary.	up			x										
+MED	A x spoke to me in the bus.	up			x										
+MED	I bought a x.	up			x										
+MED	A x is under the table.	up			x										
+MED	There are few x on this train.	down	few				x								
+MED	A big x was spinning a web.	up			x										
+MED	She's wearing a nice x.	up			x										
+MED	All of their x were born in Malaysia.	down					x								
+MED	A x is a water bird.	up			x										
+MED	A x chewed a hole in the wall.	up			x										
+MED	She wiped a x from her cheek.	up			x										
+MED	Tom was carrying some x.	up	some			x	x								
+MED	A x grows in a garden.	up			x										
+MED	He is a fast x.	up			x										
+MED	Tom has a few x in Boston.	up	a few				x								
+MED	Tom put some rice in a x.	up			x										
+MED	I bought a x.	up			x										
+MED	We stood on the brink of a x.	up			x										
+MED	I took a x from the station to the hotel.	up			x										
+MED	We need to buy some x.	up	some			x	x								
+MED	Tom sprinkled some x on the toast.	up	some			x	x								
+MED	A violinist I know says that he owns a x.	up			x										
+MED	He had all the attributes of a x.	up			x										
+MED	Tom wants to eat some x.	up				x	x								
+MED	A kilo of x costs 2.50 €.	up				x	x								
+MED	That x doesn't exist in any song.	up			x										
+MED	You can't separate language from x.	down				x	x								
+MED	I rarely catch a x.	down			x										
+MED	I don't want to argue about this in front of x.	down				x	x								
+MED	If x don't come, the lesson doesn't start.	down					x								

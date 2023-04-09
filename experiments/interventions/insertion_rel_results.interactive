@@ -1,0 +1,77 @@
+Model Name: roberta-large-mnli-help
+
+        original accuracy: 0.8029080675422139
+
+        debiased_accuracy: 0.8050656660412758
+
+        biased_accuracy: 0.7948405253283302
+
+    
+Rank of original matrix: 452 
+ 
+                Rank of debiased matrix: 961 
+
+                Rank of biased matrix: 63 
+
+control accuracy with 1 remaining dimensions: 0.40928705440900565
+control accuracy with 2 remaining dimensions: 0.5521575984990619
+control accuracy with 3 remaining dimensions: 0.40140712945590995
+control accuracy with 4 remaining dimensions: 0.7897748592870544
+control accuracy with 5 remaining dimensions: 0.5312382739212007
+control accuracy with 6 remaining dimensions: 0.7473733583489681
+control accuracy with 7 remaining dimensions: 0.7654784240150094
+control accuracy with 8 remaining dimensions: 0.7393996247654784
+control accuracy with 9 remaining dimensions: 0.8008442776735459
+control accuracy with 10 remaining dimensions: 0.7948405253283302
+control accuracy with 11 remaining dimensions: 0.7181988742964353
+control accuracy with 12 remaining dimensions: 0.7881801125703565
+control accuracy with 13 remaining dimensions: 0.8154784240150094
+control accuracy with 14 remaining dimensions: 0.8114446529080676
+control accuracy with 15 remaining dimensions: 0.799343339587242
+control accuracy with 16 remaining dimensions: 0.8151031894934334
+control accuracy with 17 remaining dimensions: 0.7412757973733584
+control accuracy with 18 remaining dimensions: 0.5798311444652908
+control accuracy with 19 remaining dimensions: 0.8106003752345216
+control accuracy with 20 remaining dimensions: 0.799249530956848
+control accuracy with 21 remaining dimensions: 0.8079737335834897
+control accuracy with 22 remaining dimensions: 0.7976547842401501
+control accuracy with 23 remaining dimensions: 0.7798311444652908
+control accuracy with 24 remaining dimensions: 0.7866791744840526
+control accuracy with 25 remaining dimensions: 0.8132270168855534
+control accuracy with 26 remaining dimensions: 0.7913696060037524
+control accuracy with 27 remaining dimensions: 0.80234521575985
+control accuracy with 28 remaining dimensions: 0.7943714821763602
+control accuracy with 29 remaining dimensions: 0.7578799249530956
+control accuracy with 30 remaining dimensions: 0.8145403377110694
+control accuracy with 31 remaining dimensions: 0.7954971857410882
+control accuracy with 32 remaining dimensions: 0.8044090056285178
+control accuracy with 33 remaining dimensions: 0.7621013133208255
+control accuracy with 34 remaining dimensions: 0.8055347091932458
+control accuracy with 35 remaining dimensions: 0.7957786116322701
+control accuracy with 36 remaining dimensions: 0.8123827392120075
+control accuracy with 37 remaining dimensions: 0.8045028142589118
+control accuracy with 38 remaining dimensions: 0.8054409005628518
+control accuracy with 39 remaining dimensions: 0.8135084427767355
+control accuracy with 40 remaining dimensions: 0.800093808630394
+control accuracy with 41 remaining dimensions: 0.7957786116322701
+control accuracy with 42 remaining dimensions: 0.8008442776735459
+control accuracy with 43 remaining dimensions: 0.8086303939962477
+control accuracy with 44 remaining dimensions: 0.8076923076923077
+control accuracy with 45 remaining dimensions: 0.8091932457786116
+control accuracy with 46 remaining dimensions: 0.8048780487804879
+control accuracy with 47 remaining dimensions: 0.8116322701688555
+control accuracy with 48 remaining dimensions: 0.7884615384615384
+control accuracy with 49 remaining dimensions: 0.7928705440900563
+control accuracy with 50 remaining dimensions: 0.7922138836772983
+control accuracy with 51 remaining dimensions: 0.8091932457786116
+control accuracy with 52 remaining dimensions: 0.8079737335834897
+control accuracy with 53 remaining dimensions: 0.8112570356472796
+control accuracy with 54 remaining dimensions: 0.7966228893058162
+control accuracy with 55 remaining dimensions: 0.8063789868667918
+control accuracy with 56 remaining dimensions: 0.8060037523452157
+control accuracy with 57 remaining dimensions: 0.8050656660412758
+control accuracy with 58 remaining dimensions: 0.8026266416510319
+control accuracy with 59 remaining dimensions: 0.8069418386491557
+control accuracy with 60 remaining dimensions: 0.8056285178236398
+control accuracy with 61 remaining dimensions: 0.8122889305816136
+control accuracy with 62 remaining dimensions: 0.8074108818011257

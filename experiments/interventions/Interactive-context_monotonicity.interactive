@@ -1,0 +1,46 @@
+Model Name: roberta-large-mnli-help
+
+        original accuracy: 0.8029080675422139
+
+        debiased_accuracy: 0.8018761726078799
+
+        biased_accuracy: 0.7796435272045028
+
+    
+Rank of original matrix: 452 
+ 
+                Rank of debiased matrix: 992 
+
+                Rank of biased matrix: 32 
+
+control accuracy with 1 remaining dimensions: 0.4171669793621013
+control accuracy with 2 remaining dimensions: 0.40928705440900565
+control accuracy with 3 remaining dimensions: 0.7778611632270169
+control accuracy with 4 remaining dimensions: 0.5982176360225141
+control accuracy with 5 remaining dimensions: 0.6069418386491557
+control accuracy with 6 remaining dimensions: 0.6686679174484053
+control accuracy with 7 remaining dimensions: 0.8044090056285178
+control accuracy with 8 remaining dimensions: 0.7715759849906192
+control accuracy with 9 remaining dimensions: 0.752063789868668
+control accuracy with 10 remaining dimensions: 0.7602251407129456
+control accuracy with 11 remaining dimensions: 0.8016885553470919
+control accuracy with 12 remaining dimensions: 0.8040337711069419
+control accuracy with 13 remaining dimensions: 0.8051594746716698
+control accuracy with 14 remaining dimensions: 0.8010318949343339
+control accuracy with 15 remaining dimensions: 0.7705440900562852
+control accuracy with 16 remaining dimensions: 0.7811444652908067
+control accuracy with 17 remaining dimensions: 0.8060975609756098
+control accuracy with 18 remaining dimensions: 0.774484052532833
+control accuracy with 19 remaining dimensions: 0.8049718574108818
+control accuracy with 20 remaining dimensions: 0.7972795497185741
+control accuracy with 21 remaining dimensions: 0.8127579737335835
+control accuracy with 22 remaining dimensions: 0.7976547842401501
+control accuracy with 23 remaining dimensions: 0.7790806754221389
+control accuracy with 24 remaining dimensions: 0.8110694183864916
+control accuracy with 25 remaining dimensions: 0.8128517823639775
+control accuracy with 26 remaining dimensions: 0.8134146341463414
+control accuracy with 27 remaining dimensions: 0.7932457786116323
+control accuracy with 28 remaining dimensions: 0.8010318949343339
+control accuracy with 29 remaining dimensions: 0.8093808630393996
+control accuracy with 30 remaining dimensions: 0.7967166979362101
+control accuracy with 31 remaining dimensions: 0.7704502814258912

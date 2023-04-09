@@ -1,0 +1,46 @@
+	source	x_grammar	x	y	y_grammar	insertion_rel	Unnamed: 6	Unnamed: 7	Unnamed: 8	Unnamed: 9
+75	own	m	fruit	food	m	leq				
+70	own	p	oysters	seafood	m	leq				
+45	MoNLI	s	hospital	building	s	leq				
+115	own	m	rap	food	m	none				
+38	MoNLI	s	hound	dog	s	leq				
+129	MED	s	potato	vegetable	s	leq				
+61	own	s	watermelon	fruit	s	leq				
+4	MoNLI	m	rap	music	m	leq				
+30	MoNLI	s	lass	woman	s	leq				 
+23	MoNLI	s	person	man	s	geq				
+66	own	m	pork	meat	m	leq				
+143	MED	m	brown sugar	sugar	m	leq				
+126	own	p	mittens	food	m	none				
+85	own	p	peaches	clothes	p	none				
+49	MoNLI	p	women	people	p	leq				
+81	own	p	hats	food	m	none				
+19	MoNLI	s	plant	tree	s	leq				
+145	MED	m	apple pie	pie	m	leq				
+16	MoNLI	s	child	person	s	leq				
+92	own	s	palace	building	s	leq				
+123	own	m	snow	weather	m	leq				
+22	MoNLI	s	oak	tree	s	leq				
+44	MoNLI	s	club	building	s	leq				
+91	own	s	building	vehicle	s	none				
+94	own	s	library	building	s	leq				
+52	MoNLI	p	files	things	p	leq				
+88	own	p	shoes	clothes	p	leq				
+31	MoNLI	s	wife	woman	s	leq				
+122	own	m	rain	weather	m	leq				
+79	own	m	pasta	food	m	leq				
+54	own	p	apples	fruit	m	leq				
+9	MoNLI	s	girl	person	s	leq				
+37	MoNLI	s	dog	hound	s	leq				
+130	MED	s	tomato	vegetable	s	leq				
+138	MED	s	cherry tree	tree	s	leq				
+8	MoNLI	m	swing	music	m	leq				
+148	MED	p	first-year students	students	p	leq				
+27	MoNLI	s	woman	adult	s	leq				
+89	own	s	creature	vehicle	s	none				
+118	own	m	meat	fruit	m	none				
+121	own	m	sleet	weather	m	leq				
+120	own	p	sausages	fruit	m	none				
+77	own	m	meat	food	m	leq				
+42	MoNLI	s	court	building	s	leq				
+127	own	m	pasta	weather	m	none				
